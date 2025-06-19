@@ -25,6 +25,7 @@ const menuItems = [
             ${isActive && isFirst ? 'rounded-l-lg' : ''}
             ${isActive && isLast ? 'rounded-r-lg' : ''}
           `}>
+            <p>{currentPath}, {item.path}, {isActive}</p>
             <a href={item.path} class="w-full h-full block px-4 py-3">
               {item.label}
             </a>
