@@ -1,5 +1,4 @@
 ---
-const baseUrl = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
 
 const menuItems = [
@@ -11,13 +10,13 @@ const menuItems = [
 
 <header>
   <div class="flex flex-col items-center justify-center gap-4">
-    <img src="/src/assets/logo.png" alt="Logo" class="mx-auto w-24 h-24" />
+    <img src="/logo.png" alt="Logo" class="mx-auto w-24 h-24" />
     
     <ul class="bg-dark-light w-full flex items-center justify-center text-sm text-gray font-semibold rounded-lg overflow-hidden">
       {menuItems.map((item, index) => {
         const isFirst = index === 0;
         const isLast = index === menuItems.length - 1;
-        const isActive = currentPath === baseUrl + item.path;
+        const isActive = currentPath === item.path;
         
         return (
           <li class={`
@@ -26,9 +25,7 @@ const menuItems = [
             ${isActive && isFirst ? 'rounded-l-lg' : ''}
             ${isActive && isLast ? 'rounded-r-lg' : ''}
           `}>
-            <p>{currentPath}</p>
-            <p>{baseUrl + item.path}</p>
-            <a href={`${baseUrl}${item.path}`} class="w-full h-full block px-4 py-3">
+            <a href={item.path} class="w-full h-full block px-4 py-3">
               {item.label}
             </a>
           </li>
