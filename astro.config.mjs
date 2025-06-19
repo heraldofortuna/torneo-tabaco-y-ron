@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://heraldofortuna.github.io',
-  base: 'torneo-tabaco-y-ron',
+  base: process.env.NODE_ENV === 'production' ? '/torneo-tabaco-y-ron/' : '/',
   vite: {
     plugins: [tailwindcss()],
   },
