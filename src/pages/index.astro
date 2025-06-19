@@ -1,0 +1,25 @@
+---
+import getPositionsData from '../adapters/getPositionsData';
+import getScorersData from '../adapters/getScorersData';
+import Table from '../components/Table.astro';
+import { results } from '../constants/results';
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+const positionsData = getPositionsData(results);
+const scorersData = getScorersData(results);
+---
+
+<Layout>
+	<div class="flex flex-col gap-6 py-4">
+		<section class="bg-dark-light flex flex-col gap-4 p-4 rounded-lg">
+			<h2 class="font-semibold">Tabla de posiciones</h2>
+			<Table data={positionsData} headers={["Pos.", "Equipo", "J", "G", "P", "E", "GF", "GC", "DG", "Puntos"]} />
+		</section>
+
+		<section class="bg-dark-light flex flex-col gap-4 p-4 rounded-lg">
+			<h2 class="font-semibold">Tablas de goleadores</h2>
+			<Table data={scorersData} headers={["Pos.", "Jugador", "Goles", "Equipo"]} />
+		</section>
+	</div>
+</Layout>
