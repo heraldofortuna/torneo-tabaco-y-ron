@@ -25,10 +25,10 @@ export const results: ResultsData  = [
         awayScorers: ['Rodrigo', 'Jozua', 'Rodrigo', 'Charly', 'Jozua'],
       },
       {
-        home: 'Rojo',
-        away: 'Verde',
-        homeScorers: ['Frankito', 'Josue'],
-        awayScorers: ['Omar', 'Omar', 'Russo', 'Pedro', 'Russo', 'Omar'],
+        home: 'Verde',
+        away: 'Rojo',
+        homeScorers: ['Omar', 'Omar', 'Russo', 'Pedro', 'Russo', 'Omar'],
+        awayScorers: ['Frankito', 'Josue'],
       },
       {
         home: 'Rojo',
@@ -37,10 +37,10 @@ export const results: ResultsData  = [
         awayScorers: ['Liam', 'Charly'],
       },
       {
-        home: 'Verde',
-        away: 'Rojo',
-        homeScorers: ['Russo', 'Omar', 'Russo', 'Lucho', 'Russo'],
-        awayScorers: ['Rodrigo', 'Rodrigo', 'Jozua'],
+        home: 'Azul',
+        away: 'Verde',
+        homeScorers: ['Rodrigo', 'Rodrigo', 'Jozua'],
+        awayScorers: ['Russo', 'Omar', 'Russo', 'Lucho', 'Russo'],
       }
     ],
   }
