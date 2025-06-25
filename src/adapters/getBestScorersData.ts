@@ -10,7 +10,7 @@ function getBestScorersData(scorersData: Array<ScorerData & { position: number }
       photo: photo
     }
   });
-  console.log("XXX:", scorersData.slice(0, 3), bestScorers);
+
   return bestScorers;
 }
 
