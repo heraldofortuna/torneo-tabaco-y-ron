@@ -5,7 +5,7 @@ export const players: PlayersData  = [
     id: 1,
     name: 'Frankito',
     team: 'Rojo',
-    photo: '/src/assets/frankito.jpg',
+    photo: '/frankito.jpg',
   },
   {
     id: 2,
