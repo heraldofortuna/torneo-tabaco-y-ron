@@ -21,11 +21,11 @@ import "../styles/global.css";
                     <li class="flex justify-between gap-2 p-2 border-b border-white/10 md:border-b-0">
                       <div class="flex flex-1 justify-between items-center">
                         <div>
-                          <h3>{match.home}</h3>
+                          <h3 class="text-left">{match.home}</h3>
                           <ul>
                             {
                               match.homeScorers.map((scorer) => (
-                                <li class="text-gray text-xs">
+                                <li class="text-gray text-xs text-left">
                                   {scorer}
                                 </li>
                               ))
@@ -40,11 +40,11 @@ import "../styles/global.css";
                       <div class="flex flex-1 justify-between items-center">
                         <p class="text-xl font-bold">{match.awayScorers.length}</p>
                         <div>
-                          <h3>{match.away}</h3>
+                          <h3 class="text-right">{match.away}</h3>
                           <ul>
                             {
                               match.awayScorers.map((scorer) => (
-                                <li class="text-gray text-xs">
+                                <li class="text-gray text-xs text-right">
                                   {scorer}
                                 </li>
                               ))
