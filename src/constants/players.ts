@@ -1,0 +1,130 @@
+import type { PlayersData } from "../types/data";
+
+export const players: PlayersData  = [
+  {
+    id: 1,
+    name: 'Frankito',
+    team: 'Rojo',
+    photo: '/src/assets/frankito.jpg',
+  },
+  {
+    id: 2,
+    name: 'Kanuto',
+    team: 'Rojo',
+    photo: '',
+  },
+  {
+    id: 3,
+    name: 'Josue',
+    team: 'Rojo',
+    photo: '',
+  },
+  {
+    id: 4,
+    name: 'Wachi',
+    team: 'Rojo',
+    photo: '',
+  },
+  {
+    id: 5,
+    name: 'Wincho',
+    team: 'Rojo',
+    photo: '',
+  },
+  {
+    id: 6,
+    name: 'Renzo',
+    team: 'Rojo',
+    photo: '',
+  },
+    {
+    id: 7,
+    name: 'Garfield',
+    team: 'Rojo',
+    photo: '',
+  },
+  {
+    id: 8,
+    name: 'Omar',
+    team: 'Real Coholicos',
+    photo: '',
+  },
+  {
+    id: 9,
+    name: 'Pedro',
+    team: 'Real Coholicos',
+    photo: '',
+  },
+  {
+    id: 10,
+    name: 'Heraldo',
+    team: 'Real Coholicos',
+    photo: '',
+  },
+  {
+    id: 11,
+    name: 'Lucho',
+    team: 'Real Coholicos',
+    photo: '',
+  },
+  {
+    id: 12,
+    name: 'Russo',
+    team: 'Real Coholicos',
+    photo: '',
+  },
+  {
+    id: 13,
+    name: 'Favio',
+    team: 'Real Coholicos',
+    photo: '',
+  },
+  {
+    id: 14,
+    name: 'Sebastian',
+    team: 'Real Coholicos',
+    photo: '',
+  },
+      {
+    id: 15,
+    name: 'Jozua',
+    team: 'Azul',
+    photo: '',
+  },
+  {
+    id: 16,
+    name: 'Rodrigo',
+    team: 'Azul',
+    photo: '',
+  },
+  {
+    id: 17,
+    name: 'Charly',
+    team: 'Azul',
+    photo: '',
+  },
+  {
+    id: 18,
+    name: 'Edder',
+    team: 'Azul',
+    photo: '',
+  },
+  {
+    id: 19,
+    name: 'Pitbull',
+    team: 'Azul',
+    photo: '',
+  },
+  {
+    id: 20,
+    name: 'Yair',
+    team: 'Azul',
+    photo: '',
+  },
+  {
+    id: 21,
+    name: 'Liam',
+    team: 'Azul',
+    photo: '',
+  },
+]

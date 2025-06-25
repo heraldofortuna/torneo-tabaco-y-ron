@@ -8,7 +8,7 @@ export const results: ResultsData  = [
     matches: [
       {
         home: 'Rojo',
-        away: 'Verde',
+        away: 'Real Coholicos',
         homeScorers: ['Josue', 'Frankito'],
         awayScorers: ['Sebastian'],
       },
@@ -19,13 +19,13 @@ export const results: ResultsData  = [
         awayScorers: ['Josue', 'Kanuto', 'Josue', 'Frankito', 'Josue', 'Wachi', 'Kanuto'],
       },
       {
-        home: 'Verde',
+        home: 'Real Coholicos',
         away: 'Azul',
         homeScorers: ['Omar', 'Omar', 'Pedro'],
         awayScorers: ['Rodrigo', 'Jozua', 'Rodrigo', 'Charly', 'Jozua'],
       },
       {
-        home: 'Verde',
+        home: 'Real Coholicos',
         away: 'Rojo',
         homeScorers: ['Omar', 'Omar', 'Russo', 'Pedro', 'Russo', 'Omar'],
         awayScorers: ['Frankito', 'Josue'],
@@ -38,7 +38,7 @@ export const results: ResultsData  = [
       },
       {
         home: 'Azul',
-        away: 'Verde',
+        away: 'Real Coholicos',
         homeScorers: ['Rodrigo', 'Rodrigo', 'Jozua'],
         awayScorers: ['Russo', 'Omar', 'Russo', 'Lucho', 'Russo'],
       }

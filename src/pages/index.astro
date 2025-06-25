@@ -1,6 +1,8 @@
 ---
+import getBestScorersData from '../adapters/getBestScorersData';
 import getPositionsData from '../adapters/getPositionsData';
 import getScorersData from '../adapters/getScorersData';
+import Podium from '../components/Podium.astro';
 import Table from '../components/Table.astro';
 import { results } from '../constants/results';
 import Layout from '../layouts/Layout.astro';
@@ -8,18 +10,29 @@ import "../styles/global.css";
 
 const positionsData = getPositionsData(results);
 const scorersData = getScorersData(results);
+const bestScorersData = getBestScorersData(scorersData);
 ---
 
 <Layout>
-	<div class="flex flex-col gap-6 py-4">
-		<section class="bg-dark-light flex flex-col gap-4 p-4 rounded-lg">
+	<div class="flex flex-col md:flex-row gap-6">
+		<section class="bg-dark-light flex-1 flex flex-col gap-4 p-4 rounded-lg">
 			<h2 class="font-semibold">Tabla de posiciones</h2>
-			<Table data={positionsData} headers={["Pos.", "Equipo", "J", "G", "P", "E", "GF", "GC", "DG", "Puntos"]} />
+			<Table
+				data={positionsData}
+				headers={["Pos.", "Equipo", "J", "G", "P", "E", "GF", "GC", "DG", "Puntos"]}
+				highlightFirst
+			/>
 		</section>
 
-		<section class="bg-dark-light flex flex-col gap-4 p-4 rounded-lg">
-			<h2 class="font-semibold">Tablas de goleadores</h2>
-			<Table data={scorersData} headers={["Pos.", "Jugador", "Goles", "Equipo"]} />
+		<section class="bg-dark-light flex-1 flex flex-col gap-4 p-4 rounded-lg">
+			<h2 class="font-semibold">Tabla de goleadores</h2>
+			<Table
+				data={scorersData}
+				headers={["Pos.", "Jugador", "Goles", "Equipo"]}
+				highlightFirst
+				maxRows={5}
+			/>
+			<Podium winners={bestScorersData} />
 		</section>
 	</div>
 </Layout>

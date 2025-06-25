@@ -2,9 +2,12 @@
 export interface Props {
   data: Array<Record<string, any>>;
   headers?: string[];
+  highlightFirst?: boolean;
+  maxRows?: number;
 }
 
-const { data, headers } = Astro.props;
+const { data, headers, highlightFirst = false, maxRows = 3 } = Astro.props;
+const displayData = data.slice(0, maxRows);
 ---
 
 <div class="text-xs sm:text-sm overflow-x-auto">
@@ -20,8 +23,8 @@ const { data, headers } = Astro.props;
         </tr>
       </thead>
       <tbody>
-        {data.map((row, rowIndex) => (
-          <tr class={`hover:bg-white/5 transition-colors`}>
+        {displayData.map((row, rowIndex) => (
+          <tr class={`hover:bg-white/5 transition-colors ${highlightFirst && rowIndex === 0 ? 'text-yellow-500 font-semibold' : ''}`}>
             {Object.values(row).map((cell) => (
               <td class="px-3 py-2 sm:px-4 sm:py-3 text-center border-b border-white/5 whitespace-nowrap">
                 {cell}
