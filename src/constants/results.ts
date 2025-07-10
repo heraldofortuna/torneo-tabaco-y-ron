@@ -129,5 +129,48 @@ export const results: ResultsData  = [
         awayScorers: ['Russo', 'Russo', 'Russo'],
       }
     ],
-  }
+  },
+  {
+    id: 4,
+    name: 'Fecha 4',
+    date: 'Jugado el 09 de Julio del 2025',
+    matches: [
+      {
+        home: 'Red Devils FC',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Kanuto'],
+        awayScorers: [],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Red Devils FC',
+        homeScorers: ['Jozua'],
+        awayScorers: ['Kanuto', 'Josue', 'Josue', 'Josue', 'Frankito', 'Frankito'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Heraldo'],
+        awayScorers: ['Charly', 'Charly', 'Rodrigo'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: ['Russo', 'Russo', 'Heraldo', 'Omar', 'Kanuto', 'Sebastian'],
+        awayScorers: ['Frankito'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Frankito', 'Frankito', 'Frankito', 'Wincho'],
+        awayScorers: ['Charly'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Jozua', 'Jozua', 'Rodrigo', 'Charly'],
+        awayScorers: ['Lucho', 'Russo'],
+      }
+    ],
+  },
 ];
