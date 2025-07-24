@@ -216,4 +216,47 @@ export const results: ResultsData  = [
       }
     ],
   },
+  {
+    id: 6,
+    name: 'Fecha 6',
+    date: 'Jugado el 23 de Julio del 2025',
+    matches: [
+      {
+        home: 'FC Real Polaco',
+        away: 'Red Devils FC',
+        homeScorers: [],
+        awayScorers: ['Frankito', 'Frankito', 'Kanuto', 'Wincho'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: [],
+        awayScorers: ['Russo', 'Omar', 'Omar'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: ['Pedro', 'Omar', 'Lucho'],
+        awayScorers: ['Kanuto', 'Kanuto', 'Josue', 'Josue'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Charly', 'Charly', 'Kanuto', 'Kanuto', 'Frankito', 'Frankito'],
+        awayScorers: ['Liam', 'Liam', 'Liam', 'Wincho'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Russo', 'Russo', 'Russo', 'Russo', 'Russo', 'Russo', 'Russo'],
+        awayScorers: ['Liam'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Wincho', 'Kanuto', 'Kanuto', 'Frankito', 'Frankito'],
+        awayScorers: ['Omar', 'Omar', 'Omar', 'Russo', 'Russo'],
+      }
+    ],
+  },
 ];
