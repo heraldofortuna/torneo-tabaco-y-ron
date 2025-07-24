@@ -175,8 +175,8 @@ export const results: ResultsData  = [
   },
   {
     id: 5,
-    name: 'Fecha 2',
-    date: 'Jugado el 17 de Julio del 2025',
+    name: 'Fecha 5',
+    date: 'Jugado el 16 de Julio del 2025',
     matches: [
       {
         home: 'Realcoholicos FC',
@@ -243,7 +243,7 @@ export const results: ResultsData  = [
         home: 'Red Devils FC',
         away: 'FC Real Polaco',
         homeScorers: ['Charly', 'Charly', 'Kanuto', 'Kanuto', 'Frankito', 'Frankito'],
-        awayScorers: ['Liam', 'Liam', 'Liam', 'Wincho'],
+        awayScorers: ['Liam', 'Liam', 'Wincho'],
       },
       {
         home: 'Realcoholicos FC',
