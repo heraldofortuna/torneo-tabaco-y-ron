@@ -259,4 +259,47 @@ export const results: ResultsData  = [
       }
     ],
   },
+  {
+    id: 7,
+    name: 'Fecha 7',
+    date: 'Jugado el 30 de Julio del 2025',
+    matches: [
+      {
+        home: 'Red Devils FC',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Josue', 'Josue', 'Wachi', 'Kanuto', 'Wincho', 'Wincho'],
+        awayScorers: ['Lucho', 'Russo'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Red Devils FC',
+        homeScorers: ['Rodrigo', 'Rodrigo', 'Rodrigo', 'Liam'],
+        awayScorers: ['Kanuto'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Russo', 'Russo'],
+        awayScorers: ['Harry', 'Liam', 'Jozua', 'Jozua', 'Jozua', 'Jozua'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: [],
+        awayScorers: ['Josue'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Liam', 'Rodrigo'],
+        awayScorers: [],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Rodrigo'],
+        awayScorers: ['Russo', 'Russo', 'Russo', 'Lucho'],
+      }
+    ],
+  },
 ];
