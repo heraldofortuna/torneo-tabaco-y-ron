@@ -291,8 +291,8 @@ export const results: ResultsData  = [
       {
         home: 'Red Devils FC',
         away: 'FC Real Polaco',
-        homeScorers: ['Liam', 'Rodrigo'],
-        awayScorers: [],
+        homeScorers: [],
+        awayScorers: ['Liam', 'Rodrigo'],
       },
       {
         home: 'FC Real Polaco',
