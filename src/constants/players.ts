@@ -1,5 +1,134 @@
 import type { PlayersData } from "../types/data";
 
+// export const players: PlayersData  = [
+//   {
+//     id: 1,
+//     name: 'Frankito',
+//     team: 'Red Devils FC',
+//     photo: '/frankito.jpg',
+//   },
+//   {
+//     id: 2,
+//     name: 'Kanuto',
+//     team: 'Red Devils FC',
+//     photo: '',
+//   },
+//   {
+//     id: 3,
+//     name: 'Josue',
+//     team: 'Red Devils FC',
+//     photo: '',
+//   },
+//   {
+//     id: 4,
+//     name: 'Wachi',
+//     team: 'Red Devils FC',
+//     photo: '',
+//   },
+//   {
+//     id: 5,
+//     name: 'Wincho',
+//     team: 'Red Devils FC',
+//     photo: '',
+//   },
+//   {
+//     id: 6,
+//     name: 'Renzo',
+//     team: 'Red Devils FC',
+//     photo: '',
+//   },
+//     {
+//     id: 7,
+//     name: 'Garfield',
+//     team: 'Red Devils FC',
+//     photo: '',
+//   },
+//   {
+//     id: 8,
+//     name: 'Omar',
+//     team: 'Realcoholicos FC',
+//     photo: '',
+//   },
+//   {
+//     id: 9,
+//     name: 'Pedro',
+//     team: 'Realcoholicos FC',
+//     photo: '',
+//   },
+//   {
+//     id: 10,
+//     name: 'Heraldo',
+//     team: 'Realcoholicos FC',
+//     photo: '',
+//   },
+//   {
+//     id: 11,
+//     name: 'Lucho',
+//     team: 'Realcoholicos FC',
+//     photo: '',
+//   },
+//   {
+//     id: 12,
+//     name: 'Russo',
+//     team: 'Realcoholicos FC',
+//     photo: '/russo.jpg',
+//   },
+//   {
+//     id: 13,
+//     name: 'Favio',
+//     team: 'Realcoholicos FC',
+//     photo: '',
+//   },
+//   {
+//     id: 14,
+//     name: 'Sebastian',
+//     team: 'Realcoholicos FC',
+//     photo: '',
+//   },
+//       {
+//     id: 15,
+//     name: 'Jozua',
+//     team: 'FC Real Polaco',
+//     photo: '/jozua.jpg',
+//   },
+//   {
+//     id: 16,
+//     name: 'Rodrigo',
+//     team: 'FC Real Polaco',
+//     photo: '',
+//   },
+//   {
+//     id: 17,
+//     name: 'Charly',
+//     team: 'FC Real Polaco',
+//     photo: '',
+//   },
+//   {
+//     id: 18,
+//     name: 'Edder',
+//     team: 'FC Real Polaco',
+//     photo: '',
+//   },
+//   {
+//     id: 19,
+//     name: 'Pitbull',
+//     team: 'FC Real Polaco',
+//     photo: '',
+//   },
+//   {
+//     id: 20,
+//     name: 'Yair',
+//     team: 'FC Real Polaco',
+//     photo: '',
+//   },
+//   {
+//     id: 21,
+//     name: 'Liam',
+//     team: 'FC Real Polaco',
+//     photo: '',
+//   },
+// ]
+
 export const players: PlayersData  = [
   {
     id: 1,
@@ -27,31 +156,31 @@ export const players: PlayersData  = [
   },
   {
     id: 5,
-    name: 'Wincho',
+    name: 'Favio',
     team: 'Red Devils FC',
     photo: '',
   },
   {
     id: 6,
-    name: 'Renzo',
+    name: 'Pedrito',
     team: 'Red Devils FC',
     photo: '',
   },
     {
     id: 7,
-    name: 'Garfield',
+    name: 'Lucho',
     team: 'Red Devils FC',
     photo: '',
   },
   {
     id: 8,
-    name: 'Omar',
+    name: 'Daniel',
     team: 'Realcoholicos FC',
     photo: '',
   },
   {
     id: 9,
-    name: 'Pedro',
+    name: 'Jose Daniel',
     team: 'Realcoholicos FC',
     photo: '',
   },
@@ -63,7 +192,7 @@ export const players: PlayersData  = [
   },
   {
     id: 11,
-    name: 'Lucho',
+    name: 'Joel',
     team: 'Realcoholicos FC',
     photo: '',
   },
@@ -75,7 +204,7 @@ export const players: PlayersData  = [
   },
   {
     id: 13,
-    name: 'Favio',
+    name: 'Wincho',
     team: 'Realcoholicos FC',
     photo: '',
   },
@@ -105,7 +234,7 @@ export const players: PlayersData  = [
   },
   {
     id: 18,
-    name: 'Edder',
+    name: 'Omar',
     team: 'FC Real Polaco',
     photo: '',
   },
