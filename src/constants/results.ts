@@ -348,4 +348,47 @@ export const results : ResultsData = [
       }
     ],
   },
+  {
+    id: 2,
+    name: 'Fecha 2',
+    date: 'Jugado el 20 de Agosto del 2025',
+    matches: [
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos F',
+        homeScorers: ['Harry', 'Jozua', 'Jozua', 'Omar'],
+        awayScorers: ['Daniel'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: ['Daniel', 'Jose Daniel'],
+        awayScorers: ['Josue', 'Josue', 'Josue'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Pedro', 'Pedro', 'Pedro', 'Josue', 'Josue'],
+        awayScorers: ['Jozua', 'Charly'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Jozua', 'Charly'],
+        awayScorers: ['Russo', 'Joel'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: ['Daniel', 'Daniel'],
+        awayScorers: ['Lucho', 'Lucho', 'Josue', 'Josue'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Lucho', 'Lucho', 'Kanuto', 'Josue', 'Pedro', 'Pedro'],
+        awayScorers: ['Omar'],
+      }
+    ],
+  },
 ]

@@ -146,7 +146,7 @@ export const players: PlayersData  = [
     id: 3,
     name: 'Josue',
     team: 'Red Devils FC',
-    photo: '',
+    photo: '/josue.png',
   },
   {
     id: 4,
@@ -176,7 +176,7 @@ export const players: PlayersData  = [
     id: 8,
     name: 'Daniel',
     team: 'Realcoholicos FC',
-    photo: '',
+    photo: '/daniel.png',
   },
   {
     id: 9,
