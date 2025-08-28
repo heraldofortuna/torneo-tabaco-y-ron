@@ -355,7 +355,7 @@ export const results : ResultsData = [
     matches: [
       {
         home: 'FC Real Polaco',
-        away: 'Realcoholicos F',
+        away: 'Realcoholicos FC',
         homeScorers: ['Harry', 'Jozua', 'Jozua', 'Omar'],
         awayScorers: ['Daniel'],
       },
