@@ -332,7 +332,7 @@ export const results : ResultsData = [
         home: 'Red Devils FC',
         away: 'FC Real Polaco',
         homeScorers: ['Frankito', 'Frankito', 'Kanuto'],
-        awayScorers: ['Liam', 'Omar', 'Rodrigo'],
+        awayScorers: ['Liam', 'Omar', 'Liam'],
       },
       {
         home: 'Realcoholicos FC',
@@ -343,7 +343,7 @@ export const results : ResultsData = [
       {
         home: 'FC Real Polaco',
         away: 'Realcoholicos FC',
-        homeScorers: ['Rodrigo', 'Rodrigo', 'Rodrigo', 'Liam', 'Liam'],
+        homeScorers: ['Rodrigo', 'Rodrigo', 'Liam', 'Liam', 'Liam'],
         awayScorers: ['Jose Daniel', 'Joel'],
       }
     ],
@@ -388,6 +388,49 @@ export const results : ResultsData = [
         away: 'FC Real Polaco',
         homeScorers: ['Lucho', 'Lucho', 'Kanuto', 'Josue', 'Pedro', 'Pedro'],
         awayScorers: ['Omar'],
+      }
+    ],
+  },
+  {
+    id: 3,
+    name: 'Fecha 3',
+    date: 'Jugado el 27 de Agosto del 2025',
+    matches: [
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: ['Daniel'],
+        awayScorers: ['Lucho', 'Josue', 'Josue'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Pitbull', 'Pitbull', 'Jozua', 'Charly'],
+        awayScorers: ['Daniel'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Josue'],
+        awayScorers: ['Jozua', 'Liam', 'Liam'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: ['Daniel', 'Daniel', 'Daniel', 'Joel'],
+        awayScorers: ['Josue'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Matías'],
+        awayScorers: ['Daniel', 'Russo', 'Russo', 'Joel'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Josue', 'Pedro', 'Lucho'],
+        awayScorers: ['Omar', 'Omar', 'Matías', 'Matías', 'Matías', 'Jozua', 'Liam'],
       }
     ],
   },
