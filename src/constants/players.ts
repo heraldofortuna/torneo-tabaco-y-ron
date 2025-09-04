@@ -256,4 +256,10 @@ export const players: PlayersData  = [
     team: 'FC Real Polaco',
     photo: '',
   },
+  {
+    id: 22,
+    name: 'Mathias',
+    team: 'FC Real Polaco',
+    photo: '',
+  },
 ]
