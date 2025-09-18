@@ -520,4 +520,47 @@ export const results : ResultsData = [
       }
     ],
   },
+  {
+    id: 6,
+    name: 'Fecha 6',
+    date: 'Jugado el 17 de Setiembre del 2025',
+    matches: [
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: [],
+        awayScorers: ['Favio'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: [],
+        awayScorers: [],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: [],
+        awayScorers: ['Jozua', 'Mathias'],
+      },
+      {
+        home: 'Realcoholicos FC',
+        away: 'Red Devils FC',
+        homeScorers: ['Wincho', 'Russo', 'Joel'],
+        awayScorers: ['Josue', 'Kanuto'],
+      },
+      {
+        home: 'FC Real Polaco',
+        away: 'Realcoholicos FC',
+        homeScorers: ['Omar', 'Jozua', 'Liam', 'Liam', 'Liam', 'Mathias'],
+        awayScorers: ['Daniel'],
+      },
+      {
+        home: 'Red Devils FC',
+        away: 'FC Real Polaco',
+        homeScorers: ['Josue', 'Kanuto', 'Kanuto'],
+        awayScorers: ['Jozua', 'Jozua', 'Omar', 'Liam', 'Mathias'],
+      }
+    ],
+  },
 ]
