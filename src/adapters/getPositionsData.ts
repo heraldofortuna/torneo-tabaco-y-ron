@@ -43,7 +43,8 @@ function getPositionsData(results: ResultsData): Array<PositionData & { position
           teams[match.away].won += 1;
           teams[match.away].points += 3;
           teams[match.away].goalsFor += 3;
-          
+          teams[match.away].goalDifference += 3; // ← CORRECCIÓN AQUÍ
+
           teams[match.home].played += 1;
           teams[match.home].lost += 1;
           teams[match.home].goalsAgainst += 3;
@@ -54,6 +55,7 @@ function getPositionsData(results: ResultsData): Array<PositionData & { position
           teams[match.home].won += 1;
           teams[match.home].points += 3;
           teams[match.home].goalsFor += 3;
+          teams[match.home].goalDifference += 3; // ← CORRECCIÓN AQUÍ
           
           teams[match.away].played += 1;
           teams[match.away].lost += 1;
