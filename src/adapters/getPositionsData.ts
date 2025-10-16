@@ -30,6 +30,40 @@ function getPositionsData(results: ResultsData): Array<PositionData & { position
   // Procesar cada partido
   results.forEach((date) => {
     date.matches.forEach((match) => {
+      // Caso 1: Partido no jugado (ambos son null)
+      if (match.homeScorers === null && match.awayScorers === null) {
+        return; // No procesar partidos no jugados
+      }
+
+      // Caso 2: Un equipo no se presentó
+      if (match.homeScorers === null || match.awayScorers === null) {
+        if (match.homeScorers === null && match.awayScorers !== null) {
+          // Equipo local no se presentó, visitante gana 3-0
+          teams[match.away].played += 1;
+          teams[match.away].won += 1;
+          teams[match.away].points += 3;
+          teams[match.away].goalsFor += 3;
+          
+          teams[match.home].played += 1;
+          teams[match.home].lost += 1;
+          teams[match.home].goalsAgainst += 3;
+          teams[match.home].goalDifference -= 3;
+        } else if (match.awayScorers === null && match.homeScorers !== null) {
+          // Equipo visitante no se presentó, local gana 3-0
+          teams[match.home].played += 1;
+          teams[match.home].won += 1;
+          teams[match.home].points += 3;
+          teams[match.home].goalsFor += 3;
+          
+          teams[match.away].played += 1;
+          teams[match.away].lost += 1;
+          teams[match.away].goalsAgainst += 3;
+          teams[match.away].goalDifference -= 3;
+        }
+        return;
+      }
+
+      // Caso 3: Partido normal (ambos arrays tienen datos)
       const homeGoals = match.homeScorers.length;
       const awayGoals = match.awayScorers.length;
 

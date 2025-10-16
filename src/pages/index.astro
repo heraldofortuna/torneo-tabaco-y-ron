@@ -3,6 +3,7 @@ import getBestScorersData from '../adapters/getBestScorersData';
 import getPositionsData from '../adapters/getPositionsData';
 import getScorersData from '../adapters/getScorersData';
 import Podium from '../components/Podium.astro';
+import PrognosticCalculator from '../components/PrognosticCalculator';
 import Table from '../components/Table.astro';
 import { results } from '../constants/results';
 import Layout from '../layouts/Layout.astro';
@@ -22,6 +23,7 @@ const bestScorersData = getBestScorersData(scorersData);
 				headers={["Pos.", "Equipo", "J", "G", "P", "E", "GF", "GC", "DG", "Puntos"]}
 				highlightFirst
 			/>
+			<!-- <PrognosticCalculator client:load results={results} /> -->
 		</section>
 
 		<section class="bg-dark-light flex-1 flex flex-col gap-4 p-4 rounded-lg">

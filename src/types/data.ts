@@ -13,14 +13,15 @@ export interface DayResults {
   id: number;
   name: string;
   date: string;
+  mvp?: string;
   matches: Match[];
 }
 
 interface Match {
   home: string;
   away: string;
-  homeScorers: string[];
-  awayScorers: string[];
+  homeScorers: string[] | null;
+  awayScorers: string[] | null;
 }
 
 export interface PositionData {

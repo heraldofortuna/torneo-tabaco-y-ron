@@ -6,7 +6,7 @@ function getScorersData(results: ResultsData): Array<ScorerData & { position: nu
   results.forEach(fecha => {
     fecha.matches.forEach(match => {
       // Procesar goleadores locales
-      match.homeScorers.forEach(player => {
+      match.homeScorers?.forEach(player => {
         if (!playerData[player]) {
           playerData[player] = { goals: 0, team: match.home };
         }
@@ -14,7 +14,7 @@ function getScorersData(results: ResultsData): Array<ScorerData & { position: nu
       });
 
       // Procesar goleadores visitantes
-      match.awayScorers.forEach(player => {
+      match.awayScorers?.forEach(player => {
         if (!playerData[player]) {
           playerData[player] = { goals: 0, team: match.away };
         }
