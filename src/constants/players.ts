@@ -230,7 +230,7 @@ export const players: PlayersData  = [
     id: 17,
     name: 'Charly',
     team: 'FC Real Polaco',
-    photo: '',
+    photo: '/charly.jpg',
   },
   {
     id: 18,
