@@ -692,8 +692,8 @@ export const results: ResultsData = [
       {
         home: 'FC Coca Juniors',
         away: 'Los Ñaños FC',
-        homeScorers: ['Omar'],
-        awayScorers: ['Jozua', 'Jozua', 'Jozua'],
+        homeScorers: ['Omar', 'Jozua', 'Jozua', 'Jozua'],
+        awayScorers: ['Russo', 'Russo', 'Daniel', 'Jose Daniel'],
       },
     ],
   },
