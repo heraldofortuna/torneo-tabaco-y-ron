@@ -701,6 +701,7 @@ export const results: ResultsData = [
     id: 3,
     name: 'Fecha 3',
     date: 'Miércoles 29 de Octubre del 2025',
+    mvp: 'wincho.png',
     matches: [
       {
         home: 'Los Ñaños FC',
