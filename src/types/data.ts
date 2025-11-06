@@ -13,7 +13,10 @@ export interface DayResults {
   id: number;
   name: string;
   date: string;
-  mvp?: string;
+  mvp?: {
+    name: string;
+    image: string;
+  };
   matches: Match[];
 }
 

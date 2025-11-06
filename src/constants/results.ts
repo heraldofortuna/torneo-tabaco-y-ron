@@ -613,7 +613,10 @@ export const results: ResultsData = [
     id: 1,
     name: 'Fecha 1',
     date: 'Jugado el 16 de Octubre del 2025',
-    mvp: 'josue.png',
+    mvp: {
+      name: 'Josue',
+      image: 'josue.png',
+    },
     matches: [
       {
         home: 'Los Ñaños FC',
@@ -657,7 +660,10 @@ export const results: ResultsData = [
     id: 2,
     name: 'Fecha 2',
     date: 'Miércoles 23 de Octubre del 2025',
-    mvp: 'jozua.jpg',
+    mvp: {
+      name: 'Jozua',
+      image: 'jozua.jpg',
+    },
     matches: [
       {
         home: 'Blue Label FC',
@@ -701,7 +707,10 @@ export const results: ResultsData = [
     id: 3,
     name: 'Fecha 3',
     date: 'Miércoles 29 de Octubre del 2025',
-    mvp: 'wincho.png',
+    mvp: {
+      name: 'Wincho',
+      image: 'wincho.png',
+    },
     matches: [
       {
         home: 'Los Ñaños FC',
@@ -745,6 +754,10 @@ export const results: ResultsData = [
     id: 4,
     name: 'Fecha 4',
     date: 'Miércoles 5 de Noviembre del 2025',
+    mvp: {
+      name: 'Ronaldiño',
+      image: 'ronaldiño.jpg',
+    },
     matches: [
       {
         home: 'Los Ñaños FC',
