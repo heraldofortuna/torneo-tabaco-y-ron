@@ -809,7 +809,7 @@ export const results: ResultsData = [
       {
         home: 'Blue Label FC',
         away: 'FC Coca Juniors',
-        homeScorers: [''],
+        homeScorers: ['Charly', 'Charly', 'Charly'],
         awayScorers: null,
       },
       {
