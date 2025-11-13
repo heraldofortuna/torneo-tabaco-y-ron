@@ -800,43 +800,47 @@ export const results: ResultsData = [
   {
     id: 5,
     name: 'Fecha 5',
-    date: 'Miércoles 13 de Noviembre del 2025',
+    date: 'Miércoles 12 de Noviembre del 2025',
+    mvp: {
+      name: 'Russo',
+      image: 'russo.jpg',
+    },
     matches: [
       {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
         home: 'Blue Label FC',
         away: 'FC Coca Juniors',
-        homeScorers: null,
+        homeScorers: [''],
         awayScorers: null,
       },
       {
         home: 'Los Ñaños FC',
         away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Russo', 'Fideo', 'Jose Daniel', 'Jose Daniel'],
+        awayScorers: ['Charly'],
+      },
+      {
+        home: 'Los Ñaños FC',
+        away: 'FC Coca Juniors',
+        homeScorers: ['Russo', 'Russo', 'Antony'],
+        awayScorers: ['Omar'],
+      },
+      {
+        home: 'FC Coca Juniors',
+        away: 'Blue Label FC',
+        homeScorers: ['Omar', 'Omar'],
+        awayScorers: [],
+      },
+      {
+        home: 'Los Ñaños FC',
+        away: 'Blue Label FC',
+        homeScorers: ['Jose Daniel', 'Jose Daniel', 'Antony'],
+        awayScorers: ['Mathias', 'Mathias', 'Mathias', 'Piero', 'Piero', 'Ronaldiño', 'Ronaldiño'],
+      },
+      {
+        home: 'FC Coca Juniors',
+        away: 'Los Ñaños FC',
+        homeScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Omar'],
+        awayScorers: ['Antony', 'Fideo', 'Fideo', 'Jose Daniel', 'Russo'],
       }
     ],
   },
