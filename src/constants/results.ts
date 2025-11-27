@@ -894,43 +894,47 @@ export const results: ResultsData = [
   {
     id: 7,
     name: 'Fecha 7',
-    date: 'Miércoles 27 de Noviembre del 2025',
+    date: 'Miércoles 26 de Noviembre del 2025',
+    mvp: {
+      name: 'Omar',
+      image: 'omar.jpg',
+    },
     matches: [
       {
         home: 'Los Ñaños FC',
         away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Antony'],
+        awayScorers: ['Omar'],
       },
       {
         home: 'Los Ñaños FC',
         away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Daniel'],
+        awayScorers: ['Josue', 'Pedro', 'Diego'],
       },
       {
         home: 'Blue Label FC',
         away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: [],
+        awayScorers: ['Omar', 'Jozua'],
+      },
+      {
+        home: 'Los Ñaños FC',
+        away: 'FC Coca Juniors',
+        homeScorers: ['Jose Daniel', 'Daniel', 'Kanuto'],
+        awayScorers: ['Liam', 'Liam', 'Omar'],
+      },
+      {
+        home: 'Blue Label FC',
+        away: 'Los Ñaños FC',
+        homeScorers: ['Charly'],
+        awayScorers: ['Daniel', 'Fideo', 'Jose Daniel', 'Jose Daniel'],
+      },
+      {
+        home: 'Blue Label FC',
+        away: 'FC Coca Juniors',
+        homeScorers: ['Charly', 'Pedro', 'Pedro', 'Mathias'],
+        awayScorers: ['Omar', 'Omar', 'Omar', 'Jozua', 'Jozua', 'Jozua', 'Frankito'],
       }
     ],
   },
