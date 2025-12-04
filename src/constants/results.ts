@@ -960,10 +960,10 @@ export const results: ResultsData = [
         awayScorers: ['Charly', 'Piero', 'Piero', 'Diego'],
       },
       {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Jose Daniel', 'Antony', 'Gianpol', 'Gianpol', 'Gianpol'],
-        awayScorers: ['Liam', 'Liam', 'Liam', 'Jozua', 'Frankito', 'Frankito'],
+        home: 'FC Coca Juniors',
+        away: 'Los Ñaños FC',
+        homeScorers: ['Liam', 'Liam', 'Liam', 'Jozua', 'Frankito', 'Frankito'],
+        awayScorers: ['Jose Daniel', 'Antony', 'Gianpol', 'Gianpol', 'Gianpol'],
       },
       {
         home: 'Blue Label FC',
@@ -973,15 +973,15 @@ export const results: ResultsData = [
       },
       {
         home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Gianpol', 'Antony', 'Russo', 'Russo', 'Jose Daniel'],
-        awayScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Frankito', 'Frankito', 'Frankito'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
+        away: 'Blue Label FC',
         homeScorers: ['Gianpol'],
         awayScorers: ['Sebastian', 'Josue', 'Piero', 'Piero'],
+      },
+      {
+        home: 'FC Coca Juniors',
+        away: 'Los Ñaños FC',
+        homeScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Frankito', 'Frankito', 'Frankito'],
+        awayScorers: ['Gianpol', 'Antony', 'Russo', 'Russo', 'Jose Daniel'],
       }
     ],
   },
