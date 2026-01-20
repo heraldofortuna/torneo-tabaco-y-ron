@@ -29,6 +29,15 @@ function getPositionsData(results: ResultsData): Array<PositionData & { position
 
   // Procesar cada partido
   results.forEach((date) => {
+    // Procesar sanciones de la fecha
+    if (date.sanctions) {
+      date.sanctions.forEach((sanction) => {
+        if (teams[sanction.team]) {
+          teams[sanction.team].points += sanction.points; // sanction.points normalmente será -3
+        }
+      });
+    }
+
     date.matches.forEach((match) => {
       // Caso 1: Partido no jugado (ambos son null)
       if (match.homeScorers === null && match.awayScorers === null) {

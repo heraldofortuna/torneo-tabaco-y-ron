@@ -1202,5 +1202,12 @@ export const results: ResultsData = [
         awayScorers: ['Kanuto', 'Liam'],
       }
     ],
+    sanctions: [
+      {
+        team: 'Sport Matozoide',
+        points: -3,
+        reason: 'Pago fuera de tiempo.',
+      },
+    ],
   },
 ];

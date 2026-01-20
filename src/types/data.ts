@@ -18,6 +18,13 @@ export interface DayResults {
     image: string;
   };
   matches: Match[];
+  sanctions?: Sanction[];
+}
+
+export interface Sanction {
+  team: string;
+  points: number; // Normalmente -3
+  reason: string; // Explicación de la sanción
 }
 
 interface Match {
