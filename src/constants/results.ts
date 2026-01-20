@@ -608,552 +608,598 @@ import type { ResultsData } from "../types/data";
 //   },
 // ]
 
+// export const thirdResults: ResultsData = [
+//   {
+//     id: 1,
+//     name: 'Fecha 1',
+//     date: 'Jugado el 16 de Octubre del 2025',
+//     mvp: {
+//       name: 'Josue',
+//       image: 'josue.png',
+//     },
+//     matches: [
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: ['Frankito', 'Frankito', 'Frankito'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Jozua', 'Jozua', 'Omar', 'Omar', 'Frankito', 'Frankito'],
+//         awayScorers: ['Mathias', 'Mathias', 'Josue', 'Josue'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Charly', 'Charly', 'Josue', 'Ronaldinho'],
+//         awayScorers: ['Russo'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Russo', 'Russo', 'Antony'],
+//         awayScorers: ['Frankito', 'Frankito', 'Heraldo', 'Jozua'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Frankito', 'Frankito', 'Omar', 'Omar'],
+//         awayScorers: ['Josue', 'Pedro', 'Pedro'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Pedro', 'Diego', 'Charly', 'Charly', 'Charly'],
+//         awayScorers: ['Russo'],
+//       }
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: 'Fecha 2',
+//     date: 'Miércoles 23 de Octubre del 2025',
+//     mvp: {
+//       name: 'Jozua',
+//       image: 'jozua.jpg',
+//     },
+//     matches: [
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Josue', 'Pedro'],
+//         awayScorers: ['Frankito', 'Jozua', 'Liam'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Antony'],
+//         awayScorers: ['Charly'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: [],
+//         awayScorers: ['Jose Daniel', 'Jose Daniel', 'Russo'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Mathias', 'Mathias', 'Josue'],
+//         awayScorers: ['Jozua'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Daniel', 'Daniel', 'Daniel', 'Russo'],
+//         awayScorers: ['Mathias'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Omar', 'Jozua', 'Jozua', 'Jozua'],
+//         awayScorers: ['Russo', 'Russo', 'Daniel', 'Jose Daniel'],
+//       },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     name: 'Fecha 3',
+//     date: 'Miércoles 29 de Octubre del 2025',
+//     mvp: {
+//       name: 'Wincho',
+//       image: 'wincho.png',
+//     },
+//     matches: [
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Kanuto', 'Kanuto'],
+//         awayScorers: ['Josue', 'Josue', 'Piero', 'Charly'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Wincho', 'Wincho'],
+//         awayScorers: ['Jose Daniel', 'Jose Daniel', 'Antony', 'Kanuto'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Josue', 'Josue', 'Charly'],
+//         awayScorers: ['Jozua'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Jose Daniel', 'Jose Daniel'],
+//         awayScorers: ['Piero', 'Ronaldiño', 'Diego', 'Ronaldiño', 'Mathias', 'Ronaldiño', 'Piero'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Jozua', 'Jozua'],
+//         awayScorers: ['Kanuto', 'Jose Daniel'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Pedro', 'Piero', 'Josue'],
+//         awayScorers: ['Frankito', 'Liam'],
+//       }
+//     ],
+//   },
+//   {
+//     id: 4,
+//     name: 'Fecha 4',
+//     date: 'Miércoles 5 de Noviembre del 2025',
+//     mvp: {
+//       name: 'Ronaldiño',
+//       image: 'ronaldiño.jpg',
+//     },
+//     matches: [
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Antony'],
+//         awayScorers: ['Jozua', 'Omar']
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Omar', 'Omar', 'Frankito', 'Frankito', 'Frankito'],
+//         awayScorers: ['Mathias'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Diego', 'Ronaldiño'],
+//         awayScorers: ['Daniel', 'Daniel', 'Antony', 'Fideo', 'Fideo', 'Fideo'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Antony', 'Daniel', 'Daniel'],
+//         awayScorers: ['Jozua', 'Jozua', 'Omar', 'Frankito', 'Frankito'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Charly', 'Ronaldiño', 'Pedro'],
+//         awayScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Frankito'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Jose Daniel', 'Jose Daniel', 'Antony'],
+//         awayScorers: ['Charly', 'Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Mathias'],
+//       }
+//     ],
+//   },
+//   {
+//     id: 5,
+//     name: 'Fecha 5',
+//     date: 'Miércoles 12 de Noviembre del 2025',
+//     mvp: {
+//       name: 'Russo',
+//       image: 'russo.jpg',
+//     },
+//     matches: [
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Charly', 'Charly', 'Charly'],
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Russo', 'Fideo', 'Jose Daniel', 'Jose Daniel'],
+//         awayScorers: ['Charly'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Russo', 'Russo', 'Antony'],
+//         awayScorers: ['Omar'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Omar', 'Omar'],
+//         awayScorers: [],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Jose Daniel', 'Jose Daniel', 'Antony'],
+//         awayScorers: ['Mathias', 'Mathias', 'Mathias', 'Piero', 'Piero', 'Ronaldiño', 'Ronaldiño'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Omar'],
+//         awayScorers: ['Antony', 'Fideo', 'Fideo', 'Jose Daniel', 'Russo'],
+//       }
+//     ],
+//   },
+//   {
+//     id: 6,
+//     name: 'Fecha 6',
+//     date: 'Miércoles 19 de Noviembre del 2025',
+//     mvp: {
+//       name: 'Ronaldiño',
+//       image: 'ronaldiño.jpg',
+//     },
+//     matches: [
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: [],
+//         awayScorers: ['Mathias'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Jose Daniel', 'Jose Daniel', 'Antony', 'Kanuto', 'Kanuto'],
+//         awayScorers: ['Frankito', 'Frankito', 'Omar', 'Wincho'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Charly', 'Charly'],
+//         awayScorers: ['Frankito', 'Liam', 'Jozua'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Pedro', 'Piero', 'Piero', 'Piero', 'Piero', 'Ronaldiño'],
+//         awayScorers: ['Antony'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Russo', 'Russo', 'Russo', 'Fideo'],
+//         awayScorers: ['Frankito', 'Frankito', 'Omar'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Josue', 'Piero'],
+//         awayScorers: ['Liam', 'Wincho'],
+//       }
+//     ],
+//   },
+//   {
+//     id: 7,
+//     name: 'Fecha 7',
+//     date: 'Miércoles 26 de Noviembre del 2025',
+//     mvp: {
+//       name: 'Omar',
+//       image: 'omar.jpg',
+//     },
+//     matches: [
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Antony'],
+//         awayScorers: ['Omar'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Daniel'],
+//         awayScorers: ['Josue', 'Pedro', 'Diego'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: [],
+//         awayScorers: ['Omar', 'Jozua'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Jose Daniel', 'Daniel', 'Kanuto'],
+//         awayScorers: ['Liam', 'Liam', 'Omar'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Charly'],
+//         awayScorers: ['Daniel', 'Fideo', 'Jose Daniel', 'Jose Daniel'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Charly', 'Pedro', 'Pedro', 'Mathias'],
+//         awayScorers: ['Omar', 'Omar', 'Omar', 'Jozua', 'Jozua', 'Jozua', 'Frankito'],
+//       }
+//     ],
+//   },
+//   {
+//     id: 8,
+//     name: 'Fecha 8',
+//     mvp: {
+//       name: 'Piero',
+//       image: 'piero.png',
+//     },
+//     date: 'Miércoles 3 de Diciembre del 2025',
+//     matches: [
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Josue', 'Piero'],
+//         awayScorers: ['Frankito', 'Frankito'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Gianpol', 'Jose Daniel', 'Jose Daniel'],
+//         awayScorers: ['Charly', 'Piero', 'Piero', 'Diego'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Liam', 'Liam', 'Liam', 'Jozua', 'Frankito', 'Frankito'],
+//         awayScorers: ['Jose Daniel', 'Antony', 'Gianpol', 'Gianpol', 'Gianpol'],
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: ['Piero', 'Piero'],
+//         awayScorers: ['Jozua'],
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: ['Gianpol'],
+//         awayScorers: ['Sebastian', 'Josue', 'Piero', 'Piero'],
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Frankito', 'Frankito', 'Frankito'],
+//         awayScorers: ['Gianpol', 'Antony', 'Russo', 'Russo', 'Jose Daniel'],
+//       }
+//     ],
+//   },
+//   {
+//     id: 9,
+//     name: 'Fecha 9',
+//     date: 'Miércoles 11 de Diciembre del 2025',
+//     matches: [
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       }
+//     ],
+//   },
+//   {
+//     id: 10,
+//     name: 'Fecha 10',
+//     date: 'Miércoles 18 de Diciembre del 2025',
+//     matches: [
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       }
+//     ],
+//   },
+//   {
+//     id: 11,
+//     name: 'Fecha 11',
+//     date: 'Martes 24 de Diciembre del 2025',
+//     matches: [
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       }
+//     ],
+//   },
+//   {
+//     id: 12,
+//     name: 'Fecha 12',
+//     date: 'Domingo 28 de Diciembre del 2026',
+//     matches: [
+//       {
+//         home: 'Blue Label FC',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Blue Label FC',
+//         away: 'FC Coca Juniors',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'Los Ñaños FC',
+//         away: 'Blue Label FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       },
+//       {
+//         home: 'FC Coca Juniors',
+//         away: 'Los Ñaños FC',
+//         homeScorers: null,
+//         awayScorers: null,
+//       }
+//     ],
+//   },
+// ];
+
 export const results: ResultsData = [
   {
     id: 1,
     name: 'Fecha 1',
-    date: 'Jugado el 16 de Octubre del 2025',
-    mvp: {
-      name: 'Josue',
-      image: 'josue.png',
-    },
+    date: 'Jugado el 14 de Enero del 2025',
     matches: [
       {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: ['Frankito', 'Frankito', 'Frankito'],
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: ['Russo', 'Jozua'],
+        awayScorers: ['Frankito', 'Josue'],
       },
       {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: ['Jozua', 'Jozua', 'Omar', 'Omar', 'Frankito', 'Frankito'],
-        awayScorers: ['Mathias', 'Mathias', 'Josue', 'Josue'],
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Ronaldiño'],
+        awayScorers: ['Russo', 'Russo', 'Jozua'],
       },
       {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Charly', 'Charly', 'Josue', 'Ronaldinho'],
-        awayScorers: ['Russo'],
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Frankito'],
+        awayScorers: ['Kanuto', 'Kanuto', 'Liam'],
       },
       {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Russo', 'Russo', 'Antony'],
-        awayScorers: ['Frankito', 'Frankito', 'Heraldo', 'Jozua'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: ['Frankito', 'Frankito', 'Omar', 'Omar'],
-        awayScorers: ['Josue', 'Pedro', 'Pedro'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Pedro', 'Diego', 'Charly', 'Charly', 'Charly'],
-        awayScorers: ['Russo'],
-      }
-    ],
-  },
-  {
-    id: 2,
-    name: 'Fecha 2',
-    date: 'Miércoles 23 de Octubre del 2025',
-    mvp: {
-      name: 'Jozua',
-      image: 'jozua.jpg',
-    },
-    matches: [
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Josue', 'Pedro'],
-        awayScorers: ['Frankito', 'Jozua', 'Liam'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Antony'],
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC ',
+        homeScorers: ['Russo', 'Jozua'],
         awayScorers: ['Charly'],
       },
       {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: [],
-        awayScorers: ['Jose Daniel', 'Jose Daniel', 'Russo'],
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Kanuto', 'Kanuto', 'Ronaldiño', 'Ronaldiño'],
+        awayScorers: ['Antony', 'Jozua'],
       },
       {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Mathias', 'Mathias', 'Josue'],
-        awayScorers: ['Jozua'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Daniel', 'Daniel', 'Daniel', 'Russo'],
-        awayScorers: ['Mathias'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Omar', 'Jozua', 'Jozua', 'Jozua'],
-        awayScorers: ['Russo', 'Russo', 'Daniel', 'Jose Daniel'],
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Fecha 3',
-    date: 'Miércoles 29 de Octubre del 2025',
-    mvp: {
-      name: 'Wincho',
-      image: 'wincho.png',
-    },
-    matches: [
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Kanuto', 'Kanuto'],
-        awayScorers: ['Josue', 'Josue', 'Piero', 'Charly'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Wincho', 'Wincho'],
-        awayScorers: ['Jose Daniel', 'Jose Daniel', 'Antony', 'Kanuto'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Josue', 'Josue', 'Charly'],
-        awayScorers: ['Jozua'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Jose Daniel', 'Jose Daniel'],
-        awayScorers: ['Piero', 'Ronaldiño', 'Diego', 'Ronaldiño', 'Mathias', 'Ronaldiño', 'Piero'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Jozua', 'Jozua'],
-        awayScorers: ['Kanuto', 'Jose Daniel'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Pedro', 'Piero', 'Josue'],
-        awayScorers: ['Frankito', 'Liam'],
-      }
-    ],
-  },
-  {
-    id: 4,
-    name: 'Fecha 4',
-    date: 'Miércoles 5 de Noviembre del 2025',
-    mvp: {
-      name: 'Ronaldiño',
-      image: 'ronaldiño.jpg',
-    },
-    matches: [
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Antony'],
-        awayScorers: ['Jozua', 'Omar']
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: ['Omar', 'Omar', 'Frankito', 'Frankito', 'Frankito'],
-        awayScorers: ['Mathias'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Diego', 'Ronaldiño'],
-        awayScorers: ['Daniel', 'Daniel', 'Antony', 'Fideo', 'Fideo', 'Fideo'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Antony', 'Daniel', 'Daniel'],
-        awayScorers: ['Jozua', 'Jozua', 'Omar', 'Frankito', 'Frankito'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Charly', 'Ronaldiño', 'Pedro'],
-        awayScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Frankito'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Jose Daniel', 'Jose Daniel', 'Antony'],
-        awayScorers: ['Charly', 'Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Mathias'],
-      }
-    ],
-  },
-  {
-    id: 5,
-    name: 'Fecha 5',
-    date: 'Miércoles 12 de Noviembre del 2025',
-    mvp: {
-      name: 'Russo',
-      image: 'russo.jpg',
-    },
-    matches: [
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Charly', 'Charly', 'Charly'],
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Russo', 'Fideo', 'Jose Daniel', 'Jose Daniel'],
-        awayScorers: ['Charly'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Russo', 'Russo', 'Antony'],
-        awayScorers: ['Omar'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: ['Omar', 'Omar'],
-        awayScorers: [],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Jose Daniel', 'Jose Daniel', 'Antony'],
-        awayScorers: ['Mathias', 'Mathias', 'Mathias', 'Piero', 'Piero', 'Ronaldiño', 'Ronaldiño'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Omar'],
-        awayScorers: ['Antony', 'Fideo', 'Fideo', 'Jose Daniel', 'Russo'],
-      }
-    ],
-  },
-  {
-    id: 6,
-    name: 'Fecha 6',
-    date: 'Miércoles 19 de Noviembre del 2025',
-    mvp: {
-      name: 'Ronaldiño',
-      image: 'ronaldiño.jpg',
-    },
-    matches: [
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: [],
-        awayScorers: ['Mathias'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Jose Daniel', 'Jose Daniel', 'Antony', 'Kanuto', 'Kanuto'],
-        awayScorers: ['Frankito', 'Frankito', 'Omar', 'Wincho'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Charly', 'Charly'],
-        awayScorers: ['Frankito', 'Liam', 'Jozua'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Pedro', 'Piero', 'Piero', 'Piero', 'Piero', 'Ronaldiño'],
-        awayScorers: ['Antony'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Russo', 'Russo', 'Russo', 'Fideo'],
-        awayScorers: ['Frankito', 'Frankito', 'Omar'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Josue', 'Piero'],
-        awayScorers: ['Liam', 'Wincho'],
-      }
-    ],
-  },
-  {
-    id: 7,
-    name: 'Fecha 7',
-    date: 'Miércoles 26 de Noviembre del 2025',
-    mvp: {
-      name: 'Omar',
-      image: 'omar.jpg',
-    },
-    matches: [
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Antony'],
-        awayScorers: ['Omar'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Daniel'],
-        awayScorers: ['Josue', 'Pedro', 'Diego'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: [],
-        awayScorers: ['Omar', 'Jozua'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Jose Daniel', 'Daniel', 'Kanuto'],
-        awayScorers: ['Liam', 'Liam', 'Omar'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Charly'],
-        awayScorers: ['Daniel', 'Fideo', 'Jose Daniel', 'Jose Daniel'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Charly', 'Pedro', 'Pedro', 'Mathias'],
-        awayScorers: ['Omar', 'Omar', 'Omar', 'Jozua', 'Jozua', 'Jozua', 'Frankito'],
-      }
-    ],
-  },
-  {
-    id: 8,
-    name: 'Fecha 8',
-    mvp: {
-      name: 'Piero',
-      image: 'piero.png',
-    },
-    date: 'Miércoles 3 de Diciembre del 2025',
-    matches: [
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Josue', 'Piero'],
-        awayScorers: ['Frankito', 'Frankito'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Gianpol', 'Jose Daniel', 'Jose Daniel'],
-        awayScorers: ['Charly', 'Piero', 'Piero', 'Diego'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Liam', 'Liam', 'Liam', 'Jozua', 'Frankito', 'Frankito'],
-        awayScorers: ['Jose Daniel', 'Antony', 'Gianpol', 'Gianpol', 'Gianpol'],
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: ['Piero', 'Piero'],
-        awayScorers: ['Jozua'],
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: ['Gianpol'],
-        awayScorers: ['Sebastian', 'Josue', 'Piero', 'Piero'],
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: ['Jozua', 'Jozua', 'Jozua', 'Jozua', 'Frankito', 'Frankito', 'Frankito'],
-        awayScorers: ['Gianpol', 'Antony', 'Russo', 'Russo', 'Jose Daniel'],
-      }
-    ],
-  },
-  {
-    id: 9,
-    name: 'Fecha 9',
-    date: 'Miércoles 11 de Diciembre del 2025',
-    matches: [
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      }
-    ],
-  },
-  {
-    id: 10,
-    name: 'Fecha 10',
-    date: 'Miércoles 18 de Diciembre del 2025',
-    matches: [
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      }
-    ],
-  },
-  {
-    id: 11,
-    name: 'Fecha 11',
-    date: 'Martes 24 de Diciembre del 2025',
-    matches: [
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      }
-    ],
-  },
-  {
-    id: 12,
-    name: 'Fecha 12',
-    date: 'Domingo 28 de Diciembre del 2026',
-    matches: [
-      {
-        home: 'Blue Label FC',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Blue Label FC',
-        away: 'FC Coca Juniors',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Los Ñaños FC',
-        away: 'Blue Label FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Coca Juniors',
-        away: 'Los Ñaños FC',
-        homeScorers: null,
-        awayScorers: null,
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Charly', 'Charly', 'Frankito', 'Josue'],
+        awayScorers: ['Kanuto', 'Liam'],
       }
     ],
   },
