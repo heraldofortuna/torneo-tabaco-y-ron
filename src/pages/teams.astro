@@ -1,9 +1,130 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
+
+interface Player {
+  name: string;
+  level: number;
+  photo: string;
+}
+
+interface Team {
+  name: string;
+  players: Player[];
+}
+
+const teams: Team[] = [
+  {
+    name: 'FC Nueva generación',
+    players: [
+      { name: 'Jozua', level: 4.0, photo: '/jozua.jpg' },
+      { name: 'Ruzzo', level: 3.5, photo: '/russo.jpg' },
+      { name: 'Kochy', level: 3.5, photo: '/default.jpg' },
+      { name: 'Jose Daniel', level: 3.0, photo: '/default.jpg' },
+      { name: 'Antony', level: 3.0, photo: '/default.jpg' },
+      { name: 'Wincho', level: 2.5, photo: '/wincho.png' },
+      { name: 'Favio', level: 2.0, photo: '/default.jpg' },
+    ],
+  },
+  {
+    name: 'Sport Matozoide',
+    players: [
+      { name: 'Omar', level: 4.0, photo: '/omar.jpg' },
+      { name: 'Kanuto', level: 3.5, photo: '/default.jpg' },
+      { name: 'Mathias', level: 3.0, photo: '/default.jpg' },
+      { name: 'Ronaldinho', level: 3.0, photo: '/ronaldiño.jpg' },
+      { name: 'Liam', level: 3.0, photo: '/default.jpg' },
+      { name: 'Heraldo', level: 2.5, photo: '/default.jpg' },
+      { name: 'Sebastian', level: 2.5, photo: '/default.jpg' },
+    ],
+  },
+  {
+    name: 'TEMETO TABA FC',
+    players: [
+      { name: 'Charly', level: 3.5, photo: '/charly.jpg' },
+      { name: 'Josue', level: 3.5, photo: '/josue.png' },
+      { name: 'Frankhy', level: 3.5, photo: '/frankito.jpg' },
+      { name: 'Piero', level: 3.5, photo: '/piero.png' },
+      { name: 'Geampierre', level: 3.0, photo: '/default.jpg' },
+      { name: 'Pedro', level: 2.5, photo: '/default.jpg' },
+      { name: 'Lucho', level: 2.0, photo: '/default.jpg' },
+    ],
+  },
+];
+
 ---
 
 <Layout>
-  <main class="flex flex-col gap-6 pb-6">
+  <main class="flex flex-col gap-8 pb-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {teams.map((team) => (
+        <div class="bg-dark-light rounded-lg p-6 flex flex-col gap-4">
+          <h2 class="lg:text-lg font-semibold text-center mb-4 text-yellow-500">{team.name}</h2>
+          
+          <div class="flex flex-col gap-4">
+            {team.players.map((player) => {
+              const fullStars = Math.floor(player.level);
+              const hasHalfStar = player.level % 1 !== 0;
+              const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+              
+              return (
+                <div class="flex flex-col items-center gap-2 p-3 bg-dark rounded-lg hover:bg-dark-light transition-colors">
+                  <img 
+                    src={player.photo} 
+                    alt={player.name}
+                    class="w-20 h-20 rounded-full object-cover border-2 border-yellow-500/30 mb-2"
+                  />
+                  <div class="flex items-center gap-0.5 text-xl">
+                    {Array.from({ length: fullStars }).map(() => (
+                      <span class="text-yellow-400">★</span>
+                    ))}
+                    {hasHalfStar && (
+                      <span class="half-star-wrapper">
+                        <span class="half-star-filled">★</span>
+                        <span class="half-star-empty">☆</span>
+                      </span>
+                    )}
+                    {Array.from({ length: emptyStars }).map(() => (
+                      <span class="text-gray-600">☆</span>
+                    ))}
+                  </div>
+                  <div class="text-sm text-gray-300 font-medium">{player.name}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
   </main>
 </Layout>
+
+<style>
+  .half-star-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+  
+  .half-star-filled {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1em;
+    overflow: hidden;
+    color: #fbbf24;
+    white-space: nowrap;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  
+  .half-star-empty {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1em;
+    color: #6b7280;
+  }
+</style>
+

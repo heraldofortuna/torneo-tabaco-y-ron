@@ -39,11 +39,7 @@ const allSanctions = results
 					<div class="space-y-2">
 						{allSanctions.map((sanction) => (
 							<div class="text-xs sm:text-sm text-gray-300">
-								<span class="font-medium text-red-400">{sanction.team}</span>
-								<span class="mx-2">-</span>
-								<span class="font-medium text-red-400">{sanction.points} puntos</span>
-								<span class="mx-2">({sanction.dateName}: {sanction.date})</span>
-								<p class="text-gray-400 mt-1 ml-0 sm:ml-8">{sanction.reason}</p>
+								<span class="font-medium text-red-400">{sanction.points} puntos a {sanction.team} en la fecha {sanction.dateName} por {sanction.reason}</span>
 							</div>
 						))}
 					</div>

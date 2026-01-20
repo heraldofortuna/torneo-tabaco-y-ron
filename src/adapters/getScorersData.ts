@@ -5,20 +5,26 @@ function getScorersData(results: ResultsData): Array<ScorerData & { position: nu
 
   results.forEach(fecha => {
     fecha.matches.forEach(match => {
-      // Procesar goleadores locales
+      // Procesar goleadores locales (filtrar strings vacíos)
       match.homeScorers?.forEach(player => {
-        if (!playerData[player]) {
-          playerData[player] = { goals: 0, team: match.home };
+        // Ignorar strings vacíos que indican goles sin goleador confirmado
+        if (player && player.trim() !== '') {
+          if (!playerData[player]) {
+            playerData[player] = { goals: 0, team: match.home };
+          }
+          playerData[player].goals += 1;
         }
-        playerData[player].goals += 1;
       });
 
-      // Procesar goleadores visitantes
+      // Procesar goleadores visitantes (filtrar strings vacíos)
       match.awayScorers?.forEach(player => {
-        if (!playerData[player]) {
-          playerData[player] = { goals: 0, team: match.away };
+        // Ignorar strings vacíos que indican goles sin goleador confirmado
+        if (player && player.trim() !== '') {
+          if (!playerData[player]) {
+            playerData[player] = { goals: 0, team: match.away };
+          }
+          playerData[player].goals += 1;
         }
-        playerData[player].goals += 1;
       });
     });
   });
