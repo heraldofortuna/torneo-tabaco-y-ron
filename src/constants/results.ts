@@ -1210,4 +1210,47 @@ export const results: ResultsData = [
       },
     ],
   },
+    {
+    id: 2,
+    name: 'Fecha 2',
+    date: 'Jugado el 21 de Enero del 2025',
+    matches: [
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Charly', 'Frankito'],
+        awayScorers: ['Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Omar'],
+      },
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Ronaldiño', 'Ronaldiño', 'Ronaldiño', 'Kanuto'],
+        awayScorers: ['Kochy', 'Kochy'],
+      },
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: ['Wincho', 'Jozua'],
+        awayScorers: ['Frankito', 'Frankito', 'Geampierre'],
+      },
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Frankito'],
+        awayScorers: ['Ronaldiño', 'Ronaldiño', 'Ronaldiño'],
+      },
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Omar', 'Omar', 'Omar', 'Kanuto', 'Kanuto', 'Ronaldiño'],
+        awayScorers: ['Charly'],
+      },
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: ['Jozua', 'Kochy', 'Kochy', 'Kochy', 'Russo', 'Russo', 'Antony'],
+        awayScorers: ['Frankito', 'Frankito', 'Geampierre', 'Geampierre'],
+      }
+    ],
+  },
 ];
