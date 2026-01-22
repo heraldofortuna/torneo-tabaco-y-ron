@@ -329,7 +329,7 @@ export const players: PlayersData  = [
   },
   {
     id: 11,
-    name: 'Ronaldinho',
+    name: 'Ronaldiño',
     team: 'Sport Matozoide',
     photo: '/ronaldiño.jpg',
   },
@@ -366,7 +366,7 @@ export const players: PlayersData  = [
   },
   {
     id: 17,
-    name: 'Frankhy',
+    name: 'Frankito',
     team: 'TEMETO TABA FC',
     photo: '/frankito.jpg',
   },

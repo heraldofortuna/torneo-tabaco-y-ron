@@ -633,7 +633,7 @@ import type { ResultsData } from "../types/data";
 //       {
 //         home: 'Blue Label FC',
 //         away: 'Los Ñaños FC',
-//         homeScorers: ['Charly', 'Charly', 'Josue', 'Ronaldinho'],
+//         homeScorers: ['Charly', 'Charly', 'Josue', 'Ronaldiño'],
 //         awayScorers: ['Russo'],
 //       },
 //       {
