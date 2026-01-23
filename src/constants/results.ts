@@ -1236,14 +1236,14 @@ export const results: ResultsData = [
       {
         home: 'TEMETO TABA FC',
         away: 'Sport Matozoide',
-        homeScorers: ['Frankito'],
-        awayScorers: ['Ronaldiño', 'Ronaldiño', 'Ronaldiño'],
+        homeScorers: ['Charly'],
+        awayScorers: ['Omar', 'Omar', 'Omar', 'Kanuto', 'Kanuto', 'Ronaldiño'],
       },
       {
         home: 'Sport Matozoide',
         away: 'FC Nueva generación',
-        homeScorers: ['Omar', 'Omar', 'Omar', 'Kanuto', 'Kanuto', 'Ronaldiño'],
-        awayScorers: ['Charly'],
+        homeScorers: ['Omar', 'Omar', 'Ronaldiño', 'Mathias'],
+        awayScorers: ['Kochy', 'Jozua', 'Jozua'],
       },
       {
         home: 'FC Nueva generación',
