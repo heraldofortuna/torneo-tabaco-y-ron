@@ -1210,7 +1210,7 @@ export const results: ResultsData = [
       },
     ],
   },
-    {
+  {
     id: 2,
     name: 'Fecha 2',
     date: 'Jugado el 21 de Enero del 2025',
@@ -1250,6 +1250,49 @@ export const results: ResultsData = [
         away: 'TEMETO TABA FC',
         homeScorers: ['Jozua', 'Kochy', 'Kochy', 'Kochy', 'Russo', 'Russo', 'Antony'],
         awayScorers: ['Frankito', 'Frankito', 'Geampierre', 'Geampierre'],
+      }
+    ],
+  },
+  {
+    id: 3,
+    name: 'Fecha 3',
+    date: 'Jugado el 28 de Enero del 2025',
+    matches: [
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Ronaldiño', 'Ronaldiño'],
+        awayScorers: ['Antony'],
+      },
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: [],
+        awayScorers: ['Geampierre', 'Frankito'],
+      },
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Frankito', 'Frankito'],
+        awayScorers: ['Liam', 'Liam', 'Ronaldiño', 'Ronaldiño', 'Omar'],
+      },
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Ronaldiño'],
+        awayScorers: ['Antony'],
+      },
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: [],
+        awayScorers: ['Geampierre', 'Geampierre', 'Lucho', 'Frankito'],
+      },
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Geampierre', 'Geampierre', 'Frankito', 'Frankito'],
+        awayScorers: ['Liam'],
       }
     ],
   },
