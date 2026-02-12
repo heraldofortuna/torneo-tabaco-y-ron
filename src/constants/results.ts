@@ -1354,7 +1354,7 @@ export const results: ResultsData = [
         home: 'Sport Matozoide',
         away: 'FC Nueva generación',
         homeScorers: ['Kanuto', 'Kanuto', 'Kanuto'],
-        awayScorers: ['Antony', 'Russo', 'Russo', 'Russo', 'Jozua'],
+        awayScorers: ['Antony', 'Russo', 'Russo', 'Russo', 'Russo', 'Jozua'],
       },
       {
         home: 'FC Nueva generación',
