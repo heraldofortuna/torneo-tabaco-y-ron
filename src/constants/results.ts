@@ -1382,4 +1382,47 @@ export const results: ResultsData = [
       }
     ],
   },
+  {
+    id: 6,
+    name: 'Fecha 6',
+    date: 'Jugado el 18 de Febrero del 2026',
+    matches: [
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Ronaldiño', 'Ronaldiño', 'Mathias', 'Ronaldiño'],
+        awayScorers: ['Antony', 'Antony', 'Piby', 'Piby'],
+      },
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: [],
+        awayScorers: ['Charly'],
+      },
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: [],
+        awayScorers: ['Omar'],
+      },
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Ronaldiño', 'Ronaldiño', 'Kanuto'],
+        awayScorers: ['Jozua'],
+      },
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: ['Antony', 'Antony', 'Antony', 'Jozua'],
+        awayScorers: [],
+      },
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Charly', 'Pedro'],
+        awayScorers: ['Ronaldiño', 'Omar', 'Liam', 'Omar'], 
+      }
+    ],
+  },
 ];
