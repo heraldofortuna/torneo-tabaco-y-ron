@@ -1403,7 +1403,7 @@ export const results: ResultsData = [
         home: 'TEMETO TABA FC',
         away: 'Sport Matozoide',
         homeScorers: [],
-        awayScorers: ['Omar'],
+        awayScorers: ['Omar', 'Liam'],
       },
       {
         home: 'Sport Matozoide',
