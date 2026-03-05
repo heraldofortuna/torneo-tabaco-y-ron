@@ -1427,7 +1427,7 @@ export const results: ResultsData = [
   },
   {
     id: 7,
-    name: 'Fecha 8',
+    name: 'Fecha 7',
     date: 'Jugado el 04 de Marzo del 2026',
     matches: [
       {
