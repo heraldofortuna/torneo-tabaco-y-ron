@@ -1451,8 +1451,8 @@ export const results: ResultsData = [
       {
         home: 'FC Nueva generación',
         away: 'TEMETO TABA FC',
-        homeScorers: ['Jozua'],
-        awayScorers: ['Geampierre', 'Antony C'],
+        homeScorers: ['Jozua', 'Antony C'],
+        awayScorers: ['Geampierre'],
       },
       {
         home: 'TEMETO TABA FC',
