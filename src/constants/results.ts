@@ -1425,4 +1425,47 @@ export const results: ResultsData = [
       }
     ],
   },
+  {
+    id: 7,
+    name: 'Fecha 8',
+    date: 'Jugado el 04 de Marzo del 2026',
+    matches: [
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: [],
+        awayScorers: ['Josue'],
+      },
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Geampierre', 'Frankito'],
+        awayScorers: ['Omar', 'Ronaldiño'],
+      },
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Kanuto', 'Omar', 'Liam'],
+        awayScorers: ['Antony', 'Jozua'],
+      },
+      {
+        home: 'FC Nueva generación',
+        away: 'TEMETO TABA FC',
+        homeScorers: ['Jozua'],
+        awayScorers: ['Geampierre', 'Antony C'],
+      },
+      {
+        home: 'TEMETO TABA FC',
+        away: 'Sport Matozoide',
+        homeScorers: ['Frankito', 'Frankito', ''],
+        awayScorers: ['Ronaldiño', 'Ronaldiño', 'Kanuto', 'Mathias'],
+      },
+      {
+        home: 'Sport Matozoide',
+        away: 'FC Nueva generación',
+        homeScorers: ['Kanuto'],
+        awayScorers: ['Jozua', 'Jozua', 'Jozua', 'Antony', 'Antony'], 
+      }
+    ],
+  },
 ];
