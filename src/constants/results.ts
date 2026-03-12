@@ -1475,7 +1475,7 @@ export const results: ResultsData = [
     matches: [
       {
         home: 'TEMETO TABA FC',
-        away: 'Sport Matozoide ',
+        away: 'Sport Matozoide',
         homeScorers: ['Josue', 'Josue', 'Charly'],
         awayScorers: ['Omar', 'Omar', 'Omar', 'Omar'],
       },
