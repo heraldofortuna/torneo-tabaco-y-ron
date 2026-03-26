@@ -1581,14 +1581,14 @@ export const results: ResultsData = [
       {
         home: 'Sport Matozoide',
         away: 'FC Nueva generación',
-        homeScorers: ['Kanuto', 'Kanuto', 'Omar', 'Omar', 'Jozua'],
-        awayScorers: ['Ronaldiño', 'Piby'],
+        homeScorers: ['Kanuto', 'Kanuto', 'Omar', 'Omar', 'Ronaldiño'],
+        awayScorers: ['Jozua', 'Piby'],
       },
       {
         home: 'FC Nueva generación',
         away: 'TEMETO TABA FC',
-        homeScorers: ['Charly', 'Wincho', 'Wincho', 'Josue'],
-        awayScorers: ['Frankito', 'Frankito', 'Jozua', 'Jozua', 'Geampierre'], 
+        homeScorers: ['Jozua', 'Wincho', 'Wincho', 'Jozua'],
+        awayScorers: ['Frankito', 'Frankito', 'Charly', 'Josue', 'Geampierre'], 
       },
       {
         home: 'TEMETO TABA FC',
@@ -1599,8 +1599,8 @@ export const results: ResultsData = [
       {
         home: 'Sport Matozoide',
         away: 'FC Nueva generación',
-        homeScorers: ['Kanuto', 'Piby', 'Mathias', 'Mathias'],
-        awayScorers: ['Omar'],
+        homeScorers: ['Kanuto', 'Omar', 'Mathias', 'Mathias'],
+        awayScorers: ['Piby'],
       },
     ],
   },
