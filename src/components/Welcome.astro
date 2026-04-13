@@ -1,4 +1,6 @@
 ---
+import Selector from "./Selector";
+
 const currentPath = Astro.url.pathname === "/" 
   ? "/" 
   : Astro.url.pathname.replace(/\/$/, '');
@@ -14,6 +16,8 @@ const menuItems = [
 <header>
   <div class="flex flex-col items-center justify-center gap-4 py-6">
     <img src="/logo.png" alt="Logo" class="mx-auto w-24 h-24" />
+
+    <Selector client:load />
 
     <ul class="bg-dark-light w-full flex items-center justify-center text-sm text-gray font-semibold rounded-lg overflow-hidden">
       {menuItems.map((item, index) => {

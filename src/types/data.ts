@@ -51,3 +51,8 @@ export interface ScorerData {
   goals: number;
   team: string;
 }
+
+export interface TournamentOption {
+  id: string;
+  label: string;
+}

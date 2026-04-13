@@ -1,61 +1,22 @@
 ---
-import getBestScorersData from '../adapters/getBestScorersData';
-import getPositionsData from '../adapters/getPositionsData';
-import getScorersData from '../adapters/getScorersData';
-import Podium from '../components/Podium.astro';
-import PrognosticCalculator from '../components/PrognosticCalculator';
-import Table from '../components/Table.astro';
-import { results } from '../constants/results';
+import TournamentTables from '../components/TournamentTables';
+import {
+  currentResults,
+  results1,
+  results2,
+  results3,
+} from '../constants/results';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 
-const positionsData = getPositionsData(results);
-const scorersData = getScorersData(results);
-const bestScorersData = getBestScorersData(scorersData);
-
-// Recolectar todas las sanciones de todas las fechas
-const allSanctions = results
-  .flatMap((date) => 
-    date.sanctions?.map((sanction) => ({
-      ...sanction,
-      dateName: date.name,
-      date: date.date,
-    })) || []
-  );
+const tournaments = {
+  "1": results1,
+  "2": results2,
+  "3": results3,
+  current: currentResults,
+};
 ---
 
 <Layout>
-	<div class="flex flex-col md:flex-row md:flex-wrap gap-6 pb-6">
-		<section class="bg-dark-light flex-1 flex flex-col gap-4 p-4 rounded-lg">
-			<h2 class="font-semibold">Tabla de posiciones</h2>
-			<Table
-				data={positionsData}
-				headers={["Pos.", "Equipo", "J", "G", "P", "E", "GF", "GC", "DG", "Puntos"]}
-				highlightFirst
-			/>
-			{allSanctions.length > 0 && (
-				<div class="mt-4 pt-4 border-t border-white/10">
-					<h3 class="font-semibold text-sm mb-3 text-yellow-500">Sanciones</h3>
-					<div class="space-y-2">
-						{allSanctions.map((sanction) => (
-							<div class="text-xs sm:text-sm text-gray-300">
-								<span class="font-medium text-red-400">{sanction.points} puntos a {sanction.team} en la fecha {sanction.dateName} por {sanction.reason}</span>
-							</div>
-						))}
-					</div>
-				</div>
-			)}
-		</section>
-
-		<section class="bg-dark-light flex-1 flex flex-col gap-4 p-4 rounded-lg">
-			<h2 class="font-semibold">Tabla de goleadores</h2>
-			<Table
-				data={scorersData}
-				headers={["Pos.", "Jugador", "Goles", "Equipo"]}
-				highlightFirst
-				maxRows={10}
-			/>
-			<Podium winners={bestScorersData} />
-		</section>
-	</div>
+  <TournamentTables client:load tournaments={tournaments} />
 </Layout>

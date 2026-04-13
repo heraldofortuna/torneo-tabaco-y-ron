@@ -9,3 +9,16 @@
 
   --font-inter: Inter, sans-serif;
 }
+
+@keyframes podium-bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-podium-bounce {
+  animation: podium-bounce 1s infinite alternate;
+}
