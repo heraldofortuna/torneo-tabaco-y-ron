@@ -1,9 +1,11 @@
-import { currentPlayers } from "../constants/players";
-import type { ScorerData } from "../types/data";
+import type { PlayersData, ScorerData } from "../types/data";
 
-function getBestScorersData(scorersData: Array<ScorerData & { position: number }>): any {
+function getBestScorersData(
+  scorersData: Array<ScorerData & { position: number }>,
+  players: PlayersData,
+): any {
   const bestScorers = scorersData.slice(0, 3).map(scorer => {
-    const photo = currentPlayers.find(player => player.name === scorer.name)?.photo || '/default.jpg';
+    const photo = players.find(player => player.name === scorer.name)?.photo || '/default.jpg';
 
     return {
       ...scorer,

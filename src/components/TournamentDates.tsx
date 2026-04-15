@@ -4,10 +4,10 @@ import {
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
 } from "../constants/tournaments";
-import type { ResultsData } from "../types/data";
+import type { PlayersData, ResultsData } from "../types/data";
 
 interface TournamentDatesProps {
-  tournaments: Record<string, ResultsData>;
+  tournaments: Record<string, { results: ResultsData; players: PlayersData }>;
 }
 
 function readStoredId(): string {
@@ -34,10 +34,10 @@ const TournamentDates: React.FC<TournamentDatesProps> = ({ tournaments }) => {
       window.removeEventListener(TOURNAMENT_CHANGE_EVENT, handler as EventListener);
   }, [tournaments]);
 
-  const results = useMemo(
-    () => tournaments[tournamentId] ?? tournaments.current,
-    [tournamentId, tournaments],
-  );
+  const results = useMemo(() => {
+    const bundle = tournaments[tournamentId] ?? tournaments.current;
+    return bundle.results;
+  }, [tournamentId, tournaments]);
 
   return (
     <main className="flex flex-col gap-6 pb-6">

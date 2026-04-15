@@ -1,20 +1,10 @@
 ---
 import TournamentDates from '../components/TournamentDates';
-import {
-  currentResults,
-  results1,
-  results2,
-  results3,
-} from '../constants/results';
+import { tournamentsDataMap } from '../constants/tournaments';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 
-const tournaments = {
-  "1": results1,
-  "2": results2,
-  "3": results3,
-  current: currentResults,
-};
+const tournaments = tournamentsDataMap();
 ---
 
 <Layout>

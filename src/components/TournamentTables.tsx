@@ -7,12 +7,12 @@ import {
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
 } from "../constants/tournaments";
-import type { ResultsData } from "../types/data";
+import type { PlayersData, ResultsData } from "../types/data";
 import Podium from "./Podium";
 import Table from "./Table";
 
 interface TournamentTablesProps {
-  tournaments: Record<string, ResultsData>;
+  tournaments: Record<string, { results: ResultsData; players: PlayersData }>;
 }
 
 function readStoredId(): string {
@@ -32,20 +32,23 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
   useEffect(() => {
     const handler = (e: Event) => {
       const id = (e as CustomEvent<string>).detail;
-      if (id in tournaments) setTournamentId(id);
+      if (id in tournaments) {
+        setTournamentId(id);
+      }
     };
     window.addEventListener(TOURNAMENT_CHANGE_EVENT, handler as EventListener);
     return () =>
       window.removeEventListener(TOURNAMENT_CHANGE_EVENT, handler as EventListener);
   }, [tournaments]);
 
-  const results = tournaments[tournamentId] ?? tournaments.current;
+  const bundle = tournaments[tournamentId] ?? tournaments.current;
+  const { results, players } = bundle;
 
   const positionsData = useMemo(() => getPositionsData(results), [results]);
   const scorersData = useMemo(() => getScorersData(results), [results]);
   const bestScorersData = useMemo(
-    () => getBestScorersData(scorersData),
-    [scorersData],
+    () => getBestScorersData(scorersData, players),
+    [scorersData, players],
   );
 
   const allSanctions = useMemo(

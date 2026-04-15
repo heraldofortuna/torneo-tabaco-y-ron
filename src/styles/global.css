@@ -22,3 +22,30 @@
 .animate-podium-bounce {
   animation: podium-bounce 1s infinite alternate;
 }
+
+.half-star-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+}
+
+.half-star-filled {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  overflow: hidden;
+  color: #fbbf24;
+  white-space: nowrap;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.half-star-empty {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  color: #6b7280;
+}
