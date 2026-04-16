@@ -678,7 +678,7 @@ const currentPlayers: PlayersData  = [
     id: 21,
     name: 'Mathias',
     team: 'Purito Palao FC',
-    photo: '/mathias.jpg',
+    photo: '/default.jpg'
   },
   {
     id: 22,
