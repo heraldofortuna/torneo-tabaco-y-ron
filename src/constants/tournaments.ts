@@ -617,7 +617,7 @@ const currentPlayers: PlayersData  = [
     id: 11,
     name: 'Frankito',
     team: 'Temetotaba FC',
-    photo: '/default.jpg',
+    photo: '/frankito.jpg',
   },
   {
     id: 12,
@@ -678,7 +678,7 @@ const currentPlayers: PlayersData  = [
     id: 21,
     name: 'Mathias',
     team: 'Purito Palao FC',
-    photo: '/default.jpg',
+    photo: '/mathias.jpg',
   },
   {
     id: 22,
@@ -703,7 +703,7 @@ const currentPlayers: PlayersData  = [
     id: 25,
     name: 'Jozua',
     team: 'FC Pajagoza',
-    photo: '/default.jpg',
+    photo: '/jozua.jpg',
   },
   {
     id: 26,
