@@ -53,14 +53,13 @@ const CapturePngButton: React.FC<CapturePngButtonProps> = ({
       type="button"
       onClick={onClick}
       disabled={disabled || busy}
-      className="shrink-0 inline-flex items-center gap-1.5 rounded-md border border-white/15 bg-dark px-2.5 py-1.5 text-xs font-medium text-gray-200 transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-[#A9DFD8]/50 cursor-pointer"
+      className="shrink-0 inline-flex items-center cursor-pointer"
       aria-label={label}
       title={title}
     >
       <span className="text-sm" aria-hidden>
         📷
       </span>
-      {busy ? "Generando…" : "PNG"}
     </button>
   );
 };

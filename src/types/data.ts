@@ -5,7 +5,6 @@ export interface Player {
   name: string;
   team: string;
   photo: string;
-  /** Opcional: estrellas en Equipos (por defecto 2.5 si no viene) */
   level?: number;
 }
 

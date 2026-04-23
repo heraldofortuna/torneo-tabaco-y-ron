@@ -17,7 +17,6 @@ function readStoredId(): string {
   return valid && raw ? raw : "current";
 }
 
-/** Nivel por defecto para estrellas cuando no hay dato en la plantilla */
 const DEFAULT_LEVEL = 2.5;
 
 function groupPlayersByTeam(players: PlayersData): { name: string; players: Player[] }[] {
@@ -29,7 +28,11 @@ function groupPlayersByTeam(players: PlayersData): { name: string; players: Play
   }
   return Array.from(map.entries()).map(([name, pls]) => ({
     name,
-    players: pls,
+    players: [...pls].sort((a, b) => {
+      const levelA = a.level ?? DEFAULT_LEVEL;
+      const levelB = b.level ?? DEFAULT_LEVEL;
+      return levelB - levelA || a.name.localeCompare(b.name);
+    }),
   }));
 }
 
@@ -58,15 +61,15 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
   const teams = useMemo(() => groupPlayersByTeam(players), [players]);
 
   return (
-    <main className="flex flex-col gap-8 pb-6">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <main className="flex flex-col gap-8">
+      <div className="flex flex-col gap-6">
         {teams.map((team) => (
           <div key={team.name} className="bg-dark-light rounded-lg p-6 flex flex-col gap-4">
             <h2 className="lg:text-lg font-semibold text-center mb-4 text-yellow-500">
               {team.name}
             </h2>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-wrap gap-4">
               {team.players.map((player) => {
                 const level = player.level ?? DEFAULT_LEVEL;
                 const fullStars = Math.floor(level);
@@ -77,7 +80,7 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
                 return (
                   <div
                     key={player.id}
-                    className="flex flex-col items-center gap-2 p-3 bg-dark rounded-lg hover:bg-dark-light transition-colors"
+                    className="min-w-full lg:min-w-36 flex flex-col items-center gap-2 p-3 bg-dark rounded-lg hover:bg-dark-light border border-transparent hover:border-yellow-500/30 transition-colors cursor-pointer"
                   >
                     <img
                       src={photo}
