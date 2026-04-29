@@ -603,7 +603,7 @@ const currentPlayers: PlayersData  = [
   },
   {
     id: 8,
-    name: 'Cuñado Antony',
+    name: 'Cristiano Ojeda',
     team: 'Peña Independiente 76',
     photo: '/default.jpg',
     level: 2.5,
@@ -2424,20 +2424,20 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
-        home: 'Temetotaba FC',
+        home: 'FC Pajagoza',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
         away: 'FC Pajagoza',
         homeScorers: null,
         awayScorers: null,
       },
       {
-        home: 'FC Pajagoza',
-        away: 'Peña Independiente 76',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Temetotaba FC',
-        away: 'Purito Palao FC',
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
         homeScorers: null,
         awayScorers: null,
       }
