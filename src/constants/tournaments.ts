@@ -2420,7 +2420,7 @@ const currentResults: ResultsData = [
       {
         home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
-        homeScorers: [],
+        homeScorers: ['Cristiano Ojeda'],
         awayScorers: [],
       },
       {
