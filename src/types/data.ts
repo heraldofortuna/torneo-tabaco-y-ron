@@ -28,11 +28,15 @@ export interface Sanction {
   reason: string; // Explicación de la sanción
 }
 
-interface Match {
+export interface Match {
   home: string;
   away: string;
   homeScorers: string[] | null;
   awayScorers: string[] | null;
+  /** Opcional: nombres de jugadores con tarjeta roja (equipo local) */
+  homeRedCards?: string[] | null;
+  /** Opcional: nombres de jugadores con tarjeta roja (equipo visitante) */
+  awayRedCards?: string[] | null;
 }
 
 export interface PositionData {

@@ -4,8 +4,44 @@ import {
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
 } from "../constants/tournaments";
-import type { DayResults, PlayersData, ResultsData } from "../types/data";
+import type { DayResults, Match, PlayersData, ResultsData } from "../types/data";
 import CapturePngButton from "./CapturePngButton";
+
+function matchHomeScore(m: Match): string | number {
+  if (!m.homeScorers && !m.awayScorers) return "";
+  if (m.homeScorers) return m.homeScorers.length;
+  return "W.O";
+}
+
+function matchAwayScore(m: Match): string | number {
+  if (!m.homeScorers && !m.awayScorers) return "";
+  if (m.awayScorers) return m.awayScorers.length;
+  return "W.O";
+}
+
+function redCardNameList(names?: string[] | null): string[] {
+  return (names ?? []).map((n) => n.trim()).filter(Boolean);
+}
+
+function RedCardPlayersList({ names, align }: { names?: string[] | null; align: "left" | "right" }) {
+  const list = redCardNameList(names);
+  if (list.length === 0) return null;
+  const text = list.join(", ");
+  return (
+    <div
+      className={`mt-1 flex flex-wrap items-baseline gap-1 text-[11px] font-medium text-red-400 ${align === "right" ? "justify-end text-right" : "text-left"}`}
+      title={`Tarjeta roja: ${text}`}
+    >
+      <span
+        className="inline-flex h-3.5 min-w-[12px] shrink-0 items-center justify-center rounded-sm bg-red-600 px-0.5 text-[9px] font-bold uppercase leading-none text-white"
+        aria-hidden
+      >
+        R
+      </span>
+      <span className="min-w-0 text-red-300/95">{text}</span>
+    </div>
+  );
+}
 
 interface TournamentDatesProps {
   tournaments: Record<string, { results: ResultsData; players: PlayersData }>;
@@ -52,37 +88,31 @@ function FechaCard({ result }: { result: DayResults }) {
                 key={`${result.id}-${match.home}-${match.away}-${mi}`}
                 className="flex justify-between gap-2 p-2 border-b border-white/10 md:border-b-0"
               >
-                <div className="flex flex-1 justify-between items-center">
-                  <div>
+                <div className="flex flex-1 justify-between items-center gap-2 min-w-0">
+                  <div className="min-w-0">
                     <h3 className="text-left">{match.home}</h3>
                     <p className="text-gray text-xs text-left">
                       {match.homeScorers ? match.homeScorers.join(", ") : ""}
                     </p>
+                    <RedCardPlayersList names={match.homeRedCards} align="left" />
                   </div>
-                  <p className="text-xl font-bold">
-                    {!match.homeScorers && !match.awayScorers
-                      ? ""
-                      : match.homeScorers
-                        ? match.homeScorers.length
-                        : "W.O"}
-                  </p>
+                  <span className="inline-flex items-center gap-1 text-xl font-bold tabular-nums shrink-0" title="Goles">
+                    <span>{matchHomeScore(match)}</span>
+                  </span>
                 </div>
                 <div className="flex flex-1 justify-center items-center">
                   <p className="text-xl">vs</p>
                 </div>
-                <div className="flex flex-1 justify-between items-center">
-                  <p className="text-xl font-bold">
-                    {!match.homeScorers && !match.awayScorers
-                      ? ""
-                      : match.awayScorers
-                        ? match.awayScorers.length
-                        : "W.O"}
-                  </p>
-                  <div>
+                <div className="flex flex-1 justify-between items-center gap-2 min-w-0">
+                  <span className="inline-flex items-center gap-1 text-xl font-bold tabular-nums shrink-0" title="Goles">
+                    <span>{matchAwayScore(match)}</span>
+                  </span>
+                  <div className="min-w-0">
                     <h3 className="text-right">{match.away}</h3>
                     <p className="text-gray text-xs text-right">
                       {match.awayScorers ? match.awayScorers.join(", ") : ""}
                     </p>
+                    <RedCardPlayersList names={match.awayRedCards} align="right" />
                   </div>
                 </div>
               </li>
