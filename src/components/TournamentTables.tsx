@@ -6,6 +6,7 @@ import {
   TOURNAMENT_CHANGE_EVENT,
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
+  type TournamentClientBundle,
 } from "../constants/tournaments";
 import type { PlayersData, ResultsData } from "../types/data";
 import CapturePngButton from "./CapturePngButton";
@@ -13,7 +14,7 @@ import Podium from "./Podium";
 import Table from "./Table";
 
 interface TournamentTablesProps {
-  tournaments: Record<string, { results: ResultsData; players: PlayersData }>;
+  tournaments: Record<string, TournamentClientBundle>;
 }
 
 function readStoredId(): string {

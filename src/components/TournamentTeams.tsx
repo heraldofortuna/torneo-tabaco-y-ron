@@ -3,11 +3,12 @@ import {
   TOURNAMENT_CHANGE_EVENT,
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
+  type TournamentClientBundle,
 } from "../constants/tournaments";
 import type { Player, PlayersData, ResultsData } from "../types/data";
 
 interface TournamentTeamsProps {
-  tournaments: Record<string, { results: ResultsData; players: PlayersData }>;
+  tournaments: Record<string, TournamentClientBundle>;
 }
 
 function readStoredId(): string {

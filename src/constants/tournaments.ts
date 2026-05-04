@@ -2748,12 +2748,31 @@ const currentResults: ResultsData = [
   },
 ];
 
+/** Mapa nombre de equipo → color CSS (hex, rgb, etc.) */
+export type TeamColorMap = Record<string, string>;
+
 export interface Tournament {
   id: string;
   label: string;
   results: ResultsData;
   players: PlayersData;
+  /** Opcional: color identificador por equipo (p. ej. en /dates) */
+  teamColors?: TeamColorMap;
 }
+
+/** Datos que reciben las islas React (tablas, fechas, equipos) */
+export type TournamentClientBundle = {
+  results: ResultsData;
+  players: PlayersData;
+  teamColors?: TeamColorMap;
+};
+
+const currentTeamColors: TeamColorMap = {
+  "Peña Independiente 76": "#ffffff",
+  "Temetotaba FC": "#000000",
+  "Purito Palao FC": "#0c2465",
+  "FC Pajagoza": "#3b0764",
+};
 
 export const TOURNAMENT_STORAGE_KEY = "tyr-tournament-id";
 
@@ -2764,7 +2783,13 @@ export const TOURNAMENTS: Tournament[] = [
   { id: "2", label: "Torneo Agosto - Septiembre 2025", results: results2, players: players2 },
   { id: "3", label: "Torneo Octubre - Diciembre 2025", results: results3, players: players3 },
   { id: "4", label: "Torneo Verano 2026", results: results4, players: players4 },
-  { id: "current", label: "Torneo Abril 2026", results: currentResults, players: currentPlayers },
+  {
+    id: "current",
+    label: "Torneo Abril 2026",
+    results: currentResults,
+    players: currentPlayers,
+    teamColors: currentTeamColors,
+  },
 ];
 
 export const TOURNAMENT_OPTIONS: TournamentOption[] = TOURNAMENTS.map(({ id, label }) => ({
@@ -2776,11 +2801,15 @@ export function tournamentsResultsMap(): Record<string, ResultsData> {
   return Object.fromEntries(TOURNAMENTS.map((t) => [t.id, t.results]));
 }
 
-export function tournamentsDataMap(): Record<
-  string,
-  { results: ResultsData; players: PlayersData }
-> {
+export function tournamentsDataMap(): Record<string, TournamentClientBundle> {
   return Object.fromEntries(
-    TOURNAMENTS.map((t) => [t.id, { results: t.results, players: t.players }]),
+    TOURNAMENTS.map((t) => [
+      t.id,
+      {
+        results: t.results,
+        players: t.players,
+        teamColors: t.teamColors,
+      },
+    ]),
   );
 }

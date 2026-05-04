@@ -3,6 +3,8 @@ import {
   TOURNAMENT_CHANGE_EVENT,
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
+  type TeamColorMap,
+  type TournamentClientBundle,
 } from "../constants/tournaments";
 import type { DayResults, Match, PlayersData, ResultsData } from "../types/data";
 import CapturePngButton from "./CapturePngButton";
@@ -44,7 +46,47 @@ function RedCardPlayersList({ names, align }: { names?: string[] | null; align: 
 }
 
 interface TournamentDatesProps {
-  tournaments: Record<string, { results: ResultsData; players: PlayersData }>;
+  tournaments: Record<string, TournamentClientBundle>;
+}
+
+function teamColorDotBorder(hex: string): string {
+  const n = hex.trim().toLowerCase();
+  if (n === "#fff" || n === "#ffffff") {
+    return "border border-zinc-600/70 ring-1 ring-black/20";
+  }
+  if (n === "#000" || n === "#000000") {
+    return "border border-zinc-400/45";
+  }
+  return "border border-white/30";
+}
+
+function TeamNameWithColor({
+  name,
+  teamColors,
+  align,
+}: {
+  name: string;
+  teamColors: TeamColorMap;
+  align: "left" | "right";
+}) {
+  const color = teamColors[name];
+  return (
+    <div
+      className={`flex min-w-0 items-center gap-2 ${align === "right" ? "justify-end" : "justify-start"}`}
+    >
+      {color ? (
+        <span
+          className={`h-2.5 w-2.5 shrink-0 rounded-full shadow-sm ${teamColorDotBorder(color)}`}
+          style={{ backgroundColor: color }}
+          title={name}
+          aria-hidden
+        />
+      ) : null}
+      <h3 className={`min-w-0 truncate font-semibold ${align === "right" ? "text-right" : "text-left"}`}>
+        {name}
+      </h3>
+    </div>
+  );
 }
 
 function readStoredId(): string {
@@ -54,7 +96,7 @@ function readStoredId(): string {
   return valid && raw ? raw : "current";
 }
 
-function FechaCard({ result }: { result: DayResults }) {
+function FechaCard({ result, teamColors }: { result: DayResults; teamColors: TeamColorMap }) {
   const captureRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -90,7 +132,7 @@ function FechaCard({ result }: { result: DayResults }) {
               >
                 <div className="flex flex-1 justify-between items-center gap-2 min-w-0">
                   <div className="min-w-0">
-                    <h3 className="text-left">{match.home}</h3>
+                    <TeamNameWithColor name={match.home} teamColors={teamColors} align="left" />
                     <p className="text-gray text-xs text-left">
                       {match.homeScorers ? match.homeScorers.join(", ") : ""}
                     </p>
@@ -108,7 +150,7 @@ function FechaCard({ result }: { result: DayResults }) {
                     <span>{matchAwayScore(match)}</span>
                   </span>
                   <div className="min-w-0">
-                    <h3 className="text-right">{match.away}</h3>
+                    <TeamNameWithColor name={match.away} teamColors={teamColors} align="right" />
                     <p className="text-gray text-xs text-right">
                       {match.awayScorers ? match.awayScorers.join(", ") : ""}
                     </p>
@@ -149,16 +191,18 @@ const TournamentDates: React.FC<TournamentDatesProps> = ({ tournaments }) => {
       window.removeEventListener(TOURNAMENT_CHANGE_EVENT, handler as EventListener);
   }, [tournaments]);
 
-  const results = useMemo(() => {
-    const bundle = tournaments[tournamentId] ?? tournaments.current;
-    return bundle.results;
-  }, [tournamentId, tournaments]);
+  const bundle = useMemo(
+    () => tournaments[tournamentId] ?? tournaments.current,
+    [tournamentId, tournaments],
+  );
+  const results = bundle.results;
+  const teamColors = bundle.teamColors ?? {};
 
   return (
     <main className="flex flex-col gap-6 pb-6">
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
         {results.map((result) => (
-          <FechaCard key={result.id} result={result} />
+          <FechaCard key={result.id} result={result} teamColors={teamColors} />
         ))}
       </ul>
     </main>
