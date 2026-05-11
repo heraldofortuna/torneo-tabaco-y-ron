@@ -2495,6 +2495,18 @@ const currentResults: ResultsData = [
     matches: [
       {
         home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'FC Pajagoza',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
         away: 'Temetotaba FC',
         homeScorers: null,
         awayScorers: null,
@@ -2506,14 +2518,8 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
-        home: 'Peña Independiente 76',
-        away: 'Purito Palao FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
         home: 'Temetotaba FC',
-        away: 'FC Pajagoza',
+        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
@@ -2523,12 +2529,6 @@ const currentResults: ResultsData = [
         homeScorers: null,
         awayScorers: null,
       },
-      {
-        home: 'Temetotaba FC',
-        away: 'Purito Palao FC',
-        homeScorers: null,
-        awayScorers: null,
-      }
     ],
   },
   {
@@ -2751,6 +2751,16 @@ const currentResults: ResultsData = [
 /** Mapa nombre de equipo → color CSS (hex, rgb, etc.) */
 export type TeamColorMap = Record<string, string>;
 
+/** Sustitución en plantilla durante el torneo (p. ej. /teams) */
+export interface RosterChange {
+  /** Etiqueta de la fecha, ej. "Fecha 2" */
+  matchday: string;
+  team: string;
+  outPlayer: string;
+  inPlayer: string;
+  reason?: string;
+}
+
 export interface Tournament {
   id: string;
   label: string;
@@ -2758,6 +2768,8 @@ export interface Tournament {
   players: PlayersData;
   /** Opcional: color identificador por equipo (p. ej. en /dates) */
   teamColors?: TeamColorMap;
+  /** Opcional: cambios de jugador en el campeonato */
+  rosterChanges?: RosterChange[];
 }
 
 /** Datos que reciben las islas React (tablas, fechas, equipos) */
@@ -2765,6 +2777,7 @@ export type TournamentClientBundle = {
   results: ResultsData;
   players: PlayersData;
   teamColors?: TeamColorMap;
+  rosterChanges?: RosterChange[];
 };
 
 const currentTeamColors: TeamColorMap = {
@@ -2773,6 +2786,23 @@ const currentTeamColors: TeamColorMap = {
   "Purito Palao FC": "#0c2465",
   "FC Pajagoza": "#3b0764",
 };
+
+const currentRosterChanges: RosterChange[] = [
+  {
+    matchday: "Fecha 2",
+    team: "Peña Independiente 76",
+    outPlayer: "Cuñado de Antony",
+    inPlayer: "Cristiano Ojeda",
+    reason: "Falta de tiempo",
+  },
+  {
+    matchday: "Fecha 2",
+    team: "FC Pajagoza",
+    outPlayer: "Piby",
+    inPlayer: "Andres",
+    reason: "Falta de tiempo",
+  },
+];
 
 export const TOURNAMENT_STORAGE_KEY = "tyr-tournament-id";
 
@@ -2789,6 +2819,7 @@ export const TOURNAMENTS: Tournament[] = [
     results: currentResults,
     players: currentPlayers,
     teamColors: currentTeamColors,
+    rosterChanges: currentRosterChanges,
   },
 ];
 
@@ -2809,6 +2840,7 @@ export function tournamentsDataMap(): Record<string, TournamentClientBundle> {
         results: t.results,
         players: t.players,
         teamColors: t.teamColors,
+        rosterChanges: t.rosterChanges,
       },
     ]),
   );

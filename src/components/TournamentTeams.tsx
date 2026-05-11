@@ -3,6 +3,7 @@ import {
   TOURNAMENT_CHANGE_EVENT,
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
+  type RosterChange,
   type TournamentClientBundle,
 } from "../constants/tournaments";
 import type { Player, PlayersData, ResultsData } from "../types/data";
@@ -54,21 +55,62 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
       window.removeEventListener(TOURNAMENT_CHANGE_EVENT, handler as EventListener);
   }, [tournaments]);
 
-  const players = useMemo(() => {
-    const bundle = tournaments[tournamentId] ?? tournaments.current;
-    return bundle.players;
-  }, [tournamentId, tournaments]);
+  const bundle = useMemo(
+    () => tournaments[tournamentId] ?? tournaments.current,
+    [tournamentId, tournaments],
+  );
+  const players = bundle.players;
+  const rosterChanges = bundle.rosterChanges ?? [];
 
   const teams = useMemo(() => groupPlayersByTeam(players), [players]);
+
+  const changesByTeam = useMemo(() => {
+    const map = new Map<string, RosterChange[]>();
+    for (const ch of rosterChanges) {
+      const list = map.get(ch.team);
+      if (list) list.push(ch);
+      else map.set(ch.team, [ch]);
+    }
+    return map;
+  }, [rosterChanges]);
 
   return (
     <main className="flex flex-col gap-8">
       <div className="flex flex-col gap-6">
-        {teams.map((team) => (
+        {teams.map((team) => {
+          const teamChanges = changesByTeam.get(team.name) ?? [];
+          return (
           <div key={team.name} className="bg-dark-light rounded-lg p-6 flex flex-col gap-4">
             <h2 className="lg:text-lg font-semibold text-center mb-4 text-yellow-500">
               {team.name}
             </h2>
+
+            {teamChanges.length > 0 ? (
+              <div className="mb-1 flex flex-col gap-2 rounded-md border border-white/10 bg-dark/60 px-3 py-2.5">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">
+                  Cambios de plantilla
+                </p>
+                <ul className="flex flex-col gap-2">
+                  {teamChanges.map((c, idx) => (
+                    <li
+                      key={`${c.matchday}-${c.outPlayer}-${c.inPlayer}-${idx}`}
+                      className="border-l-2 border-yellow-500/50 pl-2.5 text-xs text-gray-300"
+                    >
+                      <span className="text-gray-500">{c.matchday}</span>
+                      <span className="mx-1 text-gray-600">·</span>
+                      <span className="text-red-300/90">{c.outPlayer}</span>
+                      <span className="text-gray-500"> → </span>
+                      <span className="text-[#A9DFD8]">{c.inPlayer}</span>
+                      {c.reason ? (
+                        <span className="mt-0.5 block text-[11px] italic text-gray-500">
+                          Motivo: {c.reason}
+                        </span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
 
             <div className="flex flex-wrap gap-4">
               {team.players.map((player) => {
@@ -112,7 +154,8 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
               })}
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </main>
   );
