@@ -2496,8 +2496,8 @@ const currentResults: ResultsData = [
       {
         home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
-        homeScorers: ['Russo', 'Antony'],
-        awayScorers: ['Oscar Castro'],
+        homeScorers: ['Oscar Castro'], 
+        awayScorers: ['Russo', 'Antony'],
       },
       {
         home: 'Temetotaba FC',
@@ -2520,8 +2520,8 @@ const currentResults: ResultsData = [
       {
         home: 'Temetotaba FC',
         away: 'Purito Palao FC',
-        homeScorers: ['Wincho', 'Liam', 'Kevin', 'Wincho', 'Kevin', 'Antony', 'Kevin'],
-        awayScorers: ['Frankito'],
+        homeScorers: ['Frankito'],
+        awayScorers: ['Wincho', 'Liam', 'Kevin', 'Wincho', 'Kevin', 'Antony', 'Kevin'],
       },
       {
         home: 'FC Pajagoza',
