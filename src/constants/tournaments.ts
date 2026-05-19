@@ -2537,31 +2537,25 @@ const currentResults: ResultsData = [
     date: 'Jugado el 20 de Mayo del 2026',
     matches: [
       {
-        home: 'Purito Palao FC',
-        away: 'FC Pajagoza',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Peña Independiente 76',
-        away: 'Temetotaba FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Purito Palao FC',
+        home: 'Temetotaba FC',
         away: 'Peña Independiente 76',
         homeScorers: null,
         awayScorers: null,
       },
       {
         home: 'FC Pajagoza',
-        away: 'Temetotaba FC',
+        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
       {
         home: 'Temetotaba FC',
+        away: 'FC Pajagoza',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
@@ -2569,6 +2563,12 @@ const currentResults: ResultsData = [
       {
         home: 'FC Pajagoza',
         away: 'Peña Independiente 76',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Temetotaba FC',
         homeScorers: null,
         awayScorers: null,
       }
