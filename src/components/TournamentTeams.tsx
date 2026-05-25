@@ -6,7 +6,7 @@ import {
   type RosterChange,
   type TournamentClientBundle,
 } from "../constants/tournaments";
-import type { Player, PlayersData, ResultsData } from "../types/data";
+import type { Player, PlayersData } from "../types/data";
 
 interface TournamentTeamsProps {
   tournaments: Record<string, TournamentClientBundle>;
@@ -63,6 +63,14 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
   const rosterChanges = bundle.rosterChanges ?? [];
 
   const teams = useMemo(() => groupPlayersByTeam(players), [players]);
+  const teamRatings = useMemo(() => {
+    return new Map(
+      teams.map((team) => [
+        team.name,
+        team.players.reduce((total, player) => total + (player.level ?? DEFAULT_LEVEL), 0),
+      ]),
+    );
+  }, [teams]);
 
   const changesByTeam = useMemo(() => {
     const map = new Map<string, RosterChange[]>();
@@ -81,8 +89,11 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
           const teamChanges = changesByTeam.get(team.name) ?? [];
           return (
           <div key={team.name} className="bg-dark-light rounded-lg p-6 flex flex-col gap-4">
-            <h2 className="lg:text-lg font-semibold text-center mb-4 text-yellow-500">
-              {team.name}
+            <h2 className="mb-4 flex items-center justify-center gap-2 text-center font-semibold text-yellow-500 lg:text-lg">
+              <span>{team.name}</span>
+              <span className="rounded-full border border-yellow-500/30 bg-yellow-500/10 px-2 py-0.5 text-xs font-medium text-yellow-300">
+                {(teamRatings.get(team.name) ?? 0).toFixed(1)} val.
+              </span>
             </h2>
 
             {teamChanges.length > 0 ? (

@@ -578,21 +578,21 @@ const currentPlayers: PlayersData  = [
     name: 'Antony C',
     team: 'Peña Independiente 76',
     photo: '/default.jpg',
-    level: 3.5,
+    level: 4,
   },
   {
     id: 5,
     name: 'Mathias Chumacero',
     team: 'Peña Independiente 76',
     photo: '/default.jpg',
-    level: 3.5,
+    level: 3,
   },
   {
     id: 6,
     name: 'Juan Piero',
     team: 'Peña Independiente 76',
     photo: '/default.jpg',
-    level: 3.5,
+    level: 3,
   },
   {
     id: 7,
@@ -603,10 +603,10 @@ const currentPlayers: PlayersData  = [
   },
   {
     id: 8,
-    name: 'Cristiano Ojeda',
+    name: 'Pepe',
     team: 'Peña Independiente 76',
     photo: '/default.jpg',
-    level: 2.5,
+    level: 3.5,
   },
   // Temetotaba FC
   {
@@ -660,10 +660,10 @@ const currentPlayers: PlayersData  = [
   },
   {
     id: 16,
-    name: 'Marcelo',
+    name: 'Ronaldiño',
     team: 'Temetotaba FC',
     photo: '/default.jpg',
-    level: 2,
+    level: 3,
   },
   // Purito Palao FC
   {
@@ -699,14 +699,14 @@ const currentPlayers: PlayersData  = [
     name: 'Mathias',
     team: 'Purito Palao FC',
     photo: '/default.jpg',
-    level: 3,
+    level: 3.5,
   },
   {
     id: 22,
     name: 'Kevin',
     team: 'Purito Palao FC',
     photo: '/kevin.jpg',
-    level: 3.5,
+    level: 4,
   },
   {
     id: 23,
@@ -749,7 +749,7 @@ const currentPlayers: PlayersData  = [
     name: 'Joaquin',
     team: 'FC Pajagoza',
     photo: '/default.jpg',
-    level: 3,
+    level: 3.5,
   },
   {
     id: 29,
@@ -763,11 +763,11 @@ const currentPlayers: PlayersData  = [
     name: 'Heraldo',
     team: 'FC Pajagoza',
     photo: '/default.jpg',
-    level: 2.5,
+    level: 3,
   },
   {
     id: 31,
-    name: 'Tio Fritz',
+    name: 'Carlitos Cruz',
     team: 'FC Pajagoza',
     photo: '/default.jpg',
     level: 2.5,
@@ -2581,38 +2581,38 @@ const currentResults: ResultsData = [
     date: 'Jugado el 27 de Mayo del 2026',
     matches: [
       {
-        home: 'Peña Independiente 76',
-        away: 'Temetotaba FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Purito Palao FC',
+        home: 'Temetotaba FC',
         away: 'FC Pajagoza',
         homeScorers: null,
         awayScorers: null,
       },
       {
-        home: 'Peña Independiente 76',
+        home: 'Purito Palao FC',
+        away: 'Peña Independiente 76',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'FC Pajagoza',
         away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
       {
         home: 'Temetotaba FC',
-        away: 'FC Pajagoza',
+        away: 'Peña Independiente 76',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Temetotaba FC',
         homeScorers: null,
         awayScorers: null,
       },
       {
         home: 'FC Pajagoza',
         away: 'Peña Independiente 76',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Temetotaba FC',
-        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       }
@@ -2767,9 +2767,7 @@ export interface Tournament {
   label: string;
   results: ResultsData;
   players: PlayersData;
-  /** Opcional: color identificador por equipo (p. ej. en /dates) */
   teamColors?: TeamColorMap;
-  /** Opcional: cambios de jugador en el campeonato */
   rosterChanges?: RosterChange[];
 }
 
@@ -2809,6 +2807,27 @@ const currentRosterChanges: RosterChange[] = [
     outPlayer: "Josue",
     inPlayer: "Bryan",
     reason: "Lesión",
+  },
+  {
+    matchday: "Fecha 6",
+    team:"FC Pajagoza",
+    outPlayer: "Tio Fritz",
+    inPlayer: "Carlitos Cruz",
+    reason: "Lesión",
+  },
+  {
+    matchday: "Fecha 6",
+    team: "Peña Independiente 76",
+    outPlayer: "Cristiano Ojeda",
+    inPlayer: "Pepe",
+    reason: "Problemas familiares",
+  },
+  {
+    matchday: "Fecha 6",
+    team: "Temetotaba FC",
+    outPlayer: "Marcelo",
+    inPlayer: "Ronaldiño",
+    reason: "¿?",
   },
 ];
 
