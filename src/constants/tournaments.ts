@@ -2607,8 +2607,8 @@ const currentResults: ResultsData = [
       {
         home: 'Purito Palao FC',
         away: 'Temetotaba FC',
-        homeScorers: [],
-        awayScorers: ['Geampierre'],
+        homeScorers: ['Mathias'],
+        awayScorers: ['Geampierre', 'Frankito'],
       },
       {
         home: 'FC Pajagoza',
