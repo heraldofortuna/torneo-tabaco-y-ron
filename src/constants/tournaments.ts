@@ -2650,8 +2650,8 @@ const currentResults: ResultsData = [
       {
         home: 'FC Pajagoza',
         away: 'Temetotaba FC',
-        homeScorers: ['Andres', 'Andres'],
-        awayScorers: ['Frankito', 'Lucho'],
+        homeScorers: ['Andres', 'Jozua', 'Andres'],
+        awayScorers: ['Frankito', 'Ronaldiño', 'Lucho'],
       },
       {
         home: 'Peña Independiente 76',
