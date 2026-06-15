@@ -2671,6 +2671,7 @@ const currentResults: ResultsData = [
         away: 'Purito Palao FC',
         homeScorers: ['Pepe'],
         awayScorers: [],
+        awayRedCards: ['Omar'],
       },
       {
         home: 'Temetotaba FC',
@@ -2701,6 +2702,7 @@ const currentResults: ResultsData = [
         away: 'Temetotaba FC',
         homeScorers: ['Oscar Castro'],
         awayScorers: ['Frankito', 'Frankito', 'Bryan', 'Bryan'],
+        homeRedCards: ['Antony C'],
       }
     ],
   },
