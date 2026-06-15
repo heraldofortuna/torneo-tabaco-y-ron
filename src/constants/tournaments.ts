@@ -2705,6 +2705,13 @@ const currentResults: ResultsData = [
         homeRedCards: ['Antony C'],
       }
     ],
+    sanctions: [
+      {
+        team: 'FC Pajagoza',
+        points: -3,
+        reason: 'Pago fuera de tiempo.',
+      },
+    ],
   },
   {
     id: 10,
