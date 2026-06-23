@@ -689,7 +689,7 @@ const currentPlayers: PlayersData  = [
   },
   {
     id: 20,
-    name: 'Liam',
+    name: 'Leandro',
     team: 'Purito Palao FC',
     photo: '/default.jpg',
     level: 3,
@@ -2715,45 +2715,21 @@ const currentResults: ResultsData = [
   },
   {
     id: 10,
-    name: 'Fecha 10',
-    date: 'Jugado el 17 de Junio del 2026',
+    name: 'Fecha 10 / Final',
+    date: 'Jugado el 24 de Junio del 2026',
     matches: [
       {
-        home: 'Purito Palao FC',
+        home: 'Temetotaba FC',
         away: 'FC Pajagoza',
         homeScorers: null,
         awayScorers: null,
       },
       {
         home: 'Peña Independiente 76',
-        away: 'Temetotaba FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Purito Palao FC',
-        away: 'Peña Independiente 76',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'FC Pajagoza',
-        away: 'Temetotaba FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Temetotaba FC',
         away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
-      {
-        home: 'FC Pajagoza',
-        away: 'Peña Independiente 76',
-        homeScorers: null,
-        awayScorers: null,
-      }
     ],
   },
 ];
@@ -2837,6 +2813,13 @@ const currentRosterChanges: RosterChange[] = [
     outPlayer: "Marcelo",
     inPlayer: "Ronaldiño",
     reason: "¿?",
+  },
+  {
+    matchday: "Fecha 9",
+    team: "Purito Palao FC",
+    outPlayer: "Liam",
+    inPlayer: "Leandro",
+    reason: "Mudanza",
   },
 ];
 
