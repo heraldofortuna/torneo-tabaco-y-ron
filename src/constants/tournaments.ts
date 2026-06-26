@@ -2718,17 +2718,12 @@ const currentResults: ResultsData = [
     name: 'Fecha 10 / Final',
     date: 'Jugado el 24 de Junio del 2026',
     matches: [
-      {
-        home: 'Temetotaba FC',
-        away: 'FC Pajagoza',
-        homeScorers: null,
-        awayScorers: null,
-      },
+
       {
         home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Pepe'],
+        awayScorers: ['Russo', 'Leandro', 'Kevin', 'Leandro'],
       },
     ],
   },
