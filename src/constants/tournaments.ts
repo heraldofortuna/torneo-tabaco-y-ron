@@ -550,7 +550,7 @@ const players4: PlayersData  = [
   },
 ]
 
-const currentPlayers: PlayersData  = [
+const players5: PlayersData  = [
   // Peña Independiente 76
   {
     id: 1,
@@ -778,6 +778,237 @@ const currentPlayers: PlayersData  = [
     team: 'FC Pajagoza',
     photo: '/default.jpg',
     level: 2,
+  },
+]
+
+const currentPlayers: PlayersData  = [
+  // Peña Independiente 76
+  {
+    id: 1,
+    name: 'Oscar Castro',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 4,
+  },
+  {
+    id: 2,
+    name: 'Jose Oqueña',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 3,
+  },
+  {
+    id: 3,
+    name: 'Carlos Pachas',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 3,
+  },
+  {
+    id: 4,
+    name: 'Antony C',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 4,
+  },
+  {
+    id: 5,
+    name: 'Jesus',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 2.5,
+  },
+  {
+    id: 6,
+    name: 'Pasculi',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 4,
+  },
+  {
+    id: 7,
+    name: 'Fabricio',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 3,
+  },
+  {
+    id: 8,
+    name: 'Pepe',
+    team: 'Peña Independiente 76',
+    photo: '/default.jpg',
+    level: 3,
+  },
+  // Temetotaba FC
+  {
+    id: 9,
+    name: 'Fabian ',
+    team: 'Temetotaba FC',
+    photo: '/default.jpg',
+    level: 4.5,
+  },
+  {
+    id: 10,
+    name: 'Geampierre',
+    team: 'Temetotaba FC',
+    photo: '/default.jpg',
+    level: 4,
+  },
+  {
+    id: 11,
+    name: 'Frankito',
+    team: 'Temetotaba FC',
+    photo: '/frankito.jpg',
+    level: 3.5,
+  },
+  {
+    id: 12,
+    name: 'Bryan',
+    team: 'Temetotaba FC',
+    photo: '/default.jpg',
+    level: 4,
+  },
+  {
+    id: 13,
+    name: 'Dino',
+    team: 'Temetotaba FC',
+    photo: '/default.jpg',
+    level: 2,
+  },
+  {
+    id: 14,
+    name: 'Pedro',
+    team: 'Temetotaba FC',
+    photo: '/default.jpg',
+    level: 3,
+  },
+  {
+    id: 15,
+    name: 'Jesus',
+    team: 'Temetotaba FC',
+    photo: '/default.jpg',
+    level: 3,
+  },
+  {
+    id: 16,
+    name: 'Bombita',
+    team: 'Temetotaba FC',
+    photo: '/default.jpg',
+    level: 3.5,
+  },
+  // Purito Palao FC
+  {
+    id: 17,
+    name: 'Omar',
+    team: 'Purito Palao FC',
+    photo: '/omar.jpg',
+    level: 5,
+  },
+  {
+    id: 18,
+    name: 'Russo',
+    team: 'Purito Palao FC',
+    photo: '/russo.jpg',
+    level: 3,
+  },
+  {
+    id: 19,
+    name: 'Antony',
+    team: 'Purito Palao FC',
+    photo: '/antony.jpg',
+    level: 4,
+  },
+  {
+    id: 20,
+    name: 'Leandro',
+    team: 'Purito Palao FC',
+    photo: '/default.jpg',
+    level: 3.5,
+  },
+  {
+    id: 21,
+    name: 'Mathias',
+    team: 'Purito Palao FC',
+    photo: '/default.jpg',
+    level: 3.5,
+  },
+  {
+    id: 22,
+    name: 'Kevin',
+    team: 'Purito Palao FC',
+    photo: '/kevin.jpg',
+    level: 4,
+  },
+  {
+    id: 23,
+    name: 'Wincho',
+    team: 'Purito Palao FC',
+    photo: '/wincho.png',
+    level: 2.5,
+  },
+  {
+    id: 24,
+    name: 'Favio',
+    team: 'Purito Palao FC',
+    photo: '/default.jpg',
+    level: 2,
+  },
+  // Matarelgusano F.C.
+  {
+    id: 25,
+    name: 'Jozua',
+    team: 'Matarelgusano F.C.',
+    photo: '/jozua.jpg',
+    level: 4.5,
+  },
+  {
+    id: 26,
+    name: 'Kanuto',
+    team: 'Matarelgusano F.C.',
+    photo: '/default.jpg',
+    level: 4,
+  },
+  {
+    id: 27,
+    name: 'Andres',
+    team: 'Matarelgusano F.C.',
+    photo: '/default.jpg',
+    level: 3.5,
+  },
+  {
+    id: 28,
+    name: 'Joaquin',
+    team: 'Matarelgusano F.C.',
+    photo: '/default.jpg',
+    level: 3.5,
+  },
+  {
+    id: 29,
+    name: 'Charapa',
+    team: 'Matarelgusano F.C.',
+    photo: '/default.jpg',
+    level: 3.5,
+  },
+  {
+    id: 30,
+    name: 'Heraldo',
+    team: 'Matarelgusano F.C.',
+    photo: '/default.jpg',
+    level: 2.5,
+  },
+  {
+    id: 31,
+    name: 'Carlitos Cruz',
+    team: 'Matarelgusano F.C.',
+    photo: '/default.jpg',
+    level: 2.5,
+  },
+  {
+    id: 32,
+    name: 'Pardo',
+    team: 'Matarelgusano F.C.',
+    photo: '/default.jpg',
+    level: 3,
   },
 ]
 
@@ -2313,7 +2544,7 @@ const results4: ResultsData = [
   },
 ];
 
-const currentResults: ResultsData = [
+const results5: ResultsData = [
   {
     id: 1,
     name: 'Fecha 1',
@@ -2729,8 +2960,530 @@ const currentResults: ResultsData = [
   },
 ];
 
-/** Mapa nombre de equipo → color CSS (hex, rgb, etc.) */
-export type TeamColorMap = Record<string, string>;
+const currentResults: ResultsData = [
+  {
+    id: 1,
+    name: 'Fecha 1',
+    date: 'Miércoles 8 de Julio del 2026',
+    matches: [
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Fecha 2',
+    date: 'Miércoles 15 de Julio del 2026',
+    matches: [
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Fecha 3',
+    date: 'Miércoles 22 de Julio del 2026',
+    matches: [
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Fecha 4',
+    date: 'Miércoles 29 de Julio del 2026',
+    matches: [
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Fecha 5',
+    date: 'Miércoles 5 de Agosto del 2026',
+    matches: [
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Fecha 6',
+    date: 'Miércoles 12 de Agosto del 2026',
+    matches: [
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Fecha 7',
+    date: 'Miércoles 19 de Agosto del 2026',
+    matches: [
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Fecha 8',
+    date: 'Miércoles 26 de Agosto del 2026',
+    matches: [
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: 'Fecha 9',
+    date: 'Miércoles 2 de Setiembre del 2026',
+    matches: [
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Fecha 10',
+    date: 'Miércoles 9 de Setiembre del 2026',
+    matches: [
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 11,
+    name: 'Fecha 11',
+    date: 'Miércoles 16 de Setiembre del 2026',
+    matches: [
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+  {
+    id: 12,
+    name: 'Fecha 12',
+    date: 'Miércoles 23 de Setiembre del 2026',
+    matches: [
+      {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+    ],
+  },
+];
+
+/** Un color sólido o dos colores en mitad y mitad (izquierda / derecha) */
+export type TeamColor = string | readonly [string, string];
+
+/** Mapa nombre de equipo → color(es) CSS (hex, rgb, etc.) */
+export type TeamColorMap = Record<string, TeamColor>;
 
 /** Sustitución en plantilla durante el torneo (p. ej. /teams) */
 export interface RosterChange {
@@ -2759,14 +3512,21 @@ export type TournamentClientBundle = {
   rosterChanges?: RosterChange[];
 };
 
-const currentTeamColors: TeamColorMap = {
+const teamColors5: TeamColorMap = {
   "Peña Independiente 76": "#ffffff",
   "Temetotaba FC": "#000000",
   "Purito Palao FC": "#0c2465",
   "FC Pajagoza": "#3b0764",
 };
 
-const currentRosterChanges: RosterChange[] = [
+const currentTeamColors: TeamColorMap = {
+  "Peña Independiente 76": "#c4e322",
+  "Temetotaba FC": "#1b1c20",
+  "Purito Palao FC": "#0248a1",
+  "Matarelgusano F.C.": ["#5a8982", "#f3f4f6"],
+};
+
+const rosterChanges5: RosterChange[] = [
   {
     matchday: "Fecha 2",
     team: "Peña Independiente 76",
@@ -2818,6 +3578,8 @@ const currentRosterChanges: RosterChange[] = [
   },
 ];
 
+const currentRosterChanges: RosterChange[] = [];
+
 export const TOURNAMENT_STORAGE_KEY = "tyr-tournament-id";
 
 export const TOURNAMENT_CHANGE_EVENT = "tyr-tournament-change";
@@ -2827,9 +3589,10 @@ export const TOURNAMENTS: Tournament[] = [
   { id: "2", label: "Torneo Agosto - Septiembre 2025", results: results2, players: players2 },
   { id: "3", label: "Torneo Octubre - Diciembre 2025", results: results3, players: players3 },
   { id: "4", label: "Torneo Verano 2026", results: results4, players: players4 },
+  { id: "5", label: "Torneo Abril - Junio 2026", results: results5, players: players5, teamColors: teamColors5, rosterChanges: rosterChanges5 },
   {
     id: "current",
-    label: "Torneo Abril 2026",
+    label: "Torneo del 1° Aniversario",
     results: currentResults,
     players: currentPlayers,
     teamColors: currentTeamColors,

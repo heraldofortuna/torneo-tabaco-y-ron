@@ -3,6 +3,7 @@ import {
   TOURNAMENT_CHANGE_EVENT,
   TOURNAMENT_OPTIONS,
   TOURNAMENT_STORAGE_KEY,
+  type TeamColor,
   type TeamColorMap,
   type TournamentClientBundle,
 } from "../constants/tournaments";
@@ -49,15 +50,35 @@ interface TournamentDatesProps {
   tournaments: Record<string, TournamentClientBundle>;
 }
 
-function teamColorDotBorder(hex: string): string {
+function isLightHex(hex: string): boolean {
   const n = hex.trim().toLowerCase();
-  if (n === "#fff" || n === "#ffffff") {
+  return n === "#fff" || n === "#ffffff" || n === "#f3f4f6";
+}
+
+function isDarkHex(hex: string): boolean {
+  const n = hex.trim().toLowerCase();
+  return n === "#000" || n === "#000000" || n === "#1b1c20";
+}
+
+function teamColorDotBorder(color: TeamColor): string {
+  const colors = typeof color === "string" ? [color] : color;
+  if (colors.some(isLightHex)) {
     return "border border-zinc-600/70 ring-1 ring-black/20";
   }
-  if (n === "#000" || n === "#000000") {
+  if (colors.every(isDarkHex)) {
     return "border border-zinc-400/45";
   }
   return "border border-white/30";
+}
+
+function teamColorDotStyle(color: TeamColor): React.CSSProperties {
+  if (typeof color === "string") {
+    return { backgroundColor: color };
+  }
+  const [left, right] = color;
+  return {
+    background: `linear-gradient(90deg, ${left} 50%, ${right} 50%)`,
+  };
 }
 
 function TeamNameWithColor({
@@ -76,8 +97,8 @@ function TeamNameWithColor({
     >
       {color ? (
         <span
-          className={`h-2.5 w-2.5 shrink-0 rounded-full shadow-sm ${teamColorDotBorder(color)}`}
-          style={{ backgroundColor: color }}
+          className={`h-[15px] w-[15px] shrink-0 rounded-full shadow-sm ${teamColorDotBorder(color)}`}
+          style={teamColorDotStyle(color)}
           title={name}
           aria-hidden
         />
