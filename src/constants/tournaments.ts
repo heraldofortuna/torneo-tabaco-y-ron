@@ -2964,7 +2964,7 @@ const currentResults: ResultsData = [
   {
     id: 1,
     name: 'Fecha 1',
-    date: 'Miércoles 8 de Julio del 2026',
+    date: 'Miércoles 15 de Julio del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3007,7 +3007,7 @@ const currentResults: ResultsData = [
   {
     id: 2,
     name: 'Fecha 2',
-    date: 'Miércoles 15 de Julio del 2026',
+    date: 'Miércoles 22 de Julio del 2026',
     matches: [
       {
         home: 'Temetotaba FC',
@@ -3050,7 +3050,7 @@ const currentResults: ResultsData = [
   {
     id: 3,
     name: 'Fecha 3',
-    date: 'Miércoles 22 de Julio del 2026',
+    date: 'Miércoles 29 de Julio del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3093,7 +3093,7 @@ const currentResults: ResultsData = [
   {
     id: 4,
     name: 'Fecha 4',
-    date: 'Miércoles 29 de Julio del 2026',
+    date: 'Miércoles 5 de Agosto del 2026',
     matches: [
       {
         home: 'Purito Palao FC',
@@ -3136,7 +3136,7 @@ const currentResults: ResultsData = [
   {
     id: 5,
     name: 'Fecha 5',
-    date: 'Miércoles 5 de Agosto del 2026',
+    date: 'Miércoles 12 de Agosto del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3179,7 +3179,7 @@ const currentResults: ResultsData = [
   {
     id: 6,
     name: 'Fecha 6',
-    date: 'Miércoles 12 de Agosto del 2026',
+    date: 'Miércoles 19 de Agosto del 2026',
     matches: [
       {
         home: 'Temetotaba FC',
@@ -3222,7 +3222,7 @@ const currentResults: ResultsData = [
   {
     id: 7,
     name: 'Fecha 7',
-    date: 'Miércoles 19 de Agosto del 2026',
+    date: 'Miércoles 26 de Agosto del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3265,7 +3265,7 @@ const currentResults: ResultsData = [
   {
     id: 8,
     name: 'Fecha 8',
-    date: 'Miércoles 26 de Agosto del 2026',
+    date: 'Miércoles 2 de Setiembre del 2026',
     matches: [
       {
         home: 'Temetotaba FC',
@@ -3308,7 +3308,7 @@ const currentResults: ResultsData = [
   {
     id: 9,
     name: 'Fecha 9',
-    date: 'Miércoles 2 de Setiembre del 2026',
+    date: 'Miércoles 9 de Setiembre del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3351,7 +3351,7 @@ const currentResults: ResultsData = [
   {
     id: 10,
     name: 'Fecha 10',
-    date: 'Miércoles 9 de Setiembre del 2026',
+    date: 'Miércoles 16 de Setiembre del 2026',
     matches: [
       {
         home: 'Purito Palao FC',
@@ -3394,7 +3394,7 @@ const currentResults: ResultsData = [
   {
     id: 11,
     name: 'Fecha 11',
-    date: 'Miércoles 16 de Setiembre del 2026',
+    date: 'Miércoles 23 de Setiembre del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3437,7 +3437,7 @@ const currentResults: ResultsData = [
   {
     id: 12,
     name: 'Fecha 12',
-    date: 'Miércoles 23 de Setiembre del 2026',
+    date: 'Miércoles 30 de Setiembre del 2026',
     matches: [
       {
         home: 'Temetotaba FC',
