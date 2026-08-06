@@ -984,7 +984,7 @@ const currentPlayers: PlayersData  = [
   },
   {
     id: 29,
-    name: 'Charapa',
+    name: 'Toño',
     team: 'Matarelgusano F.C.',
     photo: '/default.jpg',
     level: 3.5,
@@ -3050,50 +3050,50 @@ const currentResults: ResultsData = [
   {
     id: 3,
     name: 'Fecha 3',
-    date: 'Miércoles 29 de Julio del 2026',
+    date: 'Miércoles 05 de Agosto del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Fabricio','Pasculi'],
+        awayScorers: ['Antony', 'Omar'],
       },
       {
         home: 'Temetotaba FC',
         away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Geampierre', 'Pedro', 'Pedro'],
+        awayScorers: ['Joaquin', 'Toño', 'Kanuto'],
       },
       {
         home: 'Purito Palao FC',
         away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Kevin', 'Leandro', 'Omar', 'Antony', 'Omar', 'Omar'],
+        awayScorers: ['Jozua', 'Joaquin', 'Toño'],
       },
       {
         home: 'Peña Independiente 76',
         away: 'Temetotaba FC',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Pasculi', 'Fabricio', 'Fabricio', 'Fabricio'],
+        awayScorers: ['Frankito', 'Geampierre'],
       },
       {
         home: 'Peña Independiente 76',
         away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Pasculi', 'Pasculi'],
+        awayScorers: ['Joaquin', 'Jozua'],
       },
       {
         home: 'Temetotaba FC',
         away: 'Purito Palao FC',
-        homeScorers: null,
-        awayScorers: null,
+        homeScorers: ['Frankito', 'Pedro'],
+        awayScorers: [],
       },
     ],
   },
   {
     id: 4,
     name: 'Fecha 4',
-    date: 'Miércoles 5 de Agosto del 2026',
+    date: 'Miércoles 12 de Agosto del 2026',
     matches: [
       {
         home: 'Purito Palao FC',
@@ -3136,7 +3136,7 @@ const currentResults: ResultsData = [
   {
     id: 5,
     name: 'Fecha 5',
-    date: 'Miércoles 12 de Agosto del 2026',
+    date: 'Miércoles 19 de Agosto del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3179,7 +3179,7 @@ const currentResults: ResultsData = [
   {
     id: 6,
     name: 'Fecha 6',
-    date: 'Miércoles 19 de Agosto del 2026',
+    date: 'Miércoles 26 de Agosto del 2026',
     matches: [
       {
         home: 'Temetotaba FC',
@@ -3222,7 +3222,7 @@ const currentResults: ResultsData = [
   {
     id: 7,
     name: 'Fecha 7',
-    date: 'Miércoles 26 de Agosto del 2026',
+    date: 'Miércoles 02 de Septiembre del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3265,7 +3265,7 @@ const currentResults: ResultsData = [
   {
     id: 8,
     name: 'Fecha 8',
-    date: 'Miércoles 2 de Setiembre del 2026',
+    date: 'Miércoles 09 de Setiembre del 2026',
     matches: [
       {
         home: 'Temetotaba FC',
@@ -3308,7 +3308,7 @@ const currentResults: ResultsData = [
   {
     id: 9,
     name: 'Fecha 9',
-    date: 'Miércoles 9 de Setiembre del 2026',
+    date: 'Miércoles 16 de Setiembre del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3351,7 +3351,7 @@ const currentResults: ResultsData = [
   {
     id: 10,
     name: 'Fecha 10',
-    date: 'Miércoles 16 de Setiembre del 2026',
+    date: 'Miércoles 23 de Setiembre del 2026',
     matches: [
       {
         home: 'Purito Palao FC',
@@ -3394,7 +3394,7 @@ const currentResults: ResultsData = [
   {
     id: 11,
     name: 'Fecha 11',
-    date: 'Miércoles 23 de Setiembre del 2026',
+    date: 'Miércoles 30 de Setiembre del 2026',
     matches: [
       {
         home: 'Peña Independiente 76',
@@ -3437,7 +3437,7 @@ const currentResults: ResultsData = [
   {
     id: 12,
     name: 'Fecha 12',
-    date: 'Miércoles 30 de Setiembre del 2026',
+    date: 'Miércoles 07 de Octubre del 2026',
     matches: [
       {
         home: 'Temetotaba FC',
@@ -3578,7 +3578,13 @@ const rosterChanges5: RosterChange[] = [
   },
 ];
 
-const currentRosterChanges: RosterChange[] = [];
+const currentRosterChanges: RosterChange[] = [  {
+    matchday: "Fecha 4",
+    team: "Matarelgusano F.C.",
+    outPlayer: "Charapa",
+    inPlayer: "Toño",
+    reason: "Lesión",
+  }];
 
 export const TOURNAMENT_STORAGE_KEY = "tyr-tournament-id";
 
