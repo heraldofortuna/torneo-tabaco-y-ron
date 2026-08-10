@@ -979,7 +979,7 @@ const currentPlayers: PlayersData  = [
     id: 28,
     name: 'Joaquin',
     team: 'Matarelgusano F.C.',
-    photo: '/default.jpg',
+    photo: '/joaquin.jpg',
     level: 3.5,
   },
   {
