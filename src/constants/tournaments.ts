@@ -829,7 +829,7 @@ const currentPlayers: PlayersData  = [
     id: 7,
     name: 'Fabricio',
     team: 'Peña Independiente 76',
-    photo: '/default.jpg',
+    photo: '/fabricio.jpg',
     level: 3.5,
   },
   {
