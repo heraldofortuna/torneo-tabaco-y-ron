@@ -3591,7 +3591,15 @@ const currentRosterChanges: RosterChange[] = [  {
     outPlayer: "Charapa",
     inPlayer: "Toño",
     reason: "Lesión",
-  }];
+  },
+  {
+    matchday: "Fecha 4",
+    team: "Temetotaba FC",
+    outPlayer: "Bombita",
+    inPlayer: "Marco Ríos",
+    reason: "Falta de tiempo",
+  },
+];
 
 export const TOURNAMENT_STORAGE_KEY = "tyr-tournament-id";
 
