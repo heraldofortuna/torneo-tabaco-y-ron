@@ -3046,6 +3046,13 @@ const currentResults: ResultsData = [
         awayScorers: ['Joaquin', 'Joaquin', 'Joaquin', 'Jozua'],
       },
     ],
+    sanctions: [
+      {
+        team: 'Purito Palao FC',
+        points: -0,
+        reason: 'Faltaron los 2 bajos del equipo.',
+      },
+    ],
   },
   {
     id: 3,
