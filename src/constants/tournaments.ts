@@ -3148,13 +3148,19 @@ const currentResults: ResultsData = [
     matches: [
       {
         home: 'Peña Independiente 76',
-        away: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
         homeScorers: null,
         awayScorers: null,
       },
       {
         home: 'Purito Palao FC',
         away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Temetotaba FC',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3167,12 +3173,6 @@ const currentResults: ResultsData = [
       {
         home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Peña Independiente 76',
-        away: 'Matarelgusano F.C.',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3196,6 +3196,12 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
+        home: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
         home: 'Temetotaba FC',
         away: 'Purito Palao FC',
         homeScorers: null,
@@ -3204,12 +3210,6 @@ const currentResults: ResultsData = [
       {
         home: 'Peña Independiente 76',
         away: 'Temetotaba FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Purito Palao FC',
-        away: 'Matarelgusano F.C.',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3234,12 +3234,6 @@ const currentResults: ResultsData = [
     matches: [
       {
         home: 'Peña Independiente 76',
-        away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Temetotaba FC',
         away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
@@ -3247,12 +3241,18 @@ const currentResults: ResultsData = [
       {
         home: 'Temetotaba FC',
         away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
       {
         home: 'Peña Independiente 76',
-        away: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3288,8 +3288,14 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
         home: 'Peña Independiente 76',
-        away: 'Temetotaba FC',
+        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3300,14 +3306,8 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
-        home: 'Temetotaba FC',
-        away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
         home: 'Peña Independiente 76',
-        away: 'Purito Palao FC',
+        away: 'Temetotaba FC',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3325,6 +3325,12 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
+        home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
         home: 'Purito Palao FC',
         away: 'Matarelgusano F.C.',
         homeScorers: null,
@@ -3333,12 +3339,6 @@ const currentResults: ResultsData = [
       {
         home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Temetotaba FC',
-        away: 'Matarelgusano F.C.',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3362,8 +3362,14 @@ const currentResults: ResultsData = [
     date: 'Miércoles 23 de Setiembre del 2026',
     matches: [
       {
+        home: 'Temetotaba FC',
+        away: 'Purito Palao FC',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
         home: 'Peña Independiente 76',
-        away: 'Matarelgusano F.C.',
+        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3375,10 +3381,11 @@ const currentResults: ResultsData = [
       },
       {
         home: 'Peña Independiente 76',
-        away: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
         homeScorers: null,
         awayScorers: null,
       },
+
       {
         home: 'Peña Independiente 76',
         away: 'Temetotaba FC',
@@ -3388,12 +3395,6 @@ const currentResults: ResultsData = [
       {
         home: 'Purito Palao FC',
         away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Temetotaba FC',
-        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3405,6 +3406,12 @@ const currentResults: ResultsData = [
     date: 'Miércoles 30 de Setiembre del 2026',
     matches: [
       {
+        home: 'Peña Independiente 76',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
         home: 'Purito Palao FC',
         away: 'Matarelgusano F.C.',
         homeScorers: null,
@@ -3418,24 +3425,18 @@ const currentResults: ResultsData = [
       },
       {
         home: 'Temetotaba FC',
+        away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
       {
-        home: 'Peña Independiente 76',
-        away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
         home: 'Temetotaba FC',
-        away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
-        home: 'Peña Independiente 76',
         away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
@@ -3460,14 +3461,8 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
-        home: 'Temetotaba FC',
-        away: 'Matarelgusano F.C.',
-        homeScorers: null,
-        awayScorers: null,
-      },
-      {
         home: 'Peña Independiente 76',
-        away: 'Purito Palao FC',
+        away: 'Matarelgusano F.C.',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3478,8 +3473,14 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
-        home: 'Peña Independiente 76',
+        home: 'Temetotaba FC',
         away: 'Matarelgusano F.C.',
+        homeScorers: null,
+        awayScorers: null,
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Purito Palao FC',
         homeScorers: null,
         awayScorers: null,
       },
