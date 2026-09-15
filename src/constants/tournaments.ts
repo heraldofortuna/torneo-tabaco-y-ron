@@ -3326,8 +3326,8 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
-        home: 'Temetotaba FC',
-        away: 'Matarelgusano F.C.',
+        home: 'Matarelgusano F.C.',
+        away: 'Peña Independiente 76',
         homeScorers: null,
         awayScorers: null,
       },
@@ -3344,8 +3344,8 @@ const currentResults: ResultsData = [
         awayScorers: null,
       },
       {
-        home: 'Peña Independiente 76',
-        away: 'Matarelgusano F.C.',
+        home: 'Matarelgusano F.C.',
+        away: 'Temetotaba FC',
         homeScorers: null,
         awayScorers: null,
       },
