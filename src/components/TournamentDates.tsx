@@ -5,10 +5,13 @@ import {
   TOURNAMENT_STORAGE_KEY,
   type TeamColor,
   type TeamColorMap,
+  type TeamLogoMap,
   type TournamentClientBundle,
 } from "../constants/tournaments";
 import type { DayResults, Match, PlayersData, ResultsData } from "../types/data";
+import { mergeTeamLogos } from "../constants/teamLogos";
 import CapturePngButton from "./CapturePngButton";
+import TeamLogo from "./TeamLogo";
 
 function matchHomeScore(m: Match): string | number {
   if (!m.homeScorers && !m.awayScorers) return "";
@@ -84,18 +87,23 @@ function teamColorDotStyle(color: TeamColor): React.CSSProperties {
 function TeamNameWithColor({
   name,
   teamColors,
+  teamLogos,
   align,
 }: {
   name: string;
   teamColors: TeamColorMap;
+  teamLogos: TeamLogoMap;
   align: "left" | "right";
 }) {
   const color = teamColors[name];
+  const logo = teamLogos[name];
   return (
     <div
-      className={`flex min-w-0 items-center gap-2 ${align === "right" ? "justify-end" : "justify-start"}`}
+      className={`flex min-w-0 items-center gap-2 ${align === "right" ? "flex-row-reverse" : "flex-row"}`}
     >
-      {color ? (
+      {logo ? (
+        <TeamLogo src={logo} alt={name} size="sm" />
+      ) : color ? (
         <span
           className={`h-[15px] w-[15px] shrink-0 rounded-full shadow-sm ${teamColorDotBorder(color)}`}
           style={teamColorDotStyle(color)}
@@ -117,7 +125,15 @@ function readStoredId(): string {
   return valid && raw ? raw : "current";
 }
 
-function FechaCard({ result, teamColors }: { result: DayResults; teamColors: TeamColorMap }) {
+function FechaCard({
+  result,
+  teamColors,
+  teamLogos,
+}: {
+  result: DayResults;
+  teamColors: TeamColorMap;
+  teamLogos: TeamLogoMap;
+}) {
   const captureRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -153,7 +169,7 @@ function FechaCard({ result, teamColors }: { result: DayResults; teamColors: Tea
               >
                 <div className="flex flex-1 justify-between items-center gap-2 min-w-0">
                   <div className="min-w-0">
-                    <TeamNameWithColor name={match.home} teamColors={teamColors} align="left" />
+                    <TeamNameWithColor name={match.home} teamColors={teamColors} teamLogos={teamLogos} align="left" />
                     <p className="text-gray text-xs text-left">
                       {match.homeScorers ? match.homeScorers.join(", ") : ""}
                     </p>
@@ -171,7 +187,7 @@ function FechaCard({ result, teamColors }: { result: DayResults; teamColors: Tea
                     <span>{matchAwayScore(match)}</span>
                   </span>
                   <div className="min-w-0">
-                    <TeamNameWithColor name={match.away} teamColors={teamColors} align="right" />
+                    <TeamNameWithColor name={match.away} teamColors={teamColors} teamLogos={teamLogos} align="right" />
                     <p className="text-gray text-xs text-right">
                       {match.awayScorers ? match.awayScorers.join(", ") : ""}
                     </p>
@@ -218,12 +234,13 @@ const TournamentDates: React.FC<TournamentDatesProps> = ({ tournaments }) => {
   );
   const results = bundle.results;
   const teamColors = bundle.teamColors ?? {};
+  const teamLogos = mergeTeamLogos(bundle.teamLogos);
 
   return (
     <main className="flex flex-col gap-6 pb-6">
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
         {results.map((result) => (
-          <FechaCard key={result.id} result={result} teamColors={teamColors} />
+          <FechaCard key={result.id} result={result} teamColors={teamColors} teamLogos={teamLogos} />
         ))}
       </ul>
     </main>

@@ -3,6 +3,9 @@
  * Para regenerar desde archivos separados: coloca players.ts y results.ts y ejecuta `npm run merge:tournaments`.
  */
 import type { PlayersData, ResultsData, TournamentOption } from "../types/data";
+import { SHARED_TEAM_LOGOS, type TeamLogoMap } from "./teamLogos";
+
+export type { TeamLogoMap };
 
 const players1: PlayersData  = [
   {
@@ -1015,7 +1018,7 @@ const players6: PlayersData  = [
 const currentPlayers: PlayersData = [
   // Equipo A
   { id: 1, name: 'Heraldo', team: 'Equipo A', photo: '/default.jpg', level: 2 },
-  { id: 2, name: 'Canuto', team: 'Equipo A', photo: '/kanuto.jpg', level: 4 },
+  { id: 2, name: 'Kanuto', team: 'Equipo A', photo: '/kanuto.jpg', level: 4 },
   { id: 3, name: 'Piero', team: 'Equipo A', photo: '/piero.png', level: 4 },
   { id: 4, name: 'Josué', team: 'Equipo A', photo: '/default.jpg', level: 3 },
   { id: 5, name: 'Briam', team: 'Equipo A', photo: '/default.jpg', level: 4 },
@@ -3659,6 +3662,7 @@ export interface Tournament {
   results: ResultsData;
   players: PlayersData;
   teamColors?: TeamColorMap;
+  teamLogos?: TeamLogoMap;
   rosterChanges?: RosterChange[];
 }
 
@@ -3667,6 +3671,7 @@ export type TournamentClientBundle = {
   results: ResultsData;
   players: PlayersData;
   teamColors?: TeamColorMap;
+  teamLogos?: TeamLogoMap;
   rosterChanges?: RosterChange[];
 };
 
@@ -3689,6 +3694,10 @@ const currentTeamColors: TeamColorMap = {
   "Santa Carolina FC": "#dc2626",
   "FC. Palao City": "#1b1c20",
   "Peña Independiente 76": "#eab308",
+};
+
+const currentTeamLogos: TeamLogoMap = {
+  ...SHARED_TEAM_LOGOS,
 };
 
 const rosterChanges5: RosterChange[] = [
@@ -3783,6 +3792,7 @@ export const TOURNAMENTS: Tournament[] = [
     results: currentResults,
     players: currentPlayers,
     teamColors: currentTeamColors,
+    teamLogos: currentTeamLogos,
   },
 ];
 
@@ -3803,6 +3813,7 @@ export function tournamentsDataMap(): Record<string, TournamentClientBundle> {
         results: t.results,
         players: t.players,
         teamColors: t.teamColors,
+        teamLogos: t.teamLogos,
         rosterChanges: t.rosterChanges,
       },
     ]),

@@ -6,7 +6,9 @@ import {
   type RosterChange,
   type TournamentClientBundle,
 } from "../constants/tournaments";
+import { mergeTeamLogos } from "../constants/teamLogos";
 import type { Player, PlayersData } from "../types/data";
+import TeamLogo from "./TeamLogo";
 
 interface TournamentTeamsProps {
   tournaments: Record<string, TournamentClientBundle>;
@@ -61,16 +63,9 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
   );
   const players = bundle.players;
   const rosterChanges = bundle.rosterChanges ?? [];
+  const teamLogos = mergeTeamLogos(bundle.teamLogos);
 
   const teams = useMemo(() => groupPlayersByTeam(players), [players]);
-  const teamRatings = useMemo(() => {
-    return new Map(
-      teams.map((team) => [
-        team.name,
-        team.players.reduce((total, player) => total + (player.level ?? DEFAULT_LEVEL), 0),
-      ]),
-    );
-  }, [teams]);
 
   const changesByTeam = useMemo(() => {
     const map = new Map<string, RosterChange[]>();
@@ -89,12 +84,19 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
           const teamChanges = changesByTeam.get(team.name) ?? [];
           return (
           <div key={team.name} className="bg-dark-light border border-gold/15 rounded-lg p-6 flex flex-col gap-4">
-            <h2 className="mb-4 flex items-center justify-center gap-2 text-center font-semibold text-gold lg:text-lg">
-              <span>{team.name}</span>
-              <span className="rounded-full border border-gold/30 bg-gold/10 px-2 py-0.5 text-xs font-medium text-gold-light">
-                {(teamRatings.get(team.name) ?? 0).toFixed(1)} val.
-              </span>
-            </h2>
+            <div className="mb-4 flex flex-col items-center justify-center gap-4 text-center">
+              {teamLogos[team.name] ? (
+                <TeamLogo
+                  src={teamLogos[team.name]}
+                  alt={`Escudo de ${team.name}`}
+                  size="lg"
+                  className="drop-shadow-[0_4px_12px_rgba(212,175,55,0.25)]"
+                />
+              ) : null}
+              <h2 className="font-semibold text-gold text-lg sm:text-xl">
+                {team.name}
+              </h2>
+            </div>
 
             {teamChanges.length > 0 ? (
               <div className="mb-1 flex flex-col gap-2 rounded-md border border-gold/20 bg-dark/60 px-3 py-2.5">

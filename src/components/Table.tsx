@@ -1,9 +1,14 @@
+import type { TeamLogoMap } from "../constants/tournaments";
+import TeamLogo from "./TeamLogo";
+
 export interface TableProps {
   data: Array<Record<string, any>>;
   headers?: string[];
   highlightFirst?: boolean;
   maxRows?: number;
   className?: string;
+  teamLogos?: TeamLogoMap;
+  teamColumnKey?: string;
 }
 
 const Table: React.FC<TableProps> = ({ 
@@ -11,7 +16,9 @@ const Table: React.FC<TableProps> = ({
   headers, 
   highlightFirst = false, 
   maxRows,
-  className = ""
+  className = "",
+  teamLogos,
+  teamColumnKey = "team",
 }) => {
   const displayData = maxRows ? data.slice(0, maxRows) : data;
   
@@ -28,6 +35,24 @@ const Table: React.FC<TableProps> = ({
   }
 
   const tableHeaders = headers || Object.keys(data[0] || {});
+  const rowKeys = Object.keys(data[0] || {});
+
+  const renderCell = (row: Record<string, unknown>, cellIndex: number) => {
+    const key = rowKeys[cellIndex];
+    const value = row[key];
+    const text = String(value ?? "");
+
+    if (key === teamColumnKey && teamLogos?.[text]) {
+      return (
+        <span className="inline-flex items-center justify-center gap-1.5">
+          <TeamLogo src={teamLogos[text]} alt={text} size="sm" />
+          <span>{text}</span>
+        </span>
+      );
+    }
+
+    return text;
+  };
 
   const scrollbarStyles: any = {
     scrollbarWidth: 'thin',
@@ -59,12 +84,12 @@ const Table: React.FC<TableProps> = ({
                   ${highlightFirst && rowIndex === 0 ? 'text-gold font-semibold' : ''}
                 `}
               >
-                {Object.values(row).map((cell, cellIndex) => (
+                {Object.values(row).map((_, cellIndex) => (
                   <td 
                     key={cellIndex}
                     className="px-3 py-2 sm:px-4 sm:py-3 text-center border-b border-white/5 whitespace-nowrap"
                   >
-                    {String(cell)}
+                    {renderCell(row, cellIndex)}
                   </td>
                 ))}
               </tr>

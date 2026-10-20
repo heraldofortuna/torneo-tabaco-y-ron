@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import getBestScorersData from "../adapters/getBestScorersData";
 import getPositionsData from "../adapters/getPositionsData";
 import getScorersData from "../adapters/getScorersData";
+import { mergeTeamLogos } from "../constants/teamLogos";
 import {
   TOURNAMENT_CHANGE_EVENT,
   TOURNAMENT_OPTIONS,
@@ -47,6 +48,7 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
 
   const bundle = tournaments[tournamentId] ?? tournaments.current;
   const { results, players } = bundle;
+  const teamLogos = mergeTeamLogos(bundle.teamLogos);
 
   const positionsData = useMemo(() => getPositionsData(results), [results]);
   const scorersData = useMemo(() => getScorersData(results), [results]);
@@ -102,6 +104,7 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
             data={positionsData}
             headers={positionHeaders}
             highlightFirst
+            teamLogos={teamLogos}
           />
         </div>
         {allSanctions.length > 0 && (
