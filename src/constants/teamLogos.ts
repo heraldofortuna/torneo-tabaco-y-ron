@@ -1,3 +1,4 @@
+import fcPalaoCityLogo from "../assets/teams/fc-palao-city.png";
 import penaIndependienteLogo from "../assets/teams/pena-independiente-76.png";
 import santaCarolinaLogo from "../assets/teams/santa-carolina-fc.png";
 
@@ -11,6 +12,7 @@ function logoSrc(asset: string | { src: string }): string {
 export const SHARED_TEAM_LOGOS: TeamLogoMap = {
   "Santa Carolina FC": logoSrc(santaCarolinaLogo),
   "Peña Independiente 76": logoSrc(penaIndependienteLogo),
+  "FC. Palao City": logoSrc(fcPalaoCityLogo),
 };
 
 export function mergeTeamLogos(overrides?: TeamLogoMap): TeamLogoMap {
