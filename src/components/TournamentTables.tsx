@@ -83,9 +83,9 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
 
   return (
     <div className="flex flex-col md:flex-row md:flex-wrap gap-6 pb-6">
-      <section className="bg-dark-light flex-1 flex flex-col gap-4 p-4 rounded-lg">
+      <section className="bg-dark-light border border-gold/15 flex-1 flex flex-col gap-4 p-4 rounded-lg">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="font-semibold">Tabla de posiciones</h2>
+          <h2 className="font-semibold text-gold">Tabla de posiciones</h2>
           <CapturePngButton
             captureRef={positionsTableRef}
             filenamePrefix="tabla-posiciones"
@@ -96,7 +96,7 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
         </div>
         <div
           ref={positionsTableRef}
-          className="rounded-lg bg-[#21222D] p-3 w-full"
+          className="rounded-lg bg-dark-elevated p-3 w-full"
         >
           <Table
             data={positionsData}
@@ -106,14 +106,14 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
         </div>
         {allSanctions.length > 0 && (
           <div className="mt-4 pt-4 border-t border-white/10">
-            <h3 className="font-semibold text-sm mb-3 text-yellow-500">Sanciones</h3>
+            <h3 className="font-semibold text-sm mb-3 text-gold">Sanciones</h3>
             <div className="space-y-2">
               {allSanctions.map((sanction, i) => (
                 <div
                   key={`${sanction.team}-${sanction.dateName}-${i}`}
-                  className="text-xs sm:text-sm text-gray-300"
+                  className="text-xs sm:text-sm text-gray"
                 >
-                  <span className="font-medium text-red-400">
+                  <span className="font-medium text-white">
                     {sanction.points} puntos a {sanction.team} en la fecha{" "}
                     {sanction.dateName} por {sanction.reason}
                   </span>
@@ -124,9 +124,9 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
         )}
       </section>
 
-      <section className="bg-dark-light flex-1 flex flex-col gap-4 p-4 rounded-lg">
+      <section className="bg-dark-light border border-gold/15 flex-1 flex flex-col gap-4 p-4 rounded-lg">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="font-semibold">Tabla de goleadores</h2>
+          <h2 className="font-semibold text-gold">Tabla de goleadores</h2>
           <CapturePngButton
             captureRef={scorersBlockRef}
             filenamePrefix="tabla-goleadores"
@@ -137,7 +137,7 @@ const TournamentTables: React.FC<TournamentTablesProps> = ({ tournaments }) => {
         </div>
         <div
           ref={scorersBlockRef}
-          className="rounded-lg bg-[#21222D] p-3 flex flex-col gap-4 w-full"
+          className="rounded-lg bg-dark-elevated p-3 flex flex-col gap-4 w-full"
         >
           <Table
             data={scorersData}

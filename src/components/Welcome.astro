@@ -15,11 +15,15 @@ const menuItems = [
 
 <header>
   <div class="flex flex-col items-center justify-center gap-4 py-6">
-    <img src="/logo.png" alt="Logo" class="mx-auto w-24 h-24" />
+    <img
+      src="/logo.png"
+      alt="Sport Tabaco & Ron Palao"
+      class="mx-auto w-30 sm:w-36 h-auto object-contain"
+    />
 
     <Selector client:load />
 
-    <ul class="bg-dark-light w-full flex items-center justify-center text-sm text-gray font-semibold rounded-lg overflow-hidden">
+    <ul class="bg-dark-light border border-gold/20 w-full flex items-center justify-center text-sm text-gray font-semibold rounded-lg overflow-hidden">
       {menuItems.map((item, index) => {
         const isFirst = index === 0;
         const isLast = index === menuItems.length - 1;
@@ -28,7 +32,7 @@ const menuItems = [
         return (
           <li class={`
             text-center flex-1 transition-colors relative
-            ${isActive ? 'bg-[#A9DFD8] text-dark-light' : 'hover:bg-white/10'}
+            ${isActive ? 'bg-gold text-dark' : 'hover:bg-white/10 hover:text-white'}
             ${isActive && isFirst ? 'rounded-l-lg' : ''}
             ${isActive && isLast ? 'rounded-r-lg' : ''}
           `}>

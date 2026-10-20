@@ -19,7 +19,7 @@ const Table: React.FC<TableProps> = ({
     return (
       <div className={`text-xs sm:text-sm overflow-x-auto ${className}`}>
         <div className="min-w-max w-full">
-          <div className="px-3 py-2 sm:px-4 sm:py-3 text-center text-gray-500">
+          <div className="px-3 py-2 sm:px-4 sm:py-3 text-center text-gray">
             No hay datos disponibles
           </div>
         </div>
@@ -43,7 +43,7 @@ const Table: React.FC<TableProps> = ({
               {tableHeaders.map((header, index) => (
                 <th 
                   key={index}
-                  className="px-3 py-2 sm:px-4 sm:py-3 text-gray-400 text-center font-medium sticky top-0 bg-dark-light"
+                  className="px-3 py-2 sm:px-4 sm:py-3 text-gold text-center font-medium sticky top-0 bg-dark-elevated"
                 >
                   {header}
                 </th>
@@ -56,7 +56,7 @@ const Table: React.FC<TableProps> = ({
                 key={rowIndex}
                 className={`
                   hover:bg-white/5 transition-colors 
-                  ${highlightFirst && rowIndex === 0 ? 'text-yellow-500 font-semibold' : ''}
+                  ${highlightFirst && rowIndex === 0 ? 'text-gold font-semibold' : ''}
                 `}
               >
                 {Object.values(row).map((cell, cellIndex) => (

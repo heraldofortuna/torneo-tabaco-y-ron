@@ -81,7 +81,7 @@ const PrognosticCalculator: React.FC<PrognosticCalculatorProps> = ({ results }) 
   }, []);
 
   return (
-    <div className="bg-dark-light flex-1 flex flex-col gap-6 rounded-lg">
+    <div className="bg-dark-light border border-gold/15 flex-1 flex flex-col gap-6 rounded-lg p-4">
       <Table
         data={projectedPositions}
         headers={tableHeaders}
@@ -91,16 +91,16 @@ const PrognosticCalculator: React.FC<PrognosticCalculatorProps> = ({ results }) 
 
       <div className='flex flex-col gap-4'>
         <div className="flex justify-between items-center">
-          <h2 className="font-semibold">Calculadora de pronósticos</h2>
+          <h2 className="font-semibold text-gold">Calculadora de pronósticos</h2>
           <div className='flex items-center gap-2'>
             <button 
-              className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-3 py-1 rounded text-sm font-semibold transition-colors"
               onClick={handleCalculate}
             >
               Calcular
             </button>
             <button 
-              className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm transition-colors"
+              className="bg-dark border border-gold/40 hover:bg-dark-light text-white px-3 py-1 rounded text-sm transition-colors"
               onClick={resetResults}
             >
               Reiniciar
@@ -110,21 +110,21 @@ const PrognosticCalculator: React.FC<PrognosticCalculatorProps> = ({ results }) 
 
         <div className="space-y-3">
           {matchResults.map((match, index) => (
-            <div key={index} className="flex items-center justify-between bg-gray-900 text-sm p-3 rounded">
+            <div key={index} className="flex items-center justify-between bg-dark-elevated text-sm p-3 rounded border border-gold/10">
               <span className="font-medium w-2/5 text-right truncate pr-2">{match.home}</span>
               <div className="flex items-center gap-2">
                 <input 
                   type="number" 
                   min="0"
-                  className="w-12 text-center bg-gray-800 rounded py-1 border border-gray-600 focus:border-blue-500 focus:outline-none"
+                  className="w-12 text-center bg-dark rounded py-1 border border-gold/30 focus:border-gold focus:outline-none text-white"
                   value={match.homeGoals}
                   onChange={(e) => updateResult(index, 'home', parseInt(e.target.value) || 0)}
                 />
-                <span className="font-bold">-</span>
+                <span className="font-bold text-gold">-</span>
                 <input 
                   type="number" 
                   min="0"
-                  className="w-12 text-center bg-gray-800 rounded py-1 border border-gray-600 focus:border-blue-500 focus:outline-none"
+                  className="w-12 text-center bg-dark rounded py-1 border border-gold/30 focus:border-gold focus:outline-none text-white"
                   value={match.awayGoals}
                   onChange={(e) => updateResult(index, 'away', parseInt(e.target.value) || 0)}
                 />

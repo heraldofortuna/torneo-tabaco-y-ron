@@ -24,7 +24,7 @@ const displayData = data.slice(0, maxRows);
       </thead>
       <tbody>
         {displayData.map((row, rowIndex) => (
-          <tr class={`hover:bg-white/5 transition-colors ${highlightFirst && rowIndex === 0 ? 'text-yellow-500 font-semibold' : ''}`}>
+          <tr class={`hover:bg-white/5 transition-colors ${highlightFirst && rowIndex === 0 ? 'text-gold font-semibold' : ''}`}>
             {Object.values(row).map((cell) => (
               <td class="px-3 py-2 sm:px-4 sm:py-3 text-center border-b border-white/5 whitespace-nowrap">
                 {cell}

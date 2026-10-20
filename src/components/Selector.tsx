@@ -46,10 +46,10 @@ const Selector: React.FC<SelectorProps> = ({
 
   return (
     <label
-      className={`flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-300 w-full max-w-xs mx-auto ${className}`}
+      className={`flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray w-full max-w-xs mx-auto ${className}`}
     >
       <select
-        className="w-full sm:flex-1 rounded-md border border-white/15 bg-dark-light px-3 py-2 text-white font-semibold focus:outline-none focus:ring-2 focus:ring-[#A9DFD8]/60"
+        className="w-full sm:flex-1 rounded-md border border-gold/30 bg-dark-light px-3 py-2 text-white font-semibold focus:outline-none focus:ring-2 focus:ring-gold/60"
         value={value}
         onChange={(e) => onSelect(e.target.value)}
         aria-label="Seleccionar torneo"

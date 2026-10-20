@@ -88,32 +88,32 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
         {teams.map((team) => {
           const teamChanges = changesByTeam.get(team.name) ?? [];
           return (
-          <div key={team.name} className="bg-dark-light rounded-lg p-6 flex flex-col gap-4">
-            <h2 className="mb-4 flex items-center justify-center gap-2 text-center font-semibold text-yellow-500 lg:text-lg">
+          <div key={team.name} className="bg-dark-light border border-gold/15 rounded-lg p-6 flex flex-col gap-4">
+            <h2 className="mb-4 flex items-center justify-center gap-2 text-center font-semibold text-gold lg:text-lg">
               <span>{team.name}</span>
-              <span className="rounded-full border border-yellow-500/30 bg-yellow-500/10 px-2 py-0.5 text-xs font-medium text-yellow-300">
+              <span className="rounded-full border border-gold/30 bg-gold/10 px-2 py-0.5 text-xs font-medium text-gold-light">
                 {(teamRatings.get(team.name) ?? 0).toFixed(1)} val.
               </span>
             </h2>
 
             {teamChanges.length > 0 ? (
-              <div className="mb-1 flex flex-col gap-2 rounded-md border border-white/10 bg-dark/60 px-3 py-2.5">
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">
+              <div className="mb-1 flex flex-col gap-2 rounded-md border border-gold/20 bg-dark/60 px-3 py-2.5">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-gold">
                   Cambios de plantilla
                 </p>
                 <ul className="flex flex-col gap-2">
                   {teamChanges.map((c, idx) => (
                     <li
                       key={`${c.matchday}-${c.outPlayer}-${c.inPlayer}-${idx}`}
-                      className="border-l-2 border-yellow-500/50 pl-2.5 text-xs text-gray-300"
+                      className="border-l-2 border-gold/50 pl-2.5 text-xs text-gray"
                     >
-                      <span className="text-gray-500">{c.matchday}</span>
-                      <span className="mx-1 text-gray-600">·</span>
-                      <span className="text-red-300/90">{c.outPlayer}</span>
-                      <span className="text-gray-500"> → </span>
-                      <span className="text-[#A9DFD8]">{c.inPlayer}</span>
+                      <span className="text-gray">{c.matchday}</span>
+                      <span className="mx-1 text-gray">·</span>
+                      <span className="text-white/70">{c.outPlayer}</span>
+                      <span className="text-gray"> → </span>
+                      <span className="text-gold">{c.inPlayer}</span>
                       {c.reason ? (
-                        <span className="mt-0.5 block text-[11px] italic text-gray-500">
+                        <span className="mt-0.5 block text-[11px] italic text-gray">
                           Motivo: {c.reason}
                         </span>
                       ) : null}
@@ -134,16 +134,16 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
                 return (
                   <div
                     key={player.id}
-                    className="min-w-full lg:min-w-36 flex flex-col items-center gap-2 p-3 bg-dark rounded-lg hover:bg-dark-light border border-transparent hover:border-yellow-500/30 transition-colors cursor-pointer"
+                    className="min-w-full lg:min-w-36 flex flex-col items-center gap-2 p-3 bg-dark rounded-lg hover:bg-dark-light border border-transparent hover:border-gold/30 transition-colors cursor-pointer"
                   >
                     <img
                       src={photo}
                       alt={player.name}
-                      className="w-20 h-20 rounded-full object-cover border-2 border-yellow-500/30 mb-2"
+                      className="w-20 h-20 rounded-full object-cover border-2 border-gold/30 mb-2"
                     />
                     <div className="flex items-center gap-0.5 text-xl">
                       {Array.from({ length: fullStars }).map((_, i) => (
-                        <span key={`f-${i}`} className="text-yellow-400">
+                        <span key={`f-${i}`} className="text-gold">
                           ★
                         </span>
                       ))}
@@ -154,12 +154,12 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
                         </span>
                       )}
                       {Array.from({ length: emptyStars }).map((_, i) => (
-                        <span key={`e-${i}`} className="text-gray-600">
+                        <span key={`e-${i}`} className="text-gray">
                           ☆
                         </span>
                       ))}
                     </div>
-                    <div className="text-sm text-gray-300 font-medium">{player.name}</div>
+                    <div className="text-sm text-white font-medium">{player.name}</div>
                   </div>
                 );
               })}

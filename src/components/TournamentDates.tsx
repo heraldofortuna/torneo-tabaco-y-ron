@@ -32,16 +32,16 @@ function RedCardPlayersList({ names, align }: { names?: string[] | null; align: 
   const text = list.join(", ");
   return (
     <div
-      className={`mt-1 flex flex-wrap items-baseline gap-1 text-[11px] font-medium text-red-400 ${align === "right" ? "justify-end text-right" : "text-left"}`}
+      className={`mt-1 flex flex-wrap items-baseline gap-1 text-[11px] font-medium text-white ${align === "right" ? "justify-end text-right" : "text-left"}`}
       title={`Tarjeta roja: ${text}`}
     >
       <span
-        className="inline-flex h-3.5 min-w-[12px] shrink-0 items-center justify-center rounded-sm bg-red-600 px-0.5 text-[9px] font-bold uppercase leading-none text-white"
+        className="inline-flex h-3.5 min-w-[12px] shrink-0 items-center justify-center rounded-sm bg-gold px-0.5 text-[9px] font-bold uppercase leading-none text-dark"
         aria-hidden
       >
         R
       </span>
-      <span className="min-w-0 text-red-300/95">{text}</span>
+      <span className="min-w-0 text-gray">{text}</span>
     </div>
   );
 }
@@ -63,10 +63,10 @@ function isDarkHex(hex: string): boolean {
 function teamColorDotBorder(color: TeamColor): string {
   const colors = typeof color === "string" ? [color] : color;
   if (colors.some(isLightHex)) {
-    return "border border-zinc-600/70 ring-1 ring-black/20";
+    return "border border-gold/50 ring-1 ring-black/20";
   }
   if (colors.every(isDarkHex)) {
-    return "border border-zinc-400/45";
+    return "border border-white/40";
   }
   return "border border-white/30";
 }
@@ -122,13 +122,13 @@ function FechaCard({ result, teamColors }: { result: DayResults; teamColors: Tea
 
   return (
     <li className="flex flex-col">
-      <section className="bg-dark-light h-full flex flex-col gap-2 p-4 rounded-lg relative">
+      <section className="bg-dark-light border border-gold/15 h-full flex flex-col gap-2 p-4 rounded-lg relative">
         <div
           ref={captureRef}
-          className="rounded-lg bg-[#21222D] p-3 flex flex-col gap-2 pr-14"
+          className="rounded-lg bg-dark-elevated p-3 flex flex-col gap-2 pr-14"
         >
           <div className="flex flex-col">
-            <h2 className="font-semibold text-base">{result.name}</h2>
+            <h2 className="font-semibold text-base text-gold">{result.name}</h2>
             <p className="text-gray text-xs">{result.date}</p>
           </div>
           {result.mvp ? (

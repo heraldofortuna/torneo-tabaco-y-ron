@@ -781,7 +781,7 @@ const players5: PlayersData  = [
   },
 ]
 
-const currentPlayers: PlayersData  = [
+const players6: PlayersData  = [
   // Peña Independiente 76
   {
     id: 1,
@@ -1011,6 +1011,45 @@ const currentPlayers: PlayersData  = [
     level: 3,
   },
 ]
+
+const currentPlayers: PlayersData = [
+  // Equipo A
+  { id: 1, name: 'Heraldo', team: 'Equipo A', photo: '/default.jpg', level: 2 },
+  { id: 2, name: 'Canuto', team: 'Equipo A', photo: '/kanuto.jpg', level: 4 },
+  { id: 3, name: 'Piero', team: 'Equipo A', photo: '/piero.png', level: 4 },
+  { id: 4, name: 'Josué', team: 'Equipo A', photo: '/default.jpg', level: 3 },
+  { id: 5, name: 'Briam', team: 'Equipo A', photo: '/default.jpg', level: 4 },
+  { id: 6, name: 'Pidrin', team: 'Equipo A', photo: '/default.jpg', level: 3 },
+  { id: 7, name: 'Andresito', team: 'Equipo A', photo: '/default.jpg', level: 3.5 },
+  { id: 8, name: 'Kevin', team: 'Equipo A', photo: '/kevin.jpg', level: 4 },
+  // Santa Carolina FC
+  { id: 9, name: 'Mathias', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
+  { id: 10, name: 'Panky', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
+  { id: 11, name: 'Geampierre', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
+  { id: 12, name: 'Rusian', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3 },
+  { id: 13, name: 'Dino', team: 'Santa Carolina FC', photo: '/default.jpg', level: 2 },
+  { id: 14, name: 'Anthony', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
+  { id: 15, name: 'Fabian', team: 'Santa Carolina FC', photo: '/default.jpg', level: 5 },
+  { id: 16, name: 'Marco', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
+  // FC. Palao City
+  { id: 17, name: 'Favio', team: 'FC. Palao City', photo: '/default.jpg', level: 1.5 },
+  { id: 18, name: 'Jozua', team: 'FC. Palao City', photo: '/jozua.jpg', level: 4.5 },
+  { id: 19, name: 'Charly', team: 'FC. Palao City', photo: '/charly.jpg', level: 3.5 },
+  { id: 20, name: 'Joaquín', team: 'FC. Palao City', photo: '/joaquin.jpg', level: 3 },
+  { id: 21, name: 'Carlos Cruz', team: 'FC. Palao City', photo: '/default.jpg', level: 2 },
+  { id: 22, name: 'Leandro', team: 'FC. Palao City', photo: '/default.jpg', level: 4.5 },
+  { id: 23, name: 'Anyelo Bueno', team: 'FC. Palao City', photo: '/default.jpg', level: 4.5 },
+  { id: 24, name: 'Omar', team: 'FC. Palao City', photo: '/omar.jpg', level: 4 },
+  // Peña Independiente 76
+  { id: 25, name: 'Cristiano Ojeda', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3 },
+  { id: 26, name: 'Juan Piero', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3 },
+  { id: 27, name: 'Antony C', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3.5 },
+  { id: 28, name: 'Carlos Pachas', team: 'Peña Independiente 76', photo: '/default.jpg', level: 2.5 },
+  { id: 29, name: 'Pelao Cristofer', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3 },
+  { id: 30, name: 'Fabricio', team: 'Peña Independiente 76', photo: '/fabricio.jpg', level: 4 },
+  { id: 31, name: 'Stev', team: 'Peña Independiente 76', photo: '/default.jpg', level: 4.5 },
+  { id: 32, name: 'Oscar Castro', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3.5 },
+];
 
 const results1: ResultsData  = [
   {
@@ -2960,7 +2999,7 @@ const results5: ResultsData = [
   },
 ];
 
-const currentResults: ResultsData = [
+const results6: ResultsData = [
   {
     id: 1,
     name: 'Fecha 1',
@@ -3491,6 +3530,113 @@ const currentResults: ResultsData = [
   },
 ];
 
+const currentResults: ResultsData = [
+  {
+    id: 1,
+    name: 'Fecha 1',
+    date: 'Miércoles 21 de Octubre del 2026',
+    matches: [
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Fecha 2',
+    date: 'Miércoles 28 de Octubre del 2026',
+    matches: [
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Fecha 3',
+    date: 'Miércoles 04 de Noviembre del 2026',
+    matches: [
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Fecha 4',
+    date: 'Miércoles 11 de Noviembre del 2026',
+    matches: [
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Fecha 5',
+    date: 'Miércoles 18 de Noviembre del 2026',
+    matches: [
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Fecha 6',
+    date: 'Miércoles 25 de Noviembre del 2026',
+    matches: [
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Fecha 7',
+    date: 'Miércoles 02 de Diciembre del 2026',
+    matches: [
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Fecha 8',
+    date: 'Miércoles 09 de Diciembre del 2026',
+    matches: [
+      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+    ],
+  },
+];
+
 /** Un color sólido o dos colores en mitad y mitad (izquierda / derecha) */
 export type TeamColor = string | readonly [string, string];
 
@@ -3531,11 +3677,18 @@ const teamColors5: TeamColorMap = {
   "FC Pajagoza": "#3b0764",
 };
 
-const currentTeamColors: TeamColorMap = {
+const teamColors6: TeamColorMap = {
   "Peña Independiente 76": "#c4e322",
   "Temetotaba FC": "#1b1c20",
   "Purito Palao FC": "#0248a1",
   "Matarelgusano F.C.": ["#5a8982", "#f3f4f6"],
+};
+
+const currentTeamColors: TeamColorMap = {
+  "Equipo A": "#0248a1",
+  "Santa Carolina FC": "#dc2626",
+  "FC. Palao City": "#1b1c20",
+  "Peña Independiente 76": "#eab308",
 };
 
 const rosterChanges5: RosterChange[] = [
@@ -3590,7 +3743,7 @@ const rosterChanges5: RosterChange[] = [
   },
 ];
 
-const currentRosterChanges: RosterChange[] = [  {
+const rosterChanges6: RosterChange[] = [  {
     matchday: "Fecha 3",
     team: "Matarelgusano F.C.",
     outPlayer: "Charapa",
@@ -3617,12 +3770,19 @@ export const TOURNAMENTS: Tournament[] = [
   { id: "4", label: "Torneo Verano 2026", results: results4, players: players4 },
   { id: "5", label: "Torneo Abril - Junio 2026", results: results5, players: players5, teamColors: teamColors5, rosterChanges: rosterChanges5 },
   {
-    id: "current",
+    id: "6",
     label: "Torneo del 1° Aniversario",
+    results: results6,
+    players: players6,
+    teamColors: teamColors6,
+    rosterChanges: rosterChanges6,
+  },
+  {
+    id: "current",
+    label: "Torneo de fin de año 2026",
     results: currentResults,
     players: currentPlayers,
     teamColors: currentTeamColors,
-    rosterChanges: currentRosterChanges,
   },
 ];
 

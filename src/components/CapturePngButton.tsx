@@ -2,7 +2,7 @@ import { useCallback, useState, type RefObject } from "react";
 import { toPng } from "html-to-image";
 
 const CAPTURE_PIXEL_RATIO = 3;
-const CAPTURE_BG = "#21222D";
+const CAPTURE_BG = "#161616";
 
 export interface CapturePngButtonProps {
   captureRef: RefObject<HTMLElement | null>;
