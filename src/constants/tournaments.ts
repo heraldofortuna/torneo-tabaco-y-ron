@@ -1016,15 +1016,15 @@ const players6: PlayersData  = [
 ]
 
 const currentPlayers: PlayersData = [
-  // Equipo A
-  { id: 1, name: 'Heraldo', team: 'Equipo A', photo: '/default.jpg', level: 2 },
-  { id: 2, name: 'Kanuto', team: 'Equipo A', photo: '/kanuto.jpg', level: 4 },
-  { id: 3, name: 'Piero', team: 'Equipo A', photo: '/piero.png', level: 4 },
-  { id: 4, name: 'Josué', team: 'Equipo A', photo: '/default.jpg', level: 3 },
-  { id: 5, name: 'Briam', team: 'Equipo A', photo: '/default.jpg', level: 4 },
-  { id: 6, name: 'Pidrin', team: 'Equipo A', photo: '/default.jpg', level: 3 },
-  { id: 7, name: 'Andresito', team: 'Equipo A', photo: '/default.jpg', level: 3.5 },
-  { id: 8, name: 'Kevin', team: 'Equipo A', photo: '/kevin.jpg', level: 4 },
+  // Los Alaracos FC
+  { id: 1, name: 'Heraldo', team: 'Los Alaracos FC', photo: '/default.jpg', level: 2 },
+  { id: 2, name: 'Kanuto', team: 'Los Alaracos FC', photo: '/kanuto.jpg', level: 4 },
+  { id: 3, name: 'Piero', team: 'Los Alaracos FC', photo: '/piero.png', level: 4 },
+  { id: 4, name: 'Josué', team: 'Los Alaracos FC', photo: '/default.jpg', level: 3 },
+  { id: 5, name: 'Briam', team: 'Los Alaracos FC', photo: '/default.jpg', level: 4 },
+  { id: 6, name: 'Pidrin', team: 'Los Alaracos FC', photo: '/default.jpg', level: 3 },
+  { id: 7, name: 'Andresito', team: 'Los Alaracos FC', photo: '/default.jpg', level: 3.5 },
+  { id: 8, name: 'Kevin', team: 'Los Alaracos FC', photo: '/kevin.jpg', level: 4 },
   // Santa Carolina FC
   { id: 9, name: 'Mathias', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
   { id: 10, name: 'Panky', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
@@ -3540,10 +3540,10 @@ const currentResults: ResultsData = [
     date: 'Miércoles 21 de Octubre del 2026',
     matches: [
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
     ],
   },
@@ -3552,12 +3552,12 @@ const currentResults: ResultsData = [
     name: 'Fecha 2',
     date: 'Miércoles 28 de Octubre del 2026',
     matches: [
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
     ],
   },
   {
@@ -3566,10 +3566,10 @@ const currentResults: ResultsData = [
     date: 'Miércoles 04 de Noviembre del 2026',
     matches: [
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
     ],
   },
@@ -3578,12 +3578,12 @@ const currentResults: ResultsData = [
     name: 'Fecha 4',
     date: 'Miércoles 11 de Noviembre del 2026',
     matches: [
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
     ],
   },
   {
@@ -3592,10 +3592,10 @@ const currentResults: ResultsData = [
     date: 'Miércoles 18 de Noviembre del 2026',
     matches: [
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
     ],
   },
@@ -3604,12 +3604,12 @@ const currentResults: ResultsData = [
     name: 'Fecha 6',
     date: 'Miércoles 25 de Noviembre del 2026',
     matches: [
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
     ],
   },
   {
@@ -3618,10 +3618,10 @@ const currentResults: ResultsData = [
     date: 'Miércoles 02 de Diciembre del 2026',
     matches: [
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
     ],
   },
@@ -3630,12 +3630,12 @@ const currentResults: ResultsData = [
     name: 'Fecha 8',
     date: 'Miércoles 09 de Diciembre del 2026',
     matches: [
-      { home: 'FC. Palao City', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
       { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Equipo A', homeScorers: null, awayScorers: null },
+      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
     ],
   },
 ];
@@ -3690,7 +3690,7 @@ const teamColors6: TeamColorMap = {
 };
 
 const currentTeamColors: TeamColorMap = {
-  "Equipo A": "#0248a1",
+  "Los Alaracos FC": "#0248a1",
   "Santa Carolina FC": "#dc2626",
   "FC. Palao City": "#1b1c20",
   "Peña Independiente 76": "#eab308",
