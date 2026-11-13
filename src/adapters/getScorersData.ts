@@ -8,7 +8,7 @@ function getScorersData(results: ResultsData): Array<ScorerData & { position: nu
       // Procesar goleadores locales (filtrar strings vacíos)
       match.homeScorers?.forEach(player => {
         // Ignorar strings vacíos que indican goles sin goleador confirmado
-        if (player && player.trim() !== '') {
+        if (player && player.trim() !== '' && !/autogol/i.test(player)) {
           if (!playerData[player]) {
             playerData[player] = { goals: 0, team: match.home };
           }
@@ -19,7 +19,7 @@ function getScorersData(results: ResultsData): Array<ScorerData & { position: nu
       // Procesar goleadores visitantes (filtrar strings vacíos)
       match.awayScorers?.forEach(player => {
         // Ignorar strings vacíos que indican goles sin goleador confirmado
-        if (player && player.trim() !== '') {
+        if (player && player.trim() !== '' && !/autogol/i.test(player)) {
           if (!playerData[player]) {
             playerData[player] = { goals: 0, team: match.away };
           }
