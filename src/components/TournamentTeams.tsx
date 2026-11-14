@@ -33,6 +33,9 @@ function groupPlayersByTeam(players: PlayersData): { name: string; players: Play
   return Array.from(map.entries()).map(([name, pls]) => ({
     name,
     players: [...pls].sort((a, b) => {
+      const bajoA = a.bajo ? 1 : 0;
+      const bajoB = b.bajo ? 1 : 0;
+      if (bajoA !== bajoB) return bajoA - bajoB;
       const levelA = a.level ?? DEFAULT_LEVEL;
       const levelB = b.level ?? DEFAULT_LEVEL;
       return levelB - levelA || a.name.localeCompare(b.name);
@@ -64,6 +67,18 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
   const players = bundle.players;
   const rosterChanges = bundle.rosterChanges ?? [];
   const teamLogos = mergeTeamLogos(bundle.teamLogos);
+
+  const absencesByPlayer = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const fecha of bundle.results) {
+      for (const absence of fecha.absences ?? []) {
+        const name = absence.player.trim();
+        if (!name) continue;
+        map.set(name, (map.get(name) ?? 0) + 1);
+      }
+    }
+    return map;
+  }, [bundle.results]);
 
   const teams = useMemo(() => groupPlayersByTeam(players), [players]);
 
@@ -125,23 +140,24 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
               </div>
             ) : null}
 
-            <div className="flex flex-wrap gap-4">
+            <div className="grid w-full grid-cols-2 gap-4 lg:grid-cols-4">
               {team.players.map((player) => {
                 const level = player.level ?? DEFAULT_LEVEL;
                 const fullStars = Math.floor(level);
                 const hasHalfStar = level % 1 !== 0;
                 const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
                 const photo = player.photo?.trim() ? player.photo : "/default.jpg";
+                const absences = absencesByPlayer.get(player.name) ?? 0;
 
                 return (
                   <div
                     key={player.id}
-                    className="min-w-full lg:min-w-36 flex flex-col items-center gap-2 p-3 bg-dark rounded-lg hover:bg-dark-light border border-transparent hover:border-gold/30 transition-colors cursor-pointer"
+                    className="flex w-full min-w-0 flex-col items-center gap-2 rounded-lg border border-transparent bg-dark p-3 transition-colors hover:border-gold/30 hover:bg-dark-light"
                   >
                     <img
                       src={photo}
                       alt={player.name}
-                      className="w-20 h-20 rounded-full object-cover border-2 border-gold/30 mb-2"
+                      className="mb-2 h-20 w-20 rounded-full border-2 border-gold/30 object-cover"
                     />
                     <div className="flex items-center gap-0.5 text-xl">
                       {Array.from({ length: fullStars }).map((_, i) => (
@@ -161,7 +177,26 @@ const TournamentTeams: React.FC<TournamentTeamsProps> = ({ tournaments }) => {
                         </span>
                       ))}
                     </div>
-                    <div className="text-sm text-white font-medium">{player.name}</div>
+                    <div className="text-center text-sm font-medium text-white">{player.name}</div>
+                    {player.captain || player.bajo ? (
+                      <div className="flex flex-wrap items-center justify-center gap-1">
+                        {player.captain ? (
+                          <span className="rounded border border-white/30 bg-white/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
+                            Capitán
+                          </span>
+                        ) : null}
+                        {player.bajo ? (
+                          <span className="rounded border border-gold/40 bg-gold/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-gold">
+                            Bajo
+                          </span>
+                        ) : null}
+                      </div>
+                    ) : null}
+                    {player.bajo ? (
+                      <p className={`text-center text-[11px] ${absences >= 2 ? "font-medium text-[#fecaca]" : "text-gray"}`}>
+                        {absences === 1 ? "1 falta" : `${absences} faltas`}
+                      </p>
+                    ) : null}
                   </div>
                 );
               })}

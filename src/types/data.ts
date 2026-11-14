@@ -6,9 +6,18 @@ export interface Player {
   team: string;
   photo: string;
   level?: number;
+  /** Los dos jugadores de menor exigencia del equipo. */
+  bajo?: boolean;
+  captain?: boolean;
 }
 
 export type ResultsData = DayResults[];
+
+/** Bajo que no asistió a una fecha. La 3.ª falta y las siguientes son −3 puntos. */
+export interface Absence {
+  player: string;
+  team?: string;
+}
 
 export interface DayResults {
   id: number;
@@ -20,6 +29,7 @@ export interface DayResults {
   };
   matches: Match[];
   sanctions?: Sanction[];
+  absences?: Absence[];
 }
 
 export interface Sanction {

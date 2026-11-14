@@ -32,20 +32,26 @@ function redCardNameList(names?: string[] | null): string[] {
 function RedCardPlayersList({ names, align }: { names?: string[] | null; align: "left" | "right" }) {
   const list = redCardNameList(names);
   if (list.length === 0) return null;
-  const text = list.join(", ");
   return (
-    <div
-      className={`mt-1 flex flex-wrap items-baseline gap-1 text-[11px] font-medium text-white ${align === "right" ? "justify-end text-right" : "text-left"}`}
-      title={`Tarjeta roja: ${text}`}
+    <ul
+      className={`mt-1 flex flex-col gap-0.5 text-[11px] font-medium text-white ${align === "right" ? "items-end text-right" : "items-start text-left"}`}
+      title={`Tarjeta roja: ${list.join(", ")}`}
     >
-      <span
-        className="inline-flex h-3.5 min-w-[12px] shrink-0 items-center justify-center rounded-sm bg-gold px-0.5 text-[9px] font-bold uppercase leading-none text-dark"
-        aria-hidden
-      >
-        R
-      </span>
-      <span className="min-w-0 text-gray">{text}</span>
-    </div>
+      {list.map((name, index) => (
+        <li
+          key={`${name}-${index}`}
+          className={`flex items-baseline gap-1 ${align === "right" ? "flex-row-reverse" : ""}`}
+        >
+          <span
+            className="inline-flex h-3.5 min-w-[12px] shrink-0 items-center justify-center rounded-sm bg-[#dc2626] px-0.5 text-[9px] font-bold uppercase leading-none text-white"
+            aria-hidden
+          >
+            R
+          </span>
+          <span className="min-w-0 text-gray">{name}</span>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -118,6 +124,54 @@ function TeamNameWithColor({
   );
 }
 
+function joinNames(names: string[]): string {
+  if (names.length <= 1) return names[0] ?? "";
+  if (names.length === 2) return `${names[0]} y ${names[1]}`;
+  return `${names.slice(0, -1).join(", ")} y ${names[names.length - 1]}`;
+}
+
+function fechaReminders(results: ResultsData, index: number): string[] {
+  const notes: string[] = [];
+  const previous = index > 0 ? results[index - 1] : undefined;
+  const lastMatch = previous?.matches.at(-1);
+  const suspended = [
+    ...(lastMatch?.homeRedCards ?? []),
+    ...(lastMatch?.awayRedCards ?? []),
+  ]
+    .map((name) => name.trim())
+    .filter(Boolean);
+
+  if (suspended.length > 0) {
+    const verb = suspended.length === 1 ? "no juega" : "no juegan";
+    notes.push(
+      `${joinNames(suspended)} ${verb} el primer partido: roja en el último partido de la fecha anterior.`,
+    );
+  }
+
+  const absences = new Map<string, { count: number; team?: string }>();
+  for (let i = 0; i < index; i++) {
+    for (const absence of results[i].absences ?? []) {
+      const player = absence.player.trim();
+      if (!player) continue;
+      const current = absences.get(player);
+      absences.set(player, {
+        count: (current?.count ?? 0) + 1,
+        team: absence.team ?? current?.team,
+      });
+    }
+  }
+
+  for (const [player, info] of absences) {
+    if (info.count < 2) continue;
+    const who = info.team ? `${player} (${info.team})` : player;
+    notes.push(
+      `${who} lleva ${info.count} faltas. Si falta en esta fecha, sanción de 3 puntos.`,
+    );
+  }
+
+  return notes;
+}
+
 function readStoredId(): string {
   if (typeof window === "undefined") return "current";
   const raw = localStorage.getItem(TOURNAMENT_STORAGE_KEY);
@@ -127,10 +181,12 @@ function readStoredId(): string {
 
 function FechaCard({
   result,
+  reminders,
   teamColors,
   teamLogos,
 }: {
   result: DayResults;
+  reminders: string[];
   teamColors: TeamColorMap;
   teamLogos: TeamLogoMap;
 }) {
@@ -146,6 +202,13 @@ function FechaCard({
           <div className="flex flex-col">
             <h2 className="font-semibold text-base text-gold">{result.name}</h2>
             <p className="text-gray text-xs">{result.date}</p>
+            {reminders.length > 0 ? (
+              <ul className="mt-1 flex flex-col gap-1 border-l-2 border-[#dc2626] pl-2 text-[11px] leading-snug text-[#fecaca]">
+                {reminders.map((note) => (
+                  <li key={note}>{note}</li>
+                ))}
+              </ul>
+            ) : null}
           </div>
           {result.mvp ? (
             <div className="flex flex-col items-center gap-0">
@@ -239,8 +302,14 @@ const TournamentDates: React.FC<TournamentDatesProps> = ({ tournaments }) => {
   return (
     <main className="flex flex-col gap-6 pb-6">
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-        {results.map((result) => (
-          <FechaCard key={result.id} result={result} teamColors={teamColors} teamLogos={teamLogos} />
+        {results.map((result, index) => (
+          <FechaCard
+            key={result.id}
+            result={result}
+            reminders={fechaReminders(results, index)}
+            teamColors={teamColors}
+            teamLogos={teamLogos}
+          />
         ))}
       </ul>
     </main>
