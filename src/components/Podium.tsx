@@ -20,14 +20,12 @@ const Podium: React.FC<PodiumProps> = ({ winners }) => {
           style={{ animationDelay: "0.2s" }}
         >
           <div className="text-2xl font-bold absolute -top-8 text-gold">2°</div>
-          <div className="rounded-full bg-black/10 flex items-center justify-center mt-4 mb-2 backdrop-blur-sm border-2 border-gold w-16 h-16 sm:w-20 sm:h-20">
+          <div className="mt-4 mb-2 flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-gold bg-black/10 backdrop-blur-sm sm:h-20 sm:w-20">
             {secondPlace?.photo ? (
               <img
                 src={secondPlace.photo}
                 alt={secondPlace.name}
-                width={80}
-                height={80}
-                className="rounded-full"
+                className="h-full w-full object-cover"
               />
             ) : (
               <div className="text-3xl">🥈</div>
@@ -40,14 +38,12 @@ const Podium: React.FC<PodiumProps> = ({ winners }) => {
 
         <div className="flex flex-col items-center relative px-2 sm:px-4 w-24 sm:w-32 transition-all duration-300 hover:-translate-y-1 bg-gradient-to-b from-gold-light to-gold h-48 sm:h-56 shadow-[0_10px_15px_-3px_rgba(212,175,55,0.35)] animate-podium-bounce text-dark">
           <div className="text-2xl font-bold absolute -top-8 text-gold-light">1°</div>
-          <div className="rounded-full bg-black/10 flex items-center justify-center mt-4 mb-2 backdrop-blur-sm border-2 border-white w-20 h-20 sm:w-24 sm:h-24">
+          <div className="mt-4 mb-2 flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-black/10 backdrop-blur-sm sm:h-24 sm:w-24">
             {firstPlace?.photo ? (
               <img
                 src={firstPlace.photo}
                 alt={firstPlace.name}
-                width={100}
-                height={100}
-                className="rounded-full"
+                className="h-full w-full object-cover"
               />
             ) : (
               <div className="text-3xl">🥇</div>
@@ -63,14 +59,12 @@ const Podium: React.FC<PodiumProps> = ({ winners }) => {
           style={{ animationDelay: "0.4s" }}
         >
           <div className="text-2xl font-bold absolute -top-8 text-gold">3°</div>
-          <div className="rounded-full bg-white/10 flex items-center justify-center mt-4 mb-2 backdrop-blur-sm border-2 border-gold w-16 h-16 sm:w-20 sm:h-20">
+          <div className="mt-4 mb-2 flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-gold bg-white/10 backdrop-blur-sm sm:h-20 sm:w-20">
             {thirdPlace?.photo ? (
               <img
                 src={thirdPlace.photo}
                 alt={thirdPlace.name}
-                width={80}
-                height={80}
-                className="rounded-full"
+                className="h-full w-full object-cover"
               />
             ) : (
               <div className="text-3xl">🥉</div>

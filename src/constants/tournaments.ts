@@ -267,7 +267,7 @@ const players2: PlayersData  = [
     id: 22,
     name: 'Mathias',
     team: 'FC Real Polaco',
-    photo: '',
+    photo: '/mathias.jpg',
   },
 ]
 
@@ -295,7 +295,7 @@ const players3: PlayersData  = [
     id: 4,
     name: 'Antony',
     team: 'Los Ñaños FC',
-    photo: '',
+    photo: '/antony.jpg',
   },
   {
     id: 5,
@@ -399,7 +399,7 @@ const players3: PlayersData  = [
     id: 21,
     name: 'Mathias',
     team: 'Blue Label FC',
-    photo: '',
+    photo: '/mathias.jpg',
   },
   {
     id: 22,
@@ -451,7 +451,7 @@ const players4: PlayersData  = [
     id: 5,
     name: 'Antony',
     team: 'FC Nueva generación',
-    photo: '/default.jpg',
+    photo: '/antony.jpg',
   },
   {
     id: 6,
@@ -482,7 +482,7 @@ const players4: PlayersData  = [
     id: 10,
     name: 'Mathias',
     team: 'Sport Matozoide',
-    photo: '/default.jpg',
+    photo: '/mathias.jpg',
   },
   {
     id: 11,
@@ -701,7 +701,7 @@ const players5: PlayersData  = [
     id: 21,
     name: 'Mathias',
     team: 'Purito Palao FC',
-    photo: '/default.jpg',
+    photo: '/mathias.jpg',
     level: 3.5,
   },
   {
@@ -847,7 +847,7 @@ const players6: PlayersData  = [
     id: 9,
     name: 'Fabian ',
     team: 'Temetotaba FC',
-    photo: '/default.jpg',
+    photo: '/fabian.jpg',
     level: 4.5,
   },
   {
@@ -875,7 +875,7 @@ const players6: PlayersData  = [
     id: 13,
     name: 'Dino',
     team: 'Temetotaba FC',
-    photo: '/default.jpg',
+    photo: '/dino.jpg',
     level: 2,
   },
   {
@@ -932,7 +932,7 @@ const players6: PlayersData  = [
     id: 21,
     name: 'Mathias',
     team: 'Purito Palao FC',
-    photo: '/default.jpg',
+    photo: '/mathias.jpg',
     level: 3.5,
   },
   {
@@ -1023,23 +1023,23 @@ const currentPlayers: PlayersData = [
   { id: 4, name: 'Josué', team: 'Los Alaracos FC', photo: '/default.jpg', level: 3 },
   { id: 5, name: 'Briam', team: 'Los Alaracos FC', photo: '/default.jpg', level: 4, captain: true },
   { id: 6, name: 'Pedro', team: 'Los Alaracos FC', photo: '/default.jpg', level: 3, bajo: true },
-  { id: 7, name: 'Andresito', team: 'Los Alaracos FC', photo: '/default.jpg', level: 3.5 },
+  { id: 7, name: 'Andres', team: 'Los Alaracos FC', photo: '/default.jpg', level: 3.5 },
   { id: 8, name: 'Kevin', team: 'Los Alaracos FC', photo: '/kevin.jpg', level: 4 },
   // Santa Carolina FC
-  { id: 9, name: 'Mathias', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
-  { id: 10, name: 'Panky', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
+  { id: 9, name: 'Mathias', team: 'Santa Carolina FC', photo: '/mathias.jpg', level: 3.5 },
+  { id: 10, name: 'Frankito', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
   { id: 11, name: 'Geampierre', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5, captain: true },
   { id: 12, name: 'Rusian', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3, bajo: true },
-  { id: 13, name: 'Dino', team: 'Santa Carolina FC', photo: '/default.jpg', level: 2, bajo: true },
-  { id: 14, name: 'Anthony', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
-  { id: 15, name: 'Fabian', team: 'Santa Carolina FC', photo: '/default.jpg', level: 5 },
-  { id: 16, name: 'Marco', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
+  { id: 13, name: 'Dino', team: 'Santa Carolina FC', photo: '/dino.jpg', level: 2, bajo: true },
+  { id: 14, name: 'Antony', team: 'Santa Carolina FC', photo: '/antony.jpg', level: 3.5 },
+  { id: 15, name: 'Fabian', team: 'Santa Carolina FC', photo: '/fabian.jpg', level: 5 },
+  { id: 16, name: 'Marco Ríos', team: 'Santa Carolina FC', photo: '/default.jpg', level: 3.5 },
   // FC. Palao City
   { id: 17, name: 'Favio', team: 'FC. Palao City', photo: '/default.jpg', level: 1.5, bajo: true },
   { id: 18, name: 'Jozua', team: 'FC. Palao City', photo: '/jozua.jpg', level: 4.5, captain: true },
   { id: 19, name: 'Charly', team: 'FC. Palao City', photo: '/charly.jpg', level: 3.5 },
   { id: 20, name: 'Joaquín', team: 'FC. Palao City', photo: '/joaquin.jpg', level: 3 },
-  { id: 21, name: 'Carlos Cruz', team: 'FC. Palao City', photo: '/default.jpg', level: 2, bajo: true },
+  { id: 21, name: 'Carlitos Cruz', team: 'FC. Palao City', photo: '/default.jpg', level: 2, bajo: true },
   { id: 22, name: 'Leandro', team: 'FC. Palao City', photo: '/default.jpg', level: 4.5 },
   { id: 23, name: 'Fernando', team: 'FC. Palao City', photo: '/default.jpg' },
   { id: 24, name: 'Omar', team: 'FC. Palao City', photo: '/omar.jpg', level: 4 },
@@ -1050,7 +1050,7 @@ const currentPlayers: PlayersData = [
   { id: 28, name: 'Carlos Pachas', team: 'Peña Independiente 76', photo: '/default.jpg', level: 2.5, bajo: true, captain: true },
   { id: 29, name: 'Pelao Cristofer', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3 },
   { id: 30, name: 'Pasculi', team: 'Peña Independiente 76', photo: '/default.jpg', level: 4 },
-  { id: 31, name: 'Stev', team: 'Peña Independiente 76', photo: '/default.jpg', level: 4.5 },
+  { id: 31, name: 'Steve', team: 'Peña Independiente 76', photo: '/steve.jpg', level: 4.5 },
   { id: 32, name: 'Oscar Castro', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3.5 },
 ];
 
@@ -3554,7 +3554,7 @@ const currentResults: ResultsData = [
       {
         home: 'FC. Palao City',
         away: 'Santa Carolina FC',
-        homeScorers: ['Omar', 'Leandro', 'Carlos Cruz', 'Omar'],
+        homeScorers: ['Omar', 'Leandro', 'Carlitos Cruz', 'Omar'],
         awayScorers: ['Rusian', 'Geampierre', 'Geampierre'],
       },
       {
@@ -3592,14 +3592,14 @@ const currentResults: ResultsData = [
       {
         home: 'Santa Carolina FC',
         away: 'Peña Independiente 76',
-        homeScorers: ['Fabian', 'Geampierre', 'Anthony'],
+        homeScorers: ['Fabian', 'Geampierre', 'Antony'],
         awayScorers: [],
       },
       {
         home: 'Santa Carolina FC',
         away: 'Los Alaracos FC',
-        homeScorers: ['Dino', 'Dino', 'Fabian', 'Fabian', 'Fabian', 'Anthony', 'Rusian'],
-        awayScorers: ['Kevin', 'Andresito'],
+        homeScorers: ['Dino', 'Dino', 'Fabian', 'Fabian', 'Fabian', 'Antony', 'Rusian'],
+        awayScorers: ['Kevin', 'Andres'],
       },
       {
         home: 'FC. Palao City',
@@ -3611,13 +3611,13 @@ const currentResults: ResultsData = [
         home: 'FC. Palao City',
         away: 'Santa Carolina FC',
         homeScorers: ['Anyelo Bueno', 'Anyelo Bueno', 'Leandro', 'Anyelo Bueno'],
-        awayScorers: ['Fabian', 'Fabian', 'Frankito', 'Frankito', 'Anthony'],
+        awayScorers: ['Fabian', 'Fabian', 'Frankito', 'Frankito', 'Antony'],
       },
       {
         home: 'Peña Independiente 76',
         away: 'Los Alaracos FC',
         homeScorers: ['Fabricio'],
-        awayScorers: ['Andresito', 'Briam', 'Juan Piero (autogol)'],
+        awayScorers: ['Andres', 'Briam', 'Juan Piero (autogol)'],
         homeRedCards: ['Antony C', 'Oscar Castro'],
       },
     ],
@@ -3649,14 +3649,14 @@ const currentResults: ResultsData = [
       {
         home: 'FC. Palao City',
         away: 'Santa Carolina FC',
-        homeScorers: ['Jozua', 'Carlos Cruz', 'Carlos Cruz'],
+        homeScorers: ['Jozua', 'Carlitos Cruz', 'Carlitos Cruz'],
         awayScorers: ['Dino', 'Fabian', 'Geampierre'],
       },
       {
         home: 'Santa Carolina FC',
         away: 'Los Alaracos FC',
-        homeScorers: ['Fabian', 'Fabian', 'Dino', 'Dino', 'Anthony', 'Anthony'],
-        awayScorers: ['Andresito', 'Kevin'],
+        homeScorers: ['Fabian', 'Fabian', 'Dino', 'Dino', 'Antony', 'Antony'],
+        awayScorers: ['Andres', 'Kevin'],
       },
       {
         home: 'FC. Palao City',
