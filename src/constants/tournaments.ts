@@ -594,7 +594,7 @@ const players5: PlayersData  = [
     id: 6,
     name: 'Juan Piero',
     team: 'Peña Independiente 76',
-    photo: '/default.jpg',
+    photo: '/juan-piero.jpg',
     level: 3,
   },
   {
@@ -1045,7 +1045,7 @@ const currentPlayers: PlayersData = [
   { id: 24, name: 'Omar', team: 'FC. Palao City', photo: '/omar.jpg', level: 4 },
   // Peña Independiente 76
   { id: 25, name: 'Cristiano Ojeda', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3, bajo: true },
-  { id: 26, name: 'Juan Piero', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3 },
+  { id: 26, name: 'Juan Piero', team: 'Peña Independiente 76', photo: '/juan-piero.jpg', level: 3 },
   { id: 27, name: 'Antony C', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3.5 },
   { id: 28, name: 'Carlos Pachas', team: 'Peña Independiente 76', photo: '/default.jpg', level: 2.5, bajo: true, captain: true },
   { id: 29, name: 'Pelao Cristofer', team: 'Peña Independiente 76', photo: '/default.jpg', level: 3 },
@@ -3675,12 +3675,43 @@ const currentResults: ResultsData = [
     name: 'Fecha 4',
     date: 'Miércoles 18 de Noviembre del 2026',
     matches: [
-      { home: 'FC. Palao City', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'FC. Palao City', away: 'Peña Independiente 76', homeScorers: null, awayScorers: null },
-      { home: 'Santa Carolina FC', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
-      { home: 'FC. Palao City', away: 'Santa Carolina FC', homeScorers: null, awayScorers: null },
-      { home: 'Peña Independiente 76', away: 'Los Alaracos FC', homeScorers: null, awayScorers: null },
+      {
+        home: 'FC. Palao City',
+        away: 'Los Alaracos FC',
+        homeScorers: ['Omar', 'Leandro', 'Omar', 'Leandro'],
+        awayScorers: ['Kanuto'],
+      },
+      {
+        home: 'Santa Carolina FC',
+        away: 'Peña Independiente 76',
+        homeScorers: ['Fabian'],
+        awayScorers: ['Antony C', 'Pasculi', 'Pelao Cristofer'],
+      },
+      {
+        home: 'FC. Palao City',
+        away: 'Peña Independiente 76',
+        homeScorers: [],
+        awayScorers: [],
+      },
+      {
+        home: 'Santa Carolina FC',
+        away: 'Los Alaracos FC',
+        homeScorers: ['Fabian', 'Russo', 'Fabian', 'Frankito'],
+        awayScorers: ['Briam', 'Kanuto', 'Briam', 'Kanuto', 'Josué', 'Josué'],
+        homeRedCards: ['Mathias'],
+      },
+      {
+        home: 'FC. Palao City',
+        away: 'Santa Carolina FC',
+        homeScorers: ['Charly', 'Carlitos Cruz', 'Carlitos Cruz', 'Fernando', 'Omar', 'Charly', 'Leandro', 'Fernando'],
+        awayScorers: ['Frankito', 'Dino', 'Fabian'],
+      },
+      {
+        home: 'Peña Independiente 76',
+        away: 'Los Alaracos FC',
+        homeScorers: ['Pelao Cristofer', 'Pelao Cristofer', 'Juan Piero', 'Juan Piero'],
+        awayScorers: ['Kanuto', 'Josué', 'Kanuto'],
+      },
     ],
   },
   {

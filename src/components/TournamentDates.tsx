@@ -130,6 +130,13 @@ function joinNames(names: string[]): string {
   return `${names.slice(0, -1).join(", ")} y ${names[names.length - 1]}`;
 }
 
+function isFullyPlayed(fecha: DayResults): boolean {
+  return (
+    fecha.matches.length > 0 &&
+    fecha.matches.every((match) => match.homeScorers !== null || match.awayScorers !== null)
+  );
+}
+
 function fechaReminders(results: ResultsData, index: number): string[] {
   const notes: string[] = [];
   const previous = index > 0 ? results[index - 1] : undefined;
@@ -147,6 +154,9 @@ function fechaReminders(results: ResultsData, index: number): string[] {
       `${joinNames(suspended)} ${verb} el primer partido: roja en el último partido de la fecha anterior.`,
     );
   }
+
+  const nextToPlay = results.findIndex((fecha) => !isFullyPlayed(fecha));
+  if (index !== nextToPlay) return notes;
 
   const absences = new Map<string, { count: number; team?: string }>();
   for (let i = 0; i < index; i++) {
